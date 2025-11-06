@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/timmetz/Developer/Projects/Personal/social-post-writer/**)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

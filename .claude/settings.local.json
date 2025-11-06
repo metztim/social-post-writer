@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(claude mcp list:*)",
+      "Bash(claude-add-notion.sh:*)",
+      "mcp__notion-personal__API-post-search",
+      "mcp__notion-personal__API-post-database-query",
+      "mcp__notion-personal__API-retrieve-a-page",
+      "mcp__notion-personal__API-get-block-children",
+      "WebSearch",
+      "WebFetch(domain:hbr.org)",
+      "mcp__notion-personal__API-update-a-block",
+      "mcp__notion-personal__API-delete-a-block",
+      "mcp__notion-personal__API-patch-block-children",
+      "Bash(tree:*)",
+      "mcp__notion-personal__API-post-page",
+      "mcp__notion-personal__API-retrieve-a-database",
+      "mcp__notion-personal__API-patch-page",
+      "Read(//Users/timmetz/.claude/commands/**)",
+      "Bash(find:*)",
+      "Bash(while read file)",
+      "Bash(do stat -f \"%Sm %N\" -t \"%Y%m%d%H%M%S\" \"$file\")",
+      "Bash(done)",
+      "Bash(python3:*)",
+      "Bash(cat:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

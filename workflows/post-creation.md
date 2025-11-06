@@ -3,7 +3,7 @@
 **Purpose:** Draft LinkedIn posts from Logseq [[socialpost]] entries using Tim's authentic voice
 
 **Status:** Production Ready
-**Last Updated:** 2025-10-21
+**Last Updated:** 2025-11-05
 
 ---
 
@@ -47,11 +47,25 @@ Display 3 entries showing:
 
 User selects which entry to develop.
 
+### Step 4.5: Analyze Recent Performance (Optional)
+
+**Purpose:** Gather intelligence on what's working before drafting.
+
+**Agent:** Launch `engagement-pattern-analyst` subagent to:
+- Query Notion MyContent for last 5-10 published posts
+- Identify top-performing topics and patterns
+- Flag underperforming patterns to avoid
+- Return 1-2 paragraph summary
+
+**Output:** Brief intelligence report informing drafting strategy
+
+**Note:** This step can be skipped if drafting immediately, but provides data-driven insights over time.
+
 ### Step 5: Draft Using Voice Guide
 
 **Load voice references:**
-- `voice/tim-linkedin-voice-v1.md` - Overall voice patterns
-- `voice/tim-linguistic-fingerprint-v1.md` - Detailed linguistic analysis
+- `voice/tim-linkedin-voice-v2.md` - Overall voice patterns
+- `voice/tim-linguistic-fingerprint-v2.md` - Detailed linguistic analysis
 - Review similar posts in `samples/tim/` for structural guidance
 
 **Drafting process:**
@@ -62,6 +76,22 @@ User selects which entry to develop.
 5. Avoid all phrases on "Tim would never say" list
 
 **Critical:** If draft doesn't sound authentically like Tim, acknowledge it and revise
+
+### Step 5.5: Self-Review Draft
+
+**Purpose:** Catch AI patterns before user review using uncorrelated context.
+
+**Method:** Launch Task tool agent to:
+- Load draft + Voice Authenticity Checklist (below)
+- Check for negative patterns (meta-commentary, AI-isms, over-explanation)
+- Check for positive patterns (white space, specific language, deletable material)
+- Return: PASS (authentic) or FAIL (needs revision) with specific issues
+
+**If FAIL:** Revise draft in Step 5 before proceeding
+
+**If PASS:** Continue to Step 6
+
+**Rationale:** Separate validation context prevents overfitting and catches issues early.
 
 ### Step 6: Save to Notion MyContent
 
@@ -80,8 +110,9 @@ User selects which entry to develop.
 
 User reviews Claude Draft in Notion and:
 - Edits into Final version (in page body)
+- **Expects 20-30% deletions** (strategic cuts are Tim's editorial strength)
 - Publishes
-- Engagement metrics populate over time
+- Engagement metrics populate over time for future analysis
 
 ---
 
@@ -124,19 +155,27 @@ Before saving draft, verify:
 
 ## Performance
 
-**Time:** 10-15 minutes total
+**Time:** 15-20 minutes total
 - Scanning: 1-2 min
 - Selection & context: 1-2 min
+- Metrics analysis (optional): 2-3 min
 - Drafting: 5-10 min
+- Self-review: 2-3 min
 - Notion upload: 1 min
 
-**Token usage:** 15-25k tokens (varies by entry complexity)
+**Token usage:** 20-35k tokens (varies by entry complexity and agent usage)
+
+**Success metrics:**
+- Voice authenticity: 70-80% of draft unchanged in editing
+- Engagement: Tracking over time via Notion metrics
 
 ---
 
 ## Related Files
 
 - Slash command: `.claude/commands/draft-linkedin-post.md`
-- Voice guide: `voice/tim-linkedin-voice-v1.md`
-- Linguistic fingerprint: `voice/tim-linguistic-fingerprint-v1.md`
+- Voice guide: `voice/tim-linkedin-voice-v2.md`
+- Linguistic fingerprint: `voice/tim-linguistic-fingerprint-v2.md`
 - Refinement process: `workflows/voice-refinement.md`
+- Agent guidelines: `docs/AGENT_GUIDELINES.md`
+- Engagement analyst: `.claude/subagents/engagement-pattern-analyst.json`
