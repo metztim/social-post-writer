@@ -1,0 +1,123 @@
+20260113 The Workflow email convo
+
+AI Forward Summary
+
+Tim is invited for an interview with *The Workflow* on January 15th.
+He needs to prepare by reviewing a prep document and consent form.
+Tim should upload workflow sketches, screenshots, prompts, and a toddler photo.
+The focus is on content marketing and GTM workflows using AI/automation.
+Examples and additional resources are provided for reference.
+🤖 Prep kit for your Workflow interview on Jan 15th 🤖
+The Workflow, diandra, lattanzio.sara, theworkfloww & tim
+
+
+The Workflow
+Dec 12, 2025, 7:47 PM
+Hey Tim,
+
+We’re pumped to feature you in The Workflow.
+
+To make the interview smooth (and the article sharp), here’s what we need from you ahead of time:
+
+📄 Prep doc + questions
+
+Interview prep + consent form here → Please read through and be ready to answer everything during the interview.
+
+📂 Upload these assets to the Drive folder:
+
+Sketch out your workflow
+
+Screenshots for each key step of your workflow automation setup, LLM interface, backend etc.)
+
+Your prompts/instructions in a separate doc. Overwrite the single prompts/ instructions, ignore the rest (intro, naming, etc.)
+
+1 photo of yourself as a toddler like this one (Yes, really. we’ll explain 😅)
+
+Share any links or upload existing resources (posts, articles, etc.) you’ve already created about this workflow to help us write the article.
+
+⚠️ ATTENTION
+
+We cover only content marketing and GTM workflows that include some degree of AI usage/automation. The goal is always to give readers a straightforward workflow they can replicate themselves with tools that are relatively affordable in their day-to-day. If you use a tool that's very expensive or proprietary, also share low-budget alternatives, even if they involve more manual work.
+
+👀 Want to see what it’ll look like?
+
+https://www.theworkflow.digital/p/ai-marketing-report-workflow-sara-lattanzio
+
+https://www.theworkflow.digital/p/ai-linkedin-content-post-automation
+
+🔎 What is The Workflow?
+
+A bi-weekly Substack that breaks down real AI + automation playbooks from GTM and content marketing pros. Not hype. Not tool spam. Just systems that actually work.
+
+https://www.theworkflow.digital/p/the-workflow-newsletter
+
+Any questions, just hit reply. We can’t wait to dive in.
+
+Sara & Diandra
+
+
+Collapse
+
+
+The Workflow, diandra, lattanzio.sara & You
+
+4 changes
+
+
+Tim Metz
+Tue 10:00 AM
+
+
+
+
+
+Hi Sara and Diandra,
+
+Happy new year! Hope you had a good holiday and some rest.
+
+I’ve been thinking of a few directions we can take with this. Let me know what you like best, then we can work that out in more detail.
+
+Claude Code 101: an intro to getting started with Claude Code, similar to this: https://www.animalz.co/blog/claude-code . I think it’s interesting for many people, but it doesn’t really neatly fit in the workflow category.
+
+Personal Style Guide creator: As explained here: https://www.linkedin.com/posts/metztim_ever-since-chatgpt-came-out-ive-been-trying-activity-7382268578873520128-j7cd?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADtk0sB66vemUuAUdT2uD1H6hp71UW8xH4 . Advantage of this one is that a simplified version probably also works with normal Claude / ChatGPT prompts.
+
+Social post creator from highlights: this one is cool, high level explainer in this post: https://www.linkedin.com/posts/metztim_my-most-successful-linkedin-post-ever-was-activity-7392030871584718848-ZxVl?utm_source=share&utm_medium=member_desktop&rcm=ACoAAADtk0sB66vemUuAUdT2uD1H6hp71UW8xH4 . The only problem is that it uses Claude Code and requires people to have some kind of storage of reading highlights / second brain.
+
+Personal day planner: I have a daily review workflow/command built with Claude that helps me plan my day (e.g., track and visualize sleep, review my task list, process meetings from previous day and turns into notion tasks, etc.). But also really needs Claude Code.
+
+A few other loose thoughts that are not really workflows but could be really helpful:
+
+Showing people how to connect an mcp server to normal Claude or ChatGPT (allows you to bring in context from lots of different sources)
+
+Timeless principles for building AI workflows. I’ve been writing down some principles that (I think) will stand the test of time and are important when you’re building AI workflows and processes. But of course this would be ABOUT workflows, not a workflow itself.
+
+The Personal Style Guide creator is probably most feasible, but let me know what you think, then we take it from there and I'll prepare according to your excellent guidelines!
+
+Tim
+
+
+
+The Workflow
+Tue 8:19 PM
+
+
+
+
+
+Happy New Year, Tim!
+
+I had a note to follow up with you, but you beat me to it. Hope you had a great break.
+
+Just to clarify our thinking: the idea that our workflows should be replicable with any tool isn’t meant to be taken too literally. The goal is simply to avoid sessions that turn into feature demos. We care much more about explaining the underlying process and how tools are used in practice.
+
+In this case, I don’t see any issue at all. Claude is a mainstream tool, and frankly, you’re the unrivaled king of using it for content marketing use cases, so it would be a missed opportunity not to give you the spotlight here.
+
+Neither Diandra nor I are experts on Claude Code, so your 101 article is actually perfect. We’ll definitely use it for the overall framing. 
+
+The social post creator sounds great, especially because there’s a real story behind it with your most viral LinkedIn post. We can dig into the “why” behind it: what problem you were solving, what the status quo looked like before, and how you approached building it. If you think it's too complex, let's just switch that one for a simpler content use case, but given our audience is content marketers and LinkedIn topics always bomb...
+
+Curious to hear what you think.
+
+Best,
+
+Sara
