@@ -29,7 +29,7 @@ The worst part is it trains people to expect revolution when what actually works
 **Name:** The Style Guide Reverser
 
 **Unique powers:**
-- Extracts your actual editorial voice from published content (15-20 articles → 50+ specific rules)
+- Extracts your actual editorial voice from published content (5+ articles → 50+ specific rules)
 - Reviews articles 4-5x faster than manual editing using 8 parallel agents
 - Works with any brand—just feed it different source articles
 - Creates enforcement that scales (the guide isn't just a document that sits unused)
@@ -67,7 +67,13 @@ One command in Terminal: `curl -fsSL https://claude.ai/install.sh | bash`
 Then type `claude` to start and authenticate with your Claude account (one-time setup).
 
 **Step 2: Collect Source Articles**
-Gather 15-20 representative published articles. Claude Code can scrape directly from a blog URL, or you can use local markdown files. This is your "corpus" of what good looks like.
+Gather 5+ articles (10-15 recommended for best results). Sources can be:
+- Local directory of markdown/text files
+- URLs pasted directly
+- Blog URL with guidance (e.g., "only 2024 articles, focus on thought leadership")
+- Any combination of the above
+
+Claude Code can scrape directly from URLs or read local files.
 
 **Step 3: Run Style Guide Generator**
 Single command: `/generate-style-guide [brand-name] [source]`
@@ -91,7 +97,11 @@ Get a detailed report with:
 Takes 5-10 minutes to review vs 40+ minutes for manual checking.
 
 **Step 7: Apply Corrections**
-Fix issues manually or use `--auto-apply` flag for automatic fixes. Your choice based on comfort level.
+Fix issues manually, or use flags:
+- `--auto-apply` — automatically apply all corrections
+- `--dry-run` — preview what would change without modifying files
+
+Your choice based on comfort level.
 
 ### Tools at each step
 
@@ -209,7 +219,7 @@ Now we're exploring using it for client style guides too—reverse-engineer thei
 
 The principles transfer even without Claude Code:
 
-1. **Collect examples:** Gather 15-20 of your best articles
+1. **Collect examples:** Gather 5+ of your best articles (10-15 recommended)
 2. **Use the generation prompt:** Feed them to ChatGPT with the extraction prompt
 3. **Review section by section:** Check articles against one style guide section at a time
 4. **Track what you change:** Every correction improves the guide

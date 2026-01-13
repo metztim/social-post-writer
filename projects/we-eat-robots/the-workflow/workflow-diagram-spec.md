@@ -9,7 +9,7 @@ Create a horizontal or vertical flow diagram showing these 6 steps:
 ```
 ┌─────────────────────┐
 │ 1. COLLECT          │
-│ 15-20 published     │
+│ 5+ published        │
 │ articles            │
 │ (scrape or local)   │
 └────────┬────────────┘
@@ -69,7 +69,7 @@ Create a horizontal or vertical flow diagram showing these 6 steps:
 ### Step 1: COLLECT
 **Visual element:** Blog with articles or folder with markdown files
 **Label:** "Collect Articles"
-**Subtext:** 15-20 representative articles
+**Subtext:** 5+ articles (10-15 recommended)
 **Icon suggestion:** Folder or stack of documents
 **What happens:** Gather published content that represents your brand voice
 
@@ -114,9 +114,9 @@ Create a horizontal or vertical flow diagram showing these 6 steps:
 ### Step 6: APPLY
 **Visual element:** Document with corrections being applied
 **Label:** "Apply Corrections"
-**Subtext:** Manual or auto-apply
+**Subtext:** Manual, auto-apply, or dry-run
 **Icon suggestion:** Checkmark or apply button
-**What happens:** Fix issues manually or use `--auto-apply` for automatic fixes
+**What happens:** Fix issues manually, use `--auto-apply` for automatic fixes, or `--dry-run` to preview
 
 ---
 
@@ -131,7 +131,7 @@ Mark clearly which steps are automated vs. require human judgment:
 | 3. Review Guide | Manual | Human verifies extracted rules |
 | 4. Style Check | Automated | 8 parallel agents |
 | 5. Violations Report | Automated | Generated output |
-| 6. Apply | Choice | Manual OR automated |
+| 6. Apply | Choice | Manual, --auto-apply, or --dry-run |
 
 **Total:** 1 manual decision (review guide), rest is automated
 
@@ -161,7 +161,7 @@ For the tier-1 (non-Claude-Code) audience:
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
 │   COLLECT   │ →  │   GENERATE  │ →  │ STYLE CHECK │ →  │    APPLY    │
-│   15-20     │    │   Style     │    │  (8 agents  │    │ Corrections │
+│   5+        │    │   Style     │    │  (8 agents  │    │ Corrections │
 │   Articles  │    │   Guide     │    │  parallel)  │    │             │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
       ↑                   ↑                  ↑                  ↓

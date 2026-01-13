@@ -8,7 +8,7 @@ These prompts power the "Style Guide Reverser" workflow that extracts editorial 
 
 ## Prompt 1: Style Guide Generator
 
-**Purpose:** Analyze 15-20 published articles to extract consistent brand patterns into a comprehensive style guide
+**Purpose:** Analyze 5+ published articles (10-15 recommended) to extract consistent brand patterns into a comprehensive style guide
 
 **How it works:**
 This agent analyzes articles and identifies patterns across 8 editorial dimensions. Patterns appearing 95%+ consistently become rules; 70-95% become preferences.
@@ -189,7 +189,7 @@ If you don't use Claude Code, here's how to replicate the workflow:
 
 ### Step 1: Generate Style Guide
 
-Copy 15-20 of your published articles into ChatGPT/Claude and use this prompt:
+Copy 5+ of your published articles into ChatGPT/Claude (10-15 recommended) and use this prompt:
 
 ```
 Analyze these articles and extract a style guide with 8 sections:
