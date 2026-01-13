@@ -48,23 +48,10 @@ https://www.linkedin.com/posts/metztim_my-most-successful-linkedin-post-ever-was
 
 ---
 
-## Additional Context
-
-### The "Workslop" Post
-The post that generated most of the voice fingerprint insights. Compared Claude's draft to the final published version to identify systematic editing patterns.
-
-**Key insight from this analysis:**
-- Identified 15+ phrases Claude uses that I never say
-- Discovered word-level precision patterns ("coworker" not "colleague")
-- Developed the "negative fingerprint" approach
-
----
-
 ## Tool Links
 
 - **Claude Code:** https://claude.ai/claude-code
-- **Logseq:** https://logseq.com/
-- **Notion API:** https://developers.notion.com/
+- **Anthropic Documentation:** https://docs.anthropic.com/en/docs/claude-code
 
 ---
 
@@ -72,7 +59,7 @@ The post that generated most of the voice fingerprint insights. Compared Claude'
 
 **Suggested links to include in published article:**
 1. Claude Code getting started: Link to Animalz or We Eat Robots article
-2. Example of workflow output: Link to style guide or viral post
+2. Example of workflow output: Link to the LinkedIn style guide post
 3. Tim's newsletter for more workflows: https://weeatrobots.substack.com/
 
 ---

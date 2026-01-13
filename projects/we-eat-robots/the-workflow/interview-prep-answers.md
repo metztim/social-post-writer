@@ -1,6 +1,6 @@
 # The Workflow Interview Prep Answers
 
-> Tim Metz - Social Post Creator from Highlights
+> Tim Metz - Style Guide Reverser
 
 ---
 
@@ -8,9 +8,9 @@
 
 ### Who you are, what you do, where you spend 'get-shit-done' energy
 
-I'm a content marketing strategist at Animalz, where I help B2B companies build content systems that actually work. Outside of that, I write the "We Eat Robots" newsletter about AI workflows for knowledge workers—basically documenting everything I learn about making AI useful for real work, not just demos.
+I'm Director of Marketing & Innovation at Animalz, where I help B2B companies build content systems that actually work. Outside of that, I write the "We Eat Robots" newsletter about AI workflows for knowledge workers—basically documenting everything I learn about making AI useful for real work, not just demos.
 
-Most of my energy right now goes into two things: helping Animalz clients build content strategies that survive the AI shift, and building my own AI-assisted workflows that I can actually use day-to-day. The social post creator we're talking about today came from that second bucket.
+Most of my energy right now goes into two things: helping Animalz clients build content strategies that survive the AI shift, and building my own AI-assisted workflows that I can actually use day-to-day. The style guide workflow we're talking about today came from that second bucket.
 
 ### Overhyped AI claim that made you roll your eyes
 
@@ -26,119 +26,144 @@ The worst part is it trains people to expect revolution when what actually works
 
 ### Introduce the workflow like it's a superhero
 
-**Name:** The Highlight-to-Post Pipeline
+**Name:** The Style Guide Reverser
 
 **Unique powers:**
-- Turns scattered reading notes into LinkedIn posts that actually sound like me
-- Uses a "negative fingerprint" (what I NEVER say) to catch AI-isms before they escape
-- Saves about 50% of my drafting time while maintaining engagement rates
-- Gets better over time through a continuous learning loop
+- Extracts your actual editorial voice from published content (15-20 articles → 50+ specific rules)
+- Reviews articles 4-5x faster than manual editing using 8 parallel agents
+- Works with any brand—just feed it different source articles
+- Creates enforcement that scales (the guide isn't just a document that sits unused)
 
 **Why it's famous:**
-This workflow enabled the most viral LinkedIn post I ever wrote. More importantly, it let me finally bridge the gap between consuming content (reading, highlighting) and creating content (posting). Before this, highlights just sat in my notes app. Now they actually turn into things.
+This workflow turned weeks of style guide creation into hours. More importantly, it made style enforcement actually practical. Before this, style guides were documents that got created once and then ignored because checking against them was too tedious.
 
 ### What problem were you solving?
 
-Three connected problems:
+Two connected problems with style guides:
 
-1. **The highlight graveyard:** I was reading constantly, highlighting great stuff, and then... nothing. Those highlights sat unused in Logseq for months.
+1. **They either don't exist or immediately get out of date.** Writing a comprehensive style guide manually takes weeks. Most brands skip it entirely, or create one that nobody maintains.
 
-2. **AI posts sounded wrong:** Every time I tried using ChatGPT to draft posts, they came out generic. "Let's dive into..." "Here's the thing..." It wasn't my voice.
-
-3. **Time pressure killed consistency:** Manual post writing takes me 45+ minutes. At that pace, I couldn't post consistently enough to build momentum.
+2. **They're hard to enforce consistently.** Even when you have a guide, checking a single article against 50+ rules takes 40+ minutes. At that pace, you skip it when deadlines are tight. Quality drifts.
 
 ### Measurable outcome you were aiming for
 
-- **Time:** Cut post creation from ~45 minutes to ~20 minutes (50% reduction)
-- **Quality:** Keep engagement rates within 10% of my manually-written posts
-- **Accuracy:** Get to 70-80% of the draft unchanged during editing (meaning Claude is nailing my voice most of the time)
+- **Generation:** Create usable style guide in 1-2 hours (vs weeks manually)
+- **Review:** Check articles in 5-10 minutes (vs 40+ minutes)
+- **Speedup:** 4-5x faster editorial review
+- **Quality:** Consistent voice across all content
 
 ### What wasn't working before?
 
-- Highlights scattered across apps, completely disconnected from my publishing workflow
-- AI drafts that required 80%+ rewriting—at which point, why use AI?
-- Context-switching cost: finding highlights → remembering why they mattered → drafting → editing
-- No feedback loop to improve AI outputs over time
+- Our Animalz style guide was outdated (embarrassing to admit)
+- I'd sometimes skip copy-editing because deadlines were tight
+- Different writers had different interpretations of "our voice"
+- Reviewing a single article for style took forever
+- Style guides existed but weren't enforced because enforcement didn't scale
 
 ### Step-by-step walkthrough
 
-**Step 1: Tag (Manual)**
-While reading in Logseq, I tag interesting highlights with `[[socialpost]]`. Takes 2 seconds. This is the human taste decision—what's actually worth developing?
+**Step 1: Install Claude Code**
+One command in Terminal: `curl -fsSL https://claude.ai/install.sh | bash`
+Then type `claude` to start and authenticate with your Claude account (one-time setup).
 
-**Step 2: Scan (Automated)**
-I run `/draft-linkedin-post` in Claude Code. A Python script scans my entire Logseq knowledge base for anything tagged `[[socialpost]]`.
+**Step 2: Collect Source Articles**
+Gather 15-20 representative published articles. Claude Code can scrape directly from a blog URL, or you can use local markdown files. This is your "corpus" of what good looks like.
 
-**Step 3: Select (Manual)**
-Claude presents the 3 most recent tagged entries with full context—the highlight, surrounding notes, and source. I pick which one I want to develop today.
+**Step 3: Run Style Guide Generator**
+Single command: `/generate-style-guide [brand-name] [source]`
+Claude analyzes patterns across 8 editorial dimensions and extracts 50+ specific rules with DO/DON'T examples.
 
-**Step 4: Draft (Automated)**
-This is where the magic happens. Claude Code loads my voice fingerprint—a 900+ line document that captures:
-- What I NEVER say (the "negative fingerprint")
-- My actual linguistic patterns
-- My characteristic rhythm (em-dashes, white space, etc.)
+**Step 4: Review Generated Guide**
+Human reviews the AI-extracted patterns. This is where you catch any misidentified patterns or add context the AI couldn't infer. Takes 30-60 minutes.
 
-It drafts a post applying all these rules.
+**Step 5: Run Style Check on New Article**
+Command: `/style-check [brand-name] [article-path]`
+This is where the magic happens—8 specialized agents run in parallel, each reviewing against one section of the style guide.
 
-**Step 5: Save (Automated)**
-The draft saves to my Notion "MyContent" database with the raw Claude draft in a dedicated property.
+**Step 6: Review Violations Report**
+Get a detailed report with:
+- Line numbers (exact location)
+- Issue description
+- Current text (exact quote)
+- Suggested correction
+- Rule being violated
 
-**Step 6: Cleanup (Automated)**
-The `[[socialpost]]` tag gets removed from the original Logseq entry and a link to the Notion post gets added. This prevents the same highlight from showing up in future scans.
+Takes 5-10 minutes to review vs 40+ minutes for manual checking.
+
+**Step 7: Apply Corrections**
+Fix issues manually or use `--auto-apply` flag for automatic fixes. Your choice based on comfort level.
 
 ### Tools at each step
 
 | Step | Tool | Why this one |
 |------|------|--------------|
-| Tag | Logseq | Already my knowledge base, markdown-native |
-| Scan | Python script | Handles special characters in filenames reliably |
-| Select | Claude Code terminal | Shows full context at a glance |
-| Draft | Claude Code + voice guides | Massive context window for the fingerprint |
-| Save | Notion API | Where I track all content anyway |
-| Cleanup | File modification | Prevents duplicate processing |
+| Collect | Claude Code / manual | Scraping saves copy-paste work |
+| Generate | Claude Code + generator agent | Large context window handles all articles |
+| Review Guide | Human | Judgment call on extracted rules |
+| Style Check | 8 parallel agents | Simultaneous = fast |
+| Report | Claude Code | Compiles all agent findings |
+| Apply | Manual or auto | User choice |
+
+### The 8 Parallel Agents (The Secret Sauce)
+
+| # | Agent | Focus | Example Catch |
+|---|-------|-------|---------------|
+| 1 | Voice & Tone | Passive voice, pronoun consistency | "The article was written" → "We wrote" |
+| 2 | Grammar & Usage | Oxford commas, Title Case | Missing comma in list |
+| 3 | Punctuation | Em dashes, list punctuation | Wrong em dash spacing |
+| 4 | Formatting | Headings, hyperlinks | H3 should be H2 |
+| 5 | Technical Standards | Dates, numbers | "5%" → "5 percent" |
+| 6 | Content Patterns | CTAs, openings | Missing call-to-action |
+| 7 | Industry Terms | Acronyms, terminology | Undefined "CMS" |
+| 8 | Quick Reference | Cross-check | Final sanity check |
+
+**Why parallel matters:** 8 agents simultaneously = 5-10 min. Sequential = 40+ min.
 
 ### Manual vs automated
 
 **Manual (requires human judgment):**
-- Tagging highlights (taste)
-- Selecting which entry to develop (relevance)
-- Final editing pass (voice nuances)
-- Deciding when NOT to post
+- Reviewing the generated style guide
+- Final editorial decisions on corrections
+- Deciding which violations matter vs which to ignore
 
 **Automated:**
-- Scanning for entries
-- Gathering context
-- Drafting with voice rules
-- Saving to Notion
-- Cleaning up source
+- Article collection (scraping)
+- Pattern extraction
+- Style checking (8 agents)
+- Report generation
+- Auto-apply (optional)
 
 ### Results
 
-- **First Claude-drafted post:** 3.43% engagement rate (above my average)
-- **Time savings:** 50%+ confirmed
-- **Draft accuracy:** ~75% unchanged after editing (up from ~50% before the fingerprint)
-- **Consistency:** Can actually maintain a posting cadence now
+- **Animalz style guide:** 757 lines, 50+ rules, comprehensive
+- **Review time:** 5-10 minutes per article (down from 40+)
+- **First real use:** Caught issues I would have missed manually
+- **Scalable:** Same effort whether reviewing 1 article or 100
 
 ### Surprises (good and chaotic)
 
 **Good surprise:**
-The "negative fingerprint" approach was WAY more effective than I expected. Telling Claude what I NEVER say worked better than showing it examples of what I do say. AI is better at avoiding specific patterns than matching vague concepts like "conversational tone."
+The parallel agent approach was shockingly fast. I expected some speedup, but 4-5x was better than I'd hoped. And because each agent is specialized, they catch more issues than a single "check everything" prompt.
+
+**Another good surprise:**
+AI extracted patterns I wasn't consciously aware of. Looking at our actual articles revealed conventions we followed but had never documented.
 
 **Chaotic discovery:**
-Initial drafts were consistently too long. Claude was being thorough when I needed concise. Had to add explicit length constraints.
+First version over-extracted patterns. Too many rules made the guide unwieldy. Had to tune for patterns with 95%+ consistency (rules) vs 70-95% (preferences) vs one-offs (ignore).
 
 **Limitation:**
-Can't capture the "spark" of genuine insight. The workflow handles execution, but human judgment still has to decide: "Is this highlight actually interesting enough to develop?" Sometimes I select something, Claude drafts it perfectly, and I realize... the underlying insight just isn't that compelling.
+Still needs human review—AI catches mechanical issues, not strategic ones. "Is this the right CTA for this audience?" requires judgment the AI doesn't have.
 
 ### What you wouldn't automate again
 
-**Selection is non-automatable:**
-I tried having Claude pick the "most interesting" highlight. It couldn't. It would choose things that looked complete or well-formatted, not things that had genuine insight potential.
+**Style guide review is non-automatable:**
+The AI extracts patterns, but a human needs to verify: "Yes, this is actually a rule we want, not just a coincidence in our sample."
 
-**Final edit is non-automatable:**
-Even with 75% accuracy, that last 25% matters. It's where the real voice lives—the small choices that make something sound like me vs. "pretty good AI copy."
+**Final editorial judgment is non-automatable:**
+The report tells you what violates the rules. But sometimes you break rules intentionally. That decision stays human.
 
-**Timing/relevance is non-automatable:**
-Just because a highlight exists doesn't mean now is the right time to post about it. Context matters. What's happening in my industry? What have I posted recently? That judgment stays human.
+**Strategic content decisions are non-automatable:**
+"Should we write about this topic?" "Is this the right angle?" The workflow handles execution quality, not content strategy.
 
 ---
 
@@ -146,55 +171,65 @@ Just because a highlight exists doesn't mean now is the right time to post about
 
 ### What this workflow taught you about automation
 
-**"AI doesn't replace taste—it amplifies throughput for people who have it."**
+**"AI is better at extracting patterns than we are at articulating them."**
 
-The workflow only works because I still make the creative decisions: What to highlight. Which highlight to develop. What the final edit should be. Claude handles the tedious middle—the drafting mechanics—so I can focus on taste.
+I spent years trying to describe our brand voice. Struggling to write down rules that captured what made Animalz content sound like Animalz. The AI just looked at the articles and found the patterns.
 
-People ask "will AI replace writers?" The better question is: "Which parts of writing are actually creative, and which are just execution?" This workflow helped me see the boundary more clearly.
+This reversed my mental model. Instead of "write rules, then enforce," it's "create examples, extract rules, then enforce." Much more practical.
 
 ### When does automation make sense?
 
 Automation works when you can answer "yes" to all three:
 
-1. **Can you clearly define "good"?** I can because I have 900 lines of voice rules. Most people can't articulate their own style—so AI just gives them generic output.
+1. **Do you have examples of "good"?** The published articles serve as ground truth. No examples = no patterns to extract.
 
-2. **Is there a feedback loop?** Every time I edit a Claude draft, I ask "why did I change this?" and update the fingerprint. The system learns.
+2. **Is the task decomposable?** Editorial review breaks into 8 distinct dimensions. Each can be evaluated independently.
 
-3. **Does it handle the tedious parts, not the creative parts?** I keep selection and final edit. Claude handles scanning and first-draft mechanics.
+3. **Does speed matter?** If you're reviewing one article per month, manual is fine. If you're reviewing dozens, the 4-5x speedup matters.
 
 ### Principle this confirmed
 
-**"Negative constraints are more powerful than positive examples."**
+**"Parallel is the unlock."**
 
-I spent months trying to teach Claude my voice by showing it examples. Marginal improvement.
+A single AI reviewing for everything is slow and misses issues. 8 specialized agents—each an expert in one domain—catch more issues faster.
 
-Then I documented what I NEVER say—specific phrases, transitions, structures that feel wrong. Massive improvement.
-
-The insight: AI is better at rule-following than pattern-matching. "Never use 'let's dive into'" is actionable. "Sound conversational" is vague.
+This mirrors how professional editorial teams work. You don't have one editor checking everything. You have specialists. The workflow just lets you deploy 8 specialists simultaneously.
 
 ---
 
 ## Additional Notes for Interview
 
-### The backstory with the viral post
+### The backstory with Animalz
 
-The LinkedIn post about "workslop" (AI-generated work content that shifts cognitive burden to readers) performed really well. What's interesting: that was one of the first posts where I systematically compared the Claude draft to my final version.
+We're a content marketing agency that preaches content quality. Our own style guide being outdated was... embarrassing. This workflow fixed that in hours instead of the weeks it would have taken manually.
 
-That comparison generated most of the "negative fingerprint" insights—I could see exactly what I was deleting and why. The meta-learning from one post improved all future posts.
+Now we're exploring using it for client style guides too—reverse-engineer their existing content into enforceable standards.
 
 ### For their audience (content marketers)
 
 The principles transfer even without Claude Code:
 
-1. **Build a fingerprint:** Analyze your own writing. Document what you never say.
-2. **Use the negative:** When prompting ChatGPT/Claude, include "Never use these phrases: [list]"
-3. **Track your edits:** Every time you change AI output, ask why. Add it to your rules.
-4. **Feedback loop matters more than perfect v1:** My first version was ~50% accurate. Now it's ~75%. That improvement came from systematic learning.
+1. **Collect examples:** Gather 15-20 of your best articles
+2. **Use the generation prompt:** Feed them to ChatGPT with the extraction prompt
+3. **Review section by section:** Check articles against one style guide section at a time
+4. **Track what you change:** Every correction improves the guide
+
+The workflow is slower without Claude Code (40+ min vs 5-10 min), but it works.
 
 ### The "X killed Y" connection
 
-When people say "ChatGPT killed writing," they're missing the same thing as "Beautiful.ai killed Powerpoint."
+When people say "AI killed editing," they're missing the point.
 
-The tool matters less than the workflow around it. A bad workflow with ChatGPT produces garbage. A good workflow with the same tool produces useful output. The differentiator is human judgment, systematic improvement, and clear definition of quality.
+AI handles the mechanical parts—catching inconsistent commas, wrong date formats, missing Oxford commas. Humans handle the strategic parts—is this on-brand, is this the right angle, does this serve the reader.
 
-That's what the "X killed Y" takes always miss.
+The tool matters less than understanding which parts to automate. That's what the "X killed Y" takes always miss.
+
+---
+
+## Profile/Bio Info
+
+**Tim Metz**
+- Director of Marketing & Innovation at Animalz
+- Author of "We Eat Robots" newsletter
+- LinkedIn: https://www.linkedin.com/in/metztim
+- Focus: AI workflows for knowledge work

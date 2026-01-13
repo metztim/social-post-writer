@@ -7,110 +7,116 @@
 Create a horizontal or vertical flow diagram showing these 6 steps:
 
 ```
-┌─────────────────┐
-│ 1. TAG          │
-│ Highlight in    │
-│ Logseq          │
-│ [[socialpost]]  │
-└────────┬────────┘
+┌─────────────────────┐
+│ 1. COLLECT          │
+│ 15-20 published     │
+│ articles            │
+│ (scrape or local)   │
+└────────┬────────────┘
          │
          ▼
-┌─────────────────┐
-│ 2. SCAN         │
-│ Claude Code     │
-│ finds entries   │
-│ (Python script) │
-└────────┬────────┘
+┌─────────────────────┐
+│ 2. GENERATE         │
+│ /generate-style-    │
+│ guide [brand]       │
+│ (Claude Code)       │
+└────────┬────────────┘
          │
          ▼
-┌─────────────────┐
-│ 3. SELECT       │
-│ Present 3 most  │
-│ recent options  │
-│ (Human choice)  │
-└────────┬────────┘
+┌─────────────────────┐
+│ 3. REVIEW GUIDE     │
+│ Human reviews       │
+│ AI-extracted        │
+│ patterns            │
+└────────┬────────────┘
          │
          ▼
-┌─────────────────────────────────────┐
-│ 4. DRAFT                            │
-│ Claude Code applies voice guide     │
-│                                     │
-│ ┌─────────────────────────────────┐ │
-│ │ Voice Fingerprint               │ │
-│ │ • What I NEVER say              │ │
-│ │ • My actual patterns            │ │
-│ │ • Em-dash rhythm                │ │
-│ │ • Sentence structure            │ │
-│ └─────────────────────────────────┘ │
-└────────┬────────────────────────────┘
+┌─────────────────────────────────────────────────────┐
+│ 4. STYLE CHECK                                      │
+│ /style-check [brand] [article]                      │
+│                                                     │
+│ ┌─────────────────────────────────────────────────┐ │
+│ │ 8 PARALLEL AGENTS                               │ │
+│ │                                                 │ │
+│ │ [1]Voice  [2]Grammar  [3]Punct  [4]Format      │ │
+│ │ [5]Tech   [6]Content  [7]Terms  [8]Quick       │ │
+│ │                                                 │ │
+│ │ All run simultaneously = 4-5x speedup          │ │
+│ └─────────────────────────────────────────────────┘ │
+└────────┬────────────────────────────────────────────┘
          │
          ▼
-┌─────────────────┐
-│ 5. SAVE         │
-│ Notion API      │
-│ MyContent DB    │
-│ "Claude Draft"  │
-└────────┬────────┘
+┌─────────────────────┐
+│ 5. VIOLATIONS       │
+│ REPORT              │
+│ Line numbers +      │
+│ exact corrections   │
+└────────┬────────────┘
          │
          ▼
-┌─────────────────┐
-│ 6. CLEANUP      │
-│ Remove tag      │
-│ Add Notion link │
-│ Prevent reuse   │
-└─────────────────┘
+┌─────────────────────┐
+│ 6. APPLY            │
+│ Fix manually OR     │
+│ use --auto-apply    │
+│ flag                │
+└─────────────────────┘
 ```
 
 ---
 
 ## Detailed Step Descriptions
 
-### Step 1: TAG
-**Visual element:** Logseq page with highlighted text
-**Label:** "Tag in Logseq"
-**Subtext:** `[[socialpost]]`
-**Icon suggestion:** Bookmark or tag icon
-**What happens:** While reading, tag interesting highlights that could become posts
+### Step 1: COLLECT
+**Visual element:** Blog with articles or folder with markdown files
+**Label:** "Collect Articles"
+**Subtext:** 15-20 representative articles
+**Icon suggestion:** Folder or stack of documents
+**What happens:** Gather published content that represents your brand voice
 
-### Step 2: SCAN
-**Visual element:** Terminal window with code running
-**Label:** "Claude Code Scans"
-**Subtext:** Python script
-**Icon suggestion:** Magnifying glass
-**What happens:** `/draft-linkedin-post` command triggers scan of entire knowledge base
+### Step 2: GENERATE
+**Visual element:** Terminal window running command
+**Label:** "Generate Style Guide"
+**Subtext:** `/generate-style-guide [brand]`
+**Icon suggestion:** Magic wand or generator icon
+**What happens:** AI analyzes patterns across 8 editorial dimensions
 
-### Step 3: SELECT
-**Visual element:** List with checkboxes or options
-**Label:** "Choose Entry"
-**Subtext:** Human selection
-**Icon suggestion:** Hand pointing or checkbox
-**What happens:** 3 most recent entries displayed, user picks one to develop
+### Step 3: REVIEW GUIDE
+**Visual element:** Document with checkmarks
+**Label:** "Review Generated Guide"
+**Subtext:** Human verification
+**Icon suggestion:** Eye or magnifying glass
+**What happens:** Human reviews extracted rules, catches any misidentified patterns
 
-### Step 4: DRAFT
-**Visual element:** Document being written with a style guide reference
-**Label:** "AI Drafts with Voice"
-**Subtext:** 900+ line fingerprint
-**Icon suggestion:** Pen + document
-**What happens:** Claude Code loads voice guides and creates authentic draft
+### Step 4: STYLE CHECK
+**Visual element:** 8 agents running in parallel (this is the "secret sauce")
+**Label:** "Run Style Check"
+**Subtext:** 8 parallel agents
+**Icon suggestion:** Multiple runners or parallel arrows
+**What happens:** Each agent reviews article against one section of style guide simultaneously
 
-**Important detail to show:** The voice fingerprint box with:
-- "What I NEVER say"
-- "My actual patterns"
-- "Em-dash rhythm"
+**Important detail to show:** The 8 agent boxes:
+- Voice & Tone
+- Grammar & Usage
+- Punctuation
+- Formatting
+- Technical Standards
+- Content Patterns
+- Industry Terms
+- Quick Reference
 
-### Step 5: SAVE
-**Visual element:** Notion logo or database icon
-**Label:** "Save to Notion"
-**Subtext:** MyContent database
-**Icon suggestion:** Cloud or database
-**What happens:** Draft saved with metadata, ready for editing
+### Step 5: VIOLATIONS REPORT
+**Visual element:** Report with line numbers
+**Label:** "Get Violations Report"
+**Subtext:** Line numbers + corrections
+**Icon suggestion:** Clipboard or report
+**What happens:** Detailed report with exact quotes, corrections, and rule citations
 
-### Step 6: CLEANUP
-**Visual element:** Tag being removed
-**Label:** "Mark as Used"
-**Subtext:** Prevents reuse
-**Icon suggestion:** Check mark or archive
-**What happens:** Original tag removed, link added to Notion post
+### Step 6: APPLY
+**Visual element:** Document with corrections being applied
+**Label:** "Apply Corrections"
+**Subtext:** Manual or auto-apply
+**Icon suggestion:** Checkmark or apply button
+**What happens:** Fix issues manually or use `--auto-apply` for automatic fixes
 
 ---
 
@@ -120,26 +126,31 @@ Mark clearly which steps are automated vs. require human judgment:
 
 | Step | Type | Notes |
 |------|------|-------|
-| 1. Tag | Manual | Human taste - what's worth developing |
-| 2. Scan | Automated | Python script finds all entries |
-| 3. Select | Manual | Human choice - which entry today |
-| 4. Draft | Automated | Claude Code + voice guide |
-| 5. Save | Automated | Notion API |
-| 6. Cleanup | Automated | File modification |
+| 1. Collect | Semi-auto | Claude Code can scrape; or manual local files |
+| 2. Generate | Automated | AI analyzes patterns |
+| 3. Review Guide | Manual | Human verifies extracted rules |
+| 4. Style Check | Automated | 8 parallel agents |
+| 5. Violations Report | Automated | Generated output |
+| 6. Apply | Choice | Manual OR automated |
 
-**Total:** 2 manual decisions, 4 automated steps
+**Total:** 1 manual decision (review guide), rest is automated
 
 ---
 
-## Tools to Show
+## The 8 Agents (Sidebar or Callout)
 
-In a separate "Tool Stack" section or sidebar:
+Show these 8 agents as a key visual element:
 
-- **Logseq** - Knowledge base / reading highlights
-- **Claude Code** - AI orchestration and drafting
-- **Python** - File scanning (handles special characters)
-- **Voice Guide** - Markdown files with linguistic patterns
-- **Notion** - Draft storage and workflow management
+| # | Agent | Focus | Example Catch |
+|---|-------|-------|---------------|
+| 1 | Voice & Tone | Passive voice, pronoun consistency | "The article was written" → "We wrote" |
+| 2 | Grammar & Usage | Oxford commas, Title Case | Missing comma in list |
+| 3 | Punctuation | Em dashes, list punctuation | Wrong em dash spacing |
+| 4 | Formatting | Headings, hyperlinks | H3 should be H2 |
+| 5 | Technical Standards | Dates, numbers, percentages | "5%" → "5 percent" |
+| 6 | Content Patterns | CTAs, openings | Missing call-to-action |
+| 7 | Industry Terms | Acronyms, terminology | Undefined "CMS" |
+| 8 | Quick Reference | Cross-check | Final sanity check |
 
 ---
 
@@ -149,23 +160,46 @@ For the tier-1 (non-Claude-Code) audience:
 
 ```
 ┌─────────────┐    ┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│   COLLECT   │ →  │   CREATE    │ →  │    DRAFT    │ →  │   REFINE    │
-│  Highlights │    │ Fingerprint │    │  with Voice │    │  & Publish  │
-│  in Notes   │    │  (once)     │    │    Guide    │    │             │
+│   COLLECT   │ →  │   GENERATE  │ →  │ STYLE CHECK │ →  │    APPLY    │
+│   15-20     │    │   Style     │    │  (8 agents  │    │ Corrections │
+│   Articles  │    │   Guide     │    │  parallel)  │    │             │
 └─────────────┘    └─────────────┘    └─────────────┘    └─────────────┘
       ↑                   ↑                  ↑                  ↓
       │                   │                  │                  │
-   Any notes           Analyze your       ChatGPT/Claude    Track what
-   app works           own posts          with prompt       you change
+ From your blog      50+ specific       4-5x faster         On-brand
+ or local files      rules extracted   than manual         content
+```
+
+---
+
+## Speed Comparison Visual
+
+Consider adding a speed comparison:
+
+```
+MANUAL REVIEW
+├── Voice & Tone ────────────────────────────────────> 5 min
+├── Grammar & Usage ─────────────────────────────────> 5 min
+├── Punctuation ─────────────────────────────────────> 5 min
+├── Formatting ──────────────────────────────────────> 5 min
+├── Technical Standards ─────────────────────────────> 5 min
+├── Content Patterns ────────────────────────────────> 5 min
+├── Industry Terms ──────────────────────────────────> 5 min
+├── Quick Reference ─────────────────────────────────> 5 min
+└── TOTAL: ~40+ minutes
+
+8 PARALLEL AGENTS
+├── All 8 agents run simultaneously ─────────────────> 5-10 min
+└── TOTAL: 5-10 minutes (4-5x faster)
 ```
 
 ---
 
 ## Color Coding Suggestions
 
-- **Blue:** Manual/human steps (Tag, Select)
-- **Green:** Automated steps (Scan, Draft, Save, Cleanup)
-- **Orange/Gold:** The voice fingerprint (the "secret sauce")
+- **Blue:** Manual/human steps (Review Guide, manual Apply)
+- **Green:** Automated steps (Collect, Generate, Style Check)
+- **Orange/Gold:** The 8 parallel agents (the "secret sauce")
 
 ---
 
@@ -173,11 +207,9 @@ For the tier-1 (non-Claude-Code) audience:
 
 The diagram should emphasize:
 
-1. **The voice fingerprint box** - This is what makes the workflow unique
-2. **Human judgment points** - Showing where taste/selection matters
-3. **The feedback loop** - Edits improve the fingerprint over time
-
-Consider adding a dotted feedback arrow from Step 5 back to the voice fingerprint, labeled "Edits improve fingerprint"
+1. **The 8 parallel agents box** - This is what makes the workflow fast
+2. **Human review point** - Shows where judgment matters
+3. **The speed comparison** - 4-5x faster than manual
 
 ---
 

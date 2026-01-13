@@ -6,139 +6,129 @@
 
 ## Before You Start
 
-1. Make sure you have at least one `[[socialpost]]` tagged entry in Logseq
-2. Have Notion open in browser
+1. Have a folder with 5-10 sample articles (markdown or can scrape from blog)
+2. Have an existing brand style guide (or be ready to generate one)
 3. Have terminal ready with Claude Code
+4. Have a test article to run style check on
 
 ---
 
-## Screenshot 1: Logseq with Tag
+## Screenshot 1: Source Articles
 
-**What to capture:** A Logseq page showing a highlight with the `[[socialpost]]` tag
+**What to capture:** A folder showing source articles or a blog page to scrape from
 
 **Setup:**
-1. Open Logseq
-2. Navigate to a page with a tagged highlight
-3. Make sure the `[[socialpost]]` tag is clearly visible
-4. Show some surrounding context (the highlight text, maybe other tags)
+1. Show a folder with several markdown files OR
+2. Show a blog homepage with article titles visible
 
 **Good to show:**
-- The tag syntax: `[[socialpost]]`
-- The highlight text that would become a post
-- Any related tags like source or topic
+- Multiple article files (suggests volume)
+- Recognizable file names or article titles
+- Clean, organized structure
 
-**Capture area:** The block with the tag + 1-2 surrounding blocks
+**Capture area:** Folder view or browser showing blog
 
 ---
 
-## Screenshot 2: Terminal - Scanning
+## Screenshot 2: Terminal - Generate Style Guide
 
-**What to capture:** Terminal showing Claude Code scanning for entries
+**What to capture:** Terminal showing Claude Code running the generation command
 
 **Command to run:**
 ```bash
-cd /Users/timmetz/Library/CloudStorage/Dropbox/Logseq
-python3 /Users/timmetz/Developer/Projects/Personal/writing-assistant/workflows/post-creation/scripts/scan_socialpost.py
+/generate-style-guide animalz /path/to/articles/
 ```
 
 **Good to show:**
-- The "Scanning Logseq for [[socialpost]] entries..." message
-- The count of entries found
-- The output file path
+- The command being entered
+- Output showing articles being analyzed
+- Progress indicator or "Analyzing X articles..."
 
-**Capture area:** Terminal window showing the scan running/completed
-
----
-
-## Screenshot 3: Terminal - Options Presented
-
-**What to capture:** Claude Code showing the 3 most recent entries
-
-**How to get here:**
-Run the `/draft-linkedin-post` command and capture when it displays the options
-
-**Good to show:**
-- Entry numbers (1, 2, 3)
-- The highlight text for each
-- Source file names
-- The "Select entry" prompt
-
-**Capture area:** Terminal showing all 3 options clearly
+**Capture area:** Terminal window showing the generation process
 
 ---
 
-## Screenshot 4: Terminal - Drafting
+## Screenshot 3: Generated Style Guide Excerpt
 
-**What to capture:** Claude Code generating the draft with voice guide
-
-**How to get here:**
-Select an entry and capture while Claude is:
-- Loading voice guides
-- Analyzing the entry
-- Generating the draft
-
-**Good to show:**
-- Reference to voice guide files being loaded
-- The drafting process happening
-- Perhaps a preview of the draft output
-
-**Capture area:** Terminal showing the drafting activity
-
----
-
-## Screenshot 5: Notion - Saved Draft
-
-**What to capture:** The Notion page with the Claude Draft property filled
+**What to capture:** A section of the generated style guide showing the 8-section structure
 
 **Setup:**
-1. Open Notion to MyContent database
-2. Find the newly created entry
-3. Expand to show the "Claude Draft" property
+1. Open the generated style guide markdown file
+2. Scroll to show the table of contents OR
+3. Show one section with DO/DON'T examples
 
 **Good to show:**
-- Page title
-- "Claude Draft" property with the draft text
-- "Type: LinkedIn post" property
-- "Status: In progress" property
+- The 8 section structure (Voice & Tone, Grammar & Usage, etc.)
+- Specific rules with ✅ DO and ❌ DON'T examples
+- Evidence that it's comprehensive (50+ rules)
 
-**Capture area:** Notion page with key properties visible
+**Capture area:** Part of the style guide showing structure and detail
 
 ---
 
-## Screenshot 6: Logseq - Tag Removed
+## Screenshot 4: Terminal - Run Style Check
 
-**What to capture:** The original entry with tag removed and Notion link added
+**What to capture:** Terminal showing the style check command with 8 agents launching
 
-**Setup:**
-1. Go back to Logseq
-2. Navigate to the source file that was processed
-3. Show the entry with:
-   - `[[socialpost]]` tag REMOVED
-   - Note with Notion link ADDED
+**Command to run:**
+```bash
+/style-check animalz /path/to/test-article.md
+```
 
 **Good to show:**
-- The same highlight from Screenshot 1
-- The tag is now gone
-- A note showing the Notion link
+- The command being entered
+- Visual indication that 8 agents are running in parallel
+- Agent names or progress indicators
 
-**Capture area:** The modified block showing the cleanup
+**Capture area:** Terminal showing the parallel agent execution
+
+---
+
+## Screenshot 5: Violations Report
+
+**What to capture:** The output report showing violations with line numbers and corrections
+
+**Good to show:**
+- Violation entries with line numbers
+- Current text (exact quote)
+- Suggested correction
+- Rule being cited
+- Summary at the end (e.g., "Total violations: 12")
+
+**Capture area:** Several violations from the report (show 3-5 examples)
+
+---
+
+## Screenshot 6: Before/After Article Comparison
+
+**What to capture:** Side-by-side or before/after showing corrections applied
+
+**Setup:**
+1. Show a section of the original article with issues
+2. Show the same section after corrections
+
+**Good to show:**
+- Specific fixes (e.g., missing Oxford comma added)
+- Clean, professional result
+- Minimal changes needed (most content unchanged)
+
+**Capture area:** Relevant portion showing the improvement
 
 ---
 
 ## Bonus Screenshots (Optional)
 
-### Voice Guide Excerpt
-**What:** The voice fingerprint file showing the "never say" list
-**File:** `voice/tim-linguistic-fingerprint-v2.md`
-**Section:** Part 4 - "Tim Would Never Say" list
+### The 8 Agents Running
+**What:** Close-up of terminal showing all 8 agents running simultaneously
+**Shows:** The "parallel is the unlock" concept visually
 
-### Before/After Comparison
-**What:** A Claude draft side-by-side with the final published post
-**Shows:** The 75% accuracy and what gets edited
+### Speed Comparison
+**What:** Timer or log showing 5-10 minute completion
+**Shows:** The 4-5x speedup claim is real
 
-### Engagement Metrics
-**What:** LinkedIn analytics showing engagement on a Claude-drafted post
-**Shows:** That the workflow actually works
+### Batch Review Output
+**What:** Portfolio-level report from `/batch-review`
+**Shows:** Scalability—works on 1 or 100 articles
 
 ---
 
@@ -148,18 +138,19 @@ Select an entry and capture while Claude is:
 2. **Font size:** Make sure text is readable at article size
 3. **Crop tight:** Don't include extra whitespace or unrelated UI
 4. **Consistent style:** Same window size/zoom across screenshots
-5. **Blur sensitive info:** Remove any private Logseq content if needed
+5. **Blur sensitive info:** Remove any private content if needed
+6. **Real output:** Use actual generated content, not mock-ups
 
 ---
 
 ## Naming Convention
 
 Save screenshots as:
-- `01-logseq-tag.png`
-- `02-terminal-scan.png`
-- `03-terminal-options.png`
-- `04-terminal-drafting.png`
-- `05-notion-saved.png`
-- `06-logseq-cleanup.png`
+- `01-source-articles.png`
+- `02-terminal-generate.png`
+- `03-style-guide-excerpt.png`
+- `04-terminal-style-check.png`
+- `05-violations-report.png`
+- `06-before-after.png`
 
 Upload to The Workflow's Google Drive folder.
