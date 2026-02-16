@@ -1,102 +1,33 @@
-# Social Post Writer - Tasks
+# Writing Assistant - Tasks
 
 ---
 
 ## Active Tasks
 
-### [ ] Test Workflow on First Real Post
-**Status:** Ready to test
-**Description:** Run `/draft-linkedin-post` workflow end-to-end on actual [[socialpost]] entry
+### [ ] Test `/write` with a real article end-to-end
+**Status:** Ready
+**Description:** Take the 8-phase `/write` process through a full article from foundation to review.
 
-**Next Steps:**
-1. cd to social-post-writer project
-2. Run /draft-linkedin-post
-3. Select entry
-4. Review draft quality
-5. Edit and publish
-6. Verify Claude Draft saved correctly to Notion
-
-**Success criteria:**
-- Draft sounds authentically like Tim
-- Claude Draft property populated in MyContent
-- Workflow completes without errors
-
----
-
-### [ ] First Voice Refinement Cycle
-**Status:** Not Started (waiting for 5-10 posts)
-**Description:** Run first monthly refinement after accumulating sufficient data
-
-**Prerequisites:**
-- 5-10 posts with Claude Draft + Final version + Engagement metrics
-- At least 2 weeks since posts published (for stable metrics)
-
-**Process:**
-- Follow `workflows/voice-refinement.md`
-- Compare drafts to finals
-- Extract edit patterns
-- Correlate with engagement
-- Update voice guide to v2
+### [ ] Add animalzco Notion workspace to MCP integration
+**Status:** Blocked (requires separate integration setup)
+**Description:** Personal Notion integration only connects to personal workspace. Animalzco workspace has internal KB (thesis FAQ, headline generator) that would enrich `/write`.
 
 ---
 
 ## Completed
 
-### [✓] Initial Voice Guide Creation
-**Completed:** 2025-10-21
-**Output:**
-- `voice/tim-linkedin-voice-v1.md`
-- `voice/tim-linguistic-fingerprint-v1.md`
+### [x] Build `/write` structured writing process
+**Completed:** 2026-02-16
+**Output:** `.claude/commands/write.md`, `write-rescue.md`, `write-status.md`, `.claude/subagents/writing-researcher.md`, `writing-editor.md`
 
-**Based on:** 7 LinkedIn posts (Sept-Oct 2025)
+### [x] Project cleanup pass
+**Completed:** 2026-02-16
+**Output:** README rewrite, TASKS archive, workflow dedup, stale reference cleanup
 
----
+### [x] Initial voice guide creation (v1 + v2)
+**Completed:** v1 2025-10-21, v2 2025-11-06
+**Output:** `voice/tim-linkedin-voice-v2.md`, `voice/tim-linguistic-fingerprint-v2.md`
 
-### [✓] Project Setup
-**Completed:** 2025-10-21
-**Output:**
-- Project structure created
-- Claude Draft property added to MyContent
-- Workflows documented
-- Slash command created
-
----
-
-## Future Enhancements
-
-### [ ] Voice Guide Versioning System
-**Priority:** Medium
-**Description:** Formalize version control for voice guides
-
-**Ideas:**
-- Git tracking of voice guide changes
-- Changelog in voice guide file
-- A/B testing different voice patterns
-
----
-
-### [ ] Engagement Prediction
-**Priority:** Low
-**Description:** Predict engagement before publishing based on voice patterns
-
-**Approach:**
-- Train simple model on voice features → engagement
-- Flag when draft has low-engagement patterns
-- Suggest adjustments before Tim edits
-
----
-
-### [ ] Multi-Platform Support
-**Priority:** Low
-**Description:** Adapt voice guide for other platforms (X.com, newsletter, etc.)
-
-**Current:** LinkedIn-specific
-**Future:** Platform-specific voice variations
-
----
-
-## Notes
-
-**Refinement frequency:** Monthly or after 5-10 posts
-**Voice guide versioning:** Increment major version when substantial changes
-**Archive policy:** Keep all previous versions for rollback
+### [x] LinkedIn post workflow (v1 + v2)
+**Completed:** v1 2024-11-01, v2 2025-11-06
+**Output:** `workflows/post-creation/draft-linkedin-post-v2.md`

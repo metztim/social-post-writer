@@ -22,7 +22,20 @@
       "Bash(do stat -f \"%Sm %N\" -t \"%Y%m%d%H%M%S\" \"$file\")",
       "Bash(done)",
       "Bash(python3:*)",
-      "Bash(cat:*)"
+      "Bash(cat:*)",
+      "WebFetch(domain:www.theworkflow.digital)",
+      "WebFetch(domain:www.animalz.co)",
+      "WebFetch(domain:weeatrobots.substack.com)",
+      "mcp__notion-personal__API-query-data-source",
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__click",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__notion-personal__API-retrieve-a-data-source",
+      "mcp__logseq__logseq_search",
+      "mcp__logseq__logseq_search_all",
+      "mcp__logseq__logseq_get_page"
     ],
     "deny": [],
     "ask": []

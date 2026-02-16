@@ -192,6 +192,31 @@ After:
 
 ---
 
+## Voice Authenticity Checklist
+
+Before saving draft, verify:
+
+**Negative checks (Tim NEVER does these):**
+- [ ] No "Let's dive into..." or "Let's explore..."
+- [ ] No "The real problem is..." or "The key is..."
+- [ ] No "At the end of the day" / "The bottom line is..."
+- [ ] No "Furthermore," / "Moreover," / "Additionally,"
+- [ ] No "Here's the thing:" (use "Here's what happened:" instead)
+- [ ] No "isn't it... it's..." constructions
+
+**Positive checks (Tim DOES these):**
+- [ ] Opens with concrete, specific, personal
+- [ ] Uses white space as primary transition
+- [ ] Short paragraphs (mostly 1-2 sentences)
+- [ ] Radical sentence length variation
+- [ ] "Turns out" for revelations
+- [ ] "For me," / "For October," for personal grounding
+- [ ] "My question for today:" for endings
+- [ ] Self-aware parentheticals
+- [ ] Names real people, tools, companies
+
+---
+
 ## Related Files
 
 **Current Version (v2):**

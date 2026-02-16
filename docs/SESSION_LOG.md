@@ -1,4 +1,86 @@
-# Social Post Writer - Session Log
+# Writing Assistant - Session Log
+
+---
+
+## Session Log: 2026-02-12
+
+**Project**: writing-assistant
+**Type**: [docs]
+
+### Objectives
+- Draft a LinkedIn post about building ClaudeQuote.com from a voice memo recorded while driving
+- Produce three versions using different style references to compare approaches
+- Create a Lex-optimized brief for Tim's Lex style fingerprint
+
+### Summary
+Created three LinkedIn post drafts about ClaudeQuote.com using different style approaches: (A) pattern-matching from published Notion posts, (B) codified linguistic fingerprint rules, and (C) a Lex-optimized brief. Tim preferred Draft A's conversational tone. Iteratively edited through ~8 rounds of feedback, pulling in "errand boy" from Lex and "I am not technical. At all." from Draft B. Final draft saved. Tim noted he no longer wants engagement questions at the end of LinkedIn posts ("so 2023").
+
+### Files Changed
+- `projects/linkedin-posts/claudequote-voice-memo/draft.md` - Created: Final LinkedIn post draft about building ClaudeQuote.com
+
+### Referenced Materials
+- `voice/tim-linguistic-fingerprint-v2.md` - Forensic linguistic analysis used for Draft B
+- `voice/tim-linkedin-voice-v2.md` - Actionable voice guide used for Draft B
+- `samples/tim/01-claude-code-style-guide.md` - Published post example used for Draft A pattern-matching
+- `/Users/timmetz/Developer/Projects/Personal/claude-quote/` - The ClaudeQuote.com project (source of post content)
+- `/Users/timmetz/Developer/Projects/Personal/claude-quote/docs/SESSION_LOG.md` - Build process details
+- `/Users/timmetz/Developer/Projects/Animalz/claude-plugins/plugins/blog-style-guide-creator/brands/the-workflow/style-guide.md` - The Workflow house style (explored but not used for LinkedIn)
+- Notion MyContent database - Published LinkedIn posts queried for style patterns
+- https://www.animalz.co/blog/claude-code - Animalz Claude Code getting started guide (referenced in post)
+
+### Plan File
+- **Path**: `~/.claude/plans/async-roaming-crown.md`
+- **Status**: Completed
+- **Phases Completed**: All (exploration, design, drafting, editing)
+
+### Technical Notes
+- **Three-draft comparison approach worked well**: Running subagents with different style inputs (examples vs rules) produced meaningfully different outputs. Draft A (examples) was more conversational; Draft B (rules) was tighter/more rhythmic. Worth repeating.
+- **Lex research**: Lex calls its feature "Style Guide" not "style fingerprint." Best input for Lex is outline + context (not a finished draft). It combines stored writing samples with structural content to generate.
+- **Notion content gaps**: Some published LinkedIn posts in Notion had content stored in blocks that weren't fully readable via API. Only 2 of 5 posts had full content visible.
+- **Tim's Superpath Slack message** was the key factual source — lists exactly what Tim did (5 items after the voice memo).
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- Tim no longer wants engagement questions at post endings ("so 2023") — update voice guide v3 when next revising
+- Tim prefers Draft A style (conversational/flowing) over Draft B style (tight/punchy) — the fingerprint rules may over-optimize for tightness
+- Em-dashes: Tim asked to remove ALL em-dashes from this post. This contradicts the fingerprint which marks them as "signature punctuation." May be post-specific or an evolving preference — worth checking on next post.
+
+**Workflow improvements:**
+- The draft-linkedin-post skill could be enhanced to automatically read the voice fingerprint files and produce a first draft, saving the manual subagent setup
+- Could add a "style comparison" mode that automatically produces drafts from different style references
+
+### Next Actions
+- [ ] Tim to review and edit the final draft before publishing
+- [ ] Consider writing a full We Eat Robots article about the same topic (mentioned in voice memo)
+- [ ] Update voice/fingerprint files with new preferences discovered (no engagement questions, em-dash usage)
+
+### Metrics
+- Files created: 1
+- Drafts produced: 3 (+ 1 Lex brief + 1 combined edit)
+- Editing rounds: ~8
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-02-12" ([docs] entry)
+>
+> Context: Drafted a LinkedIn post about building ClaudeQuote.com from a voice memo. Final draft saved. Tim mentioned potentially continuing with a full We Eat Robots article on the same topic.
+>
+> Key points:
+> - Final LinkedIn draft at projects/linkedin-posts/claudequote-voice-memo/draft.md
+> - Tim prefers conversational Draft A style over tight/punchy Draft B
+> - Tim no longer wants engagement questions at post endings
+> - Tim asked to remove all em-dashes from this post (contradicts fingerprint)
+> - Full article for We Eat Robots is a potential follow-up
+>
+> Referenced paths:
+> - `projects/linkedin-posts/claudequote-voice-memo/draft.md`
+> - `voice/tim-linguistic-fingerprint-v2.md`
+> - `voice/tim-linkedin-voice-v2.md`
+> - `/Users/timmetz/Developer/Projects/Personal/claude-quote/`
+>
+> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
 
 ---
 
@@ -18,6 +100,71 @@ User had a draft post about their /unslop command—a Claude Code slash command 
 
 ### Files Changed
 - `drafts/unslop-command/unslop-command-article.md` - Created full article version with detailed explanations, before/after examples section, and installation instructions
+
+---
+
+## Session Log: 2025-12-31
+
+**Project**: writing-assistant
+**Duration**: ~30 minutes
+**Type**: [content-creation]
+
+### Objectives
+- Find a specific quote from Dario Amodei in user's Logseq database about writing essays by hand
+- Set up permanent Logseq access for this project
+- Craft LinkedIn post featuring the quote for New Year's posting
+
+### Summary
+Configured permanent Logseq database access by creating project CLAUDE.md with the path. Located the Dario Amodei quote from "A Cheeky Pint With Anthropic CEO Dario Amodei" (interview with Stripe's John Collison). Iteratively refined a LinkedIn post through multiple rounds of editing—tightening the hook, ensuring journalistic accuracy with quote attribution, eliminating repetition, and applying Harry Dry's writing principles (visual, falsifiable, unique). Final post ready for Dec 31st posting.
+
+### Files Changed
+- `CLAUDE.md` - Created project-level config documenting Logseq database path at `/Users/timmetz/Library/CloudStorage/Dropbox/Logseq`
+
+### Technical Notes
+- Logseq stores data as markdown files in `pages/` and `journals/` directories
+- Quote source: "A Cheeky Pint With Anthropic CEO Dario Amodei" - YouTube interview, timestamp ~01:02:04
+- Journalistic standards: ellipsis brackets `[…]` for omissions, verbal fillers can be removed, but cutting context that changes tone should be disclosed
+- Harry Dry's writing rules applied: Can I visualize it? Can I falsify it? Can nobody else say this?
+
+### Final LinkedIn Post
+
+```
+We're three years into the ChatGPT era, and Dario Amodei, the CEO of Anthropic, still writes his own essays:
+
+> "I use Claude to generate lots of ideas. I kind of use it as research. But so far, I've done the writing myself. […] I'd be comfortable with it for business emails, but writing an essay or something that I want to really get right, it's not quite there yet. But maybe it will be in a year or so."
+
+Let's see if he's still writing them himself on December 31st 2026.
+
+Until then, here's to another year where it takes humans to do great writing. 🥂
+```
+
+### Key Editing Decisions
+- Changed "three years post-ChatGPT panic" to "three years into the ChatGPT era" (more accurate—panic was 2023, launch was Nov 2022)
+- Removed "Who would have thought?" (tells reader what to feel instead of letting them arrive at irony)
+- Combined callback + toast into two-line close with line break for visual beat
+- Chose "it takes humans" over "humans are still involved" (user's genuine belief, more confident)
+- Eliminated "still" repetition by removing it from toast (redundant with "another year")
+- Avoided "own essays" repetition by using "them himself" in callback
+
+### Next Actions
+- [ ] Post to LinkedIn on December 31st 2025
+- [ ] Set reminder for December 31st 2026 to revisit
+
+### Metrics
+- Files created: 1 (CLAUDE.md)
+- External files modified: 1 (Logseq highlight)
+
+### Additional Work: Logseq Highlight Update
+
+After finalizing the LinkedIn post, updated the source highlight in Logseq:
+
+**File**: `/Users/timmetz/Library/CloudStorage/Dropbox/Logseq/pages/A Cheeky Pint With Anthropic CEO Dario Amodei (highlights).md`
+
+**Changes**:
+- Updated tags from `#[[.5]] #[[socialpost]]` → `#[[.3]] #[[AI writing]] #[[Anthropic]] #[[Dario Amodei]] #[[socialpost]]`
+- Added `**Note**:` child block containing the final LinkedIn post
+
+**Workflow Reference**: Used format from `/Users/timmetz/Developer/Projects/system/my-os/workflows/logseq-dot5-review/` for proper Logseq block structure
 - `drafts/unslop-command/unslop-command-linkedin.md` - Created LinkedIn-optimized version (2,561 characters, 439 under limit)
 
 ### Technical Notes
@@ -770,5 +917,420 @@ Conducted comprehensive research through Logseq highlights library to find suppo
 - Workflow improvements (measure agent effectiveness)
 
 **Session logs for this project:** Continue adding above this line
+
+---
+
+## Session Log: 2025-12-30
+
+**Project**: writing-assistant
+**Duration**: ~45 minutes
+**Type**: [refactor] [docs] [config]
+
+### Objectives
+- Analyze current state of writing-assistant project after hiatus
+- Check MCP servers and API integrations
+- Compare with we-eat-robots-writing project and decide on merge strategy
+- Consolidate into unified writing repository
+
+### Summary
+Conducted comprehensive analysis of both writing projects using parallel subagents. Discovered writing-assistant is a mature LinkedIn post drafting system with voice capture, while we-eat-robots-writing focuses on article research workflows. Designed and implemented a unified repository structure with `projects/` directory organized by content type (linkedin-posts, articles, we-eat-robots newsletter). Imported all assets from we-eat-robots-writing including the article-researcher agent and /research-article command.
+
+### Files Changed
+- `projects/linkedin-posts/` - Created directory, moved all drafts from `drafts/`
+- `projects/articles/` - Created directory for long-form content
+- `projects/articles/ai-multitasking-trap/` - Imported from we-eat-robots-writing
+- `projects/articles/dan-wang-writing/` - Moved from drafts
+- `projects/we-eat-robots/` - Created empty directory for newsletter editions
+- `.claude/subagents/article-researcher.md` - Imported specialized research agent
+- `.claude/commands/research-article.md` - Imported slash command for article research
+- `docs/SESSION_LOG.md` - Merged we-eat-robots session log entry
+- `drafts/` - Removed (contents moved to projects/)
+
+### Technical Notes
+
+**MCP Server Status**:
+- Notion Personal: Connected and functional
+- Chrome DevTools: Connected and functional
+
+**Key Design Decisions**:
+1. **Projects by type, not status**: `linkedin-posts/`, `articles/`, `we-eat-robots/` allows different workflows per content type
+2. **Research co-location**: Each article keeps its `research-findings-*.md` alongside the draft (no shared research folder)
+3. **Voice guides centralized**: Root-level `voice/` directory serves all project types
+4. **Single .claude/**: All commands and agents in one place at repo root
+5. **Notion for published work**: Local folders for drafts/research; Notion MyContent for tracking engagement
+
+**Project Comparison Summary**:
+| Aspect | writing-assistant | we-eat-robots-writing |
+|--------|------------------|----------------------|
+| Focus | LinkedIn posts, voice authenticity | Articles, research depth |
+| Maturity | Production-ready (v2 voice guide) | Early stage |
+| Main workflow | /draft-linkedin-post | /research-article |
+
+### Future Plans & Unimplemented Phases
+
+#### Phase: Archive/Delete we-eat-robots-writing
+**Status**: Not started
+**Planned Steps**:
+1. Verify all content successfully imported (confirmed in this session)
+2. Archive or delete `/Users/timmetz/Developer/Projects/Personal/we-eat-robots-writing`
+3. Update any cross-references if needed
+
+#### Phase: Test Imported Workflows
+**Status**: Not started
+**Planned Steps**:
+1. Run `/research-article` command on an existing draft to verify it works
+2. Confirm Logseq path permissions are correct in settings.local.json
+3. Test article-researcher agent output format
+
+### Next Actions
+- [ ] Archive or delete we-eat-robots-writing repository (all content imported)
+- [ ] Test `/research-article` command on a draft article
+- [ ] Continue work on ai-multitasking-trap article (research complete, draft integration pending)
+- [ ] Consider creating README in projects/ explaining the structure
+
+### Metrics
+- Files moved: 10
+- Files imported: 4 (article-researcher.md, research-article.md, 2 article files)
+- Directories created: 4 (projects/, linkedin-posts/, articles/, we-eat-robots/)
+- Git commits: 2 (pre-cleanup + restructure)
+
+---
+
+## Session Log: 2026-01-13
+
+**Project**: writing-assistant
+**Type**: [docs]
+
+### Objectives
+- Prepare materials for "The Workflow" podcast appearance (Jan 15th)
+- Update Style Guide Creator workflow documentation
+- Review and update Animalz Claude Code article
+
+### Summary
+Pivoted from Social Post Creator to Style Guide Creator workflow for The Workflow podcast—more universally applicable since it doesn't require a Second Brain/Logseq setup. Created comprehensive interview prep materials, prompts document with 8-agent appendix, workflow diagram spec, and screenshot instructions. Also reviewed the Animalz Claude Code article for updates (installation method, slash commands). Final corrections made based on actual plugin review: article count (5+ not 15-20), flexible source inputs, and --dry-run flag.
+
+### Files Changed
+- `projects/we-eat-robots/the-workflow/prompts-for-the-workflow.md` - Complete rewrite with Style Guide prompts + 8 agent appendix
+- `projects/we-eat-robots/the-workflow/interview-prep-answers.md` - Updated for 7-step workflow, corrected article count
+- `projects/we-eat-robots/the-workflow/workflow-diagram-spec.md` - 6-step visual flow, corrected article count, added --dry-run
+- `projects/we-eat-robots/the-workflow/screenshot-instructions.md` - 6 screenshots for Style Guide workflow
+- `projects/we-eat-robots/the-workflow/links-and-resources.md` - Updated bio and links
+
+### Technical Notes
+- **Plugin commands verified**: `/generate-style-guide`, `/style-check`, `/batch-review`, `/update-style-guide`, `/validate-style-guide`
+- **Article minimum**: 5 articles minimum, 10-15 recommended (not 15-20 as originally documented)
+- **Source flexibility**: Local files, URLs, blog URL with guidance, or any combination
+- **Flags**: `--auto-apply` and `--dry-run` (dry-run takes precedence)
+- **Installation simplified**: Native installer now recommended over npm (`curl -fsSL https://claude.ai/install.sh | bash`)
+- **The Workflow format**: Written Substack newsletter, not audio podcast—interview is for research, output is written article
+
+### Future Plans & Unimplemented Phases
+
+#### Phase: Screenshots
+**Status**: Not started
+**Planned Steps**:
+1. Capture source articles (folder or blog view)
+2. Terminal running `/generate-style-guide` command
+3. Generated style guide excerpt showing 8 sections
+4. Terminal running `/style-check` with 8 agents visible
+5. Violations report with line numbers
+6. Before/after article comparison
+
+#### Phase: Final Assembly
+**Status**: Not started
+**Planned Steps**:
+1. Find toddler photo (Tim's task)
+2. Upload all materials to The Workflow's Google Drive
+3. Create workflow diagram in Miro (their preferred tool)
+
+### Animalz Article Updates Discussed
+- Installation: Update to native installer (one command, no Node.js required)
+- Slash commands: Update list (remove /export, add /resume, /cost, /config)
+- First test prompt: "analyze my desktop and downloads folders" works after typing `claude`
+- Plugins section: Verified accurate for animalz/claude-plugins
+
+### Next Actions
+- [ ] Find toddler photo
+- [ ] Capture 6 screenshots per screenshot-instructions.md
+- [ ] Upload materials to Google Drive by Tuesday EOD
+- [ ] Create visual diagram in Miro
+- [ ] Update Animalz article with new installation method
+- [ ] Update Animalz article slash commands section
+
+### Metrics
+- Files modified: 5
+- Git commits: 2 (41555b9, f7518ed)
+- Lines added: ~989
+- Lines removed: ~510
+
+---
+
+## Session Log: 2026-01-14
+
+**Project**: writing-assistant/projects/we-eat-robots/the-workflow
+**Type**: [docs]
+
+### Objectives
+- Review and sort 27 screenshots for The Workflow podcast interview prep
+- Select 10 best screenshots covering the full workflow
+- Organize backups and rename files with descriptive names
+
+### Summary
+Reviewed all 27 screenshots captured for The Workflow podcast, categorized them by workflow stage (generate → style check → violations report), selected the 10 best that tell the complete story, moved 17 backup files to a new backup folder, and renamed the primary 10 with numbered descriptive names.
+
+### Files Changed
+- `screenshots/01-command-autocomplete.png` - Renamed from CleanShot 23.52.46
+- `screenshots/02-source-selection-menu.png` - Renamed from CleanShot 23.53.11
+- `screenshots/03-fetching-articles.png` - Renamed from CleanShot 23.55.21
+- `screenshots/04-style-guide-generated.png` - Renamed from CleanShot 00.42.19
+- `screenshots/05-style-guide-preview.png` - Renamed from CleanShot 00.42.39
+- `screenshots/06-eight-agents-launching.png` - Renamed from CleanShot 00.49.37
+- `screenshots/07-agents-completed.png` - Renamed from CleanShot 00.51.33
+- `screenshots/08-violations-summary.png` - Renamed from CleanShot 00.52.47
+- `screenshots/09-report-with-chart.png` - Renamed from CleanShot 00.53.57
+- `screenshots/10-priority-recommendations.png` - Renamed from CleanShot 00.54.47
+- `screenshots/backup/` - Created, contains 17 backup screenshots
+
+### Technical Notes
+- Screenshots cover 4 of 6 workflow stages from screenshot-instructions.md
+- Missing: Source articles folder view, Before/after comparison
+- User opted to proceed without capturing missing types
+- Key visual (06-eight-agents-launching) shows all 8 parallel agents - the "money shot"
+
+### Future Plans & Unimplemented Phases
+None - task completed as requested.
+
+### Next Actions
+- [ ] Upload 10 primary screenshots to The Workflow Google Drive
+- [ ] Consider capturing source articles folder view if needed later
+- [ ] Consider capturing before/after comparison if needed later
+
+### Metrics
+- Files renamed: 10
+- Files moved to backup: 17
+- Directories created: 1 (screenshots/backup/)
+
+---
+
+## Session Log: 2026-01-27
+
+**Project**: writing-assistant
+**Type**: [feature]
+
+### Objectives
+- Sync LinkedIn posts to Notion MyContent database
+- Extract engagement metrics (impressions, reactions, comments, reposts)
+- Add full post content to page bodies
+
+### Summary
+Synced 20 LinkedIn posts to Notion: updated 11 existing posts with current engagement metrics and created 9 new posts with all properties. Used Chrome DevTools MCP for browser automation to extract post data from LinkedIn. Discovered and worked around a bug in the MCP post-page tool by using the direct Notion API script at `~/.claude/scripts/notion-api.py`. Session paused before adding body content to the 9 newly created pages.
+
+### Files Changed
+- `~/.claude/plans/shimmering-tinkering-bird.md` - Plan file for LinkedIn-to-Notion sync (updated with remaining task)
+
+### Technical Notes
+- **Chrome DevTools MCP**: Effective for browser automation with logged-in sessions (LinkedIn)
+- **MCP post-page bug**: The parent parameter was being stringified instead of passed as object; workaround is using `~/.claude/scripts/notion-api.py` directly
+- **Database ID confusion**: Notion's MCP returns `data_source_id` (b0bdaa81-c088-4ef7-b92b-75690666958c) but page creation requires actual `database_id` (131edc77-7df2-80be-a79e-edc6e0955fc2) from page parent responses
+- **Notion text limit**: 2000 characters per text block; long posts need to be split into multiple paragraphs
+
+### Plan File
+- **Path**: `~/.claude/plans/shimmering-tinkering-bird.md`
+- **Status**: In Progress
+- **Phases Completed**: Post extraction, metrics update, page creation
+- **Remaining**: Add body content to 9 newly created pages
+
+### Future Plans & Unimplemented Phases
+
+#### Add Post Body Content
+**Status**: Not started
+**Planned Steps**:
+1. Query Notion database for LinkedIn posts: `python3 ~/.claude/scripts/notion-api.py personal query-database 131edc77-7df2-80be-a79e-edc6e0955fc2 '{"property": "Type", "multi_select": {"contains": "LinkedIn post"}}'`
+2. Check which pages have empty bodies using `get-blocks`
+3. Use Chrome DevTools MCP to navigate to LinkedIn and extract full post text via JavaScript evaluation
+4. For each page needing content, use `append-blocks` to add paragraphs (split at 2000 chars)
+5. Verify content added via Notion UI
+
+### Next Actions
+- [ ] Add body content to 9 newly created LinkedIn posts in Notion
+- [ ] Verify all 20 posts have complete data in Notion
+
+### Metrics
+- Notion pages updated: 11
+- Notion pages created: 9
+- Total posts synced: 20
+
+---
+
+## Session Log: 2026-01-30
+
+**Project**: writing-assistant
+**Type**: [content] [creative]
+
+### Objectives
+- Decide whether to add an image to LinkedIn post about ActiveCampaign interview
+- Explore creative approaches to the post
+
+### Summary
+Started with a practical question about LinkedIn post images, evolved into creative reimagining of the post "as the Buddha would write it." This produced a standalone koan about AI and clarity that will be published on both LinkedIn and We Eat Robots Substack. Refined the piece through multiple iterations, ultimately choosing radical minimalism: no image, no subtitle, just "A Koan" as the title.
+
+### Files Changed
+- No files modified in repository (content created for external platforms)
+
+### Technical Notes
+- **The koan created**:
+  ```
+  The student asked: "How do I use AI without creating noise?"
+  The teacher said: "First, know what you want to say. The tool cannot find clarity you do not possess."
+  The student asked: "But what if the tool writes faster than I can think?"
+  The teacher said: "Then you have only accelerated your confusion."
+  ```
+- Echoes the classic Buddhist parable about the businessman who doesn't have time to meditate
+- For LinkedIn: Post as "A koan" with no framing, no image
+- For Substack: Title "A Koan", no subtitle, no image, SEO description uses the opening question
+- URL slug changed from `a-koan` to `ai-koan` for discoverability
+
+### Key Decisions
+1. **Image decision**: For LinkedIn, the article header screenshot (active campaign 2.png) would work, but for the koan-only version, no image is better
+2. **No attribution**: Decided against crediting Claude or linking to the original ActiveCampaign article - would undercut the minimalism
+3. **"Content age" vs "AI content age"**: Kept broader framing, then dropped it entirely to just "A koan"
+4. **Substack SEO**: Keep `ai-koan` as slug for discoverability (infrastructure doesn't affect reader experience)
+
+### Next Actions
+- [ ] Publish koan on We Eat Robots Substack
+- [ ] Post koan version on LinkedIn
+- [ ] Consider follow-up post showing before/after unslop comparison (using unslop-sideview.png)
+
+### Metrics
+- Files modified: 0
+- Creative output: 1 koan for dual-platform publishing
+
+---
+
+## Session Log: 2026-02-16
+
+**Project**: writing-assistant
+**Type**: [feature] [refactor]
+
+### Objectives
+- Design and build a structured writing process tool (`/write`) for thought leadership articles
+- Research the Animalz writing methodology from published articles, Logseq knowledge base, and internal resources
+- Reorganize the writing-assistant project around this new primary workflow
+
+### Summary
+Built a complete 8-phase structured writing process for Claude Code (`/write` command) based on deep research across 13 Animalz articles and 23+ Logseq search queries. The process enforces disciplined writing by having Claude act as strict editor — pushing back on weak theses, enforcing outline discipline, and preventing AI shortcuts. Also created `/write-rescue` (mid-process entry for broken drafts), `/write-status` (progress check), and two subagents (writing-researcher for Phase 4 research, writing-editor for Phase 8 ABCD review). Project cleanup planned but not yet executed.
+
+### Files Changed
+- `.claude/commands/write.md` - **Created.** Core 8-phase writing process (23KB). Foundation → Thesis → Structure → Research → 30% Outline → Introduction → Drafting → Review. Quality gates at each phase.
+- `.claude/commands/write-rescue.md` - **Created.** Mid-process rescue: diagnoses existing drafts, maps against 8 phases, identifies failure points, sets up state file for `/write`.
+- `.claude/commands/write-status.md` - **Created.** Quick status utility for in-progress articles.
+- `.claude/subagents/writing-researcher.md` - **Created.** Research agent for Phase 4. Adapted from article-researcher.md with added web search and outline-section mapping.
+- `.claude/subagents/writing-editor.md` - **Created.** Editorial review agent for Phase 8. ABCD analysis (Awesome/Boring/Confusing/Didn't Believe), thesis drift check, cut recommendations.
+- `CLAUDE.md` - **Rewritten.** Added commands overview, article folder convention, people section.
+- `docs/AGENT_GUIDELINES.md` - **Updated.** Added writing-researcher and writing-editor agents, updated decision tree.
+- `docs/SESSION_STATE_2026-02-16.md` - **Created.** Temporary context preservation file with full session state and research findings. Can be deleted after cleanup is complete.
+
+### Referenced Materials
+*(Not modified, but important context for this session)*
+
+**Animalz articles read (all in `/Users/timmetz/Library/CloudStorage/Dropbox/1 Animalz/2 Areas/AI Ops Animalz/1 Published articles/`):**
+- `20200321 How to Write a Blog Post Outline - Animalz.md` — 10%/30% outline methodology
+- `20210601 Hook, Line, Sinker How to Write an Introduction - Animalz.md` — Hook/sinker/line framework
+- `20240328 Distribute Ideas Not Content - Mark Rodgers.docx` — Idea-centric content strategy
+- `20240428 Everybody Wants Thought Leadership...docx` — Earned secrets, 5 types of thought leadership
+- `20240725 Stay Strong Never Let AI Fill Your Blank Page - Animalz.md` — Human-first AI philosophy
+- `20241205 Blockbuster Blogs How Breakthrough Ideas Are Born - Animalz.md` — 4 origins of blockbuster ideas
+- `20250522 Confessions of an AI Addict - Animalz.md` — 6 vows for AI discipline
+- `20250612 17 Flagship Frameworks From 10 Years of Animalz Content - Animalz.md` — BLUF, Content Value Curve, High-Concept, Information Gain
+- `20250403 Write Smarter, Not Harder...Animalz.md` — ABCD feedback framework, voice-to-draft pipeline
+- `20201013 The Idea Farm...Ryan Law.md` — Idea readiness assessment (Impact/Originality/Credibility/Timeliness)
+- `20211124 The Problem with "Writing is Thinking" - Animalz.md` — Writer-centric vs reader-centric audit
+- `20250918 The Burden of Quality...Animalz.md` — Purpose + Context quality calibration
+- `20250409 AI Content Works...Animalz.md` — Editorial QA questions
+
+**Logseq pages with key findings:**
+- `On Writing (highlights).md` — Stephen King: 2nd draft = 1st - 10%, write with door closed
+- `On Writing Well (highlights).md` — Zinsser: clear thinking = clear writing, one provocative thought
+- `Several Short Sentences About Writing (highlights).md` — Klinkenborg: every word earns its place
+- `Working (highlights).md` — Caro: see it whole before writing, boil to 3 paragraphs
+- `Hey Whipple, Squeeze This (highlights).md` — Sullivan: don't write, talk; cut by a third
+- `blank page fallacy.md` — Full article draft on AI + writing (three seductions of The Button)
+
+**Existing project files used as patterns:**
+- `~/.claude/commands/brief.md` — Step-display pattern, checkpoint design
+- `.claude/subagents/article-researcher.md` — 6-objective research pattern (basis for writing-researcher)
+
+**Notion page attempted but inaccessible:**
+- `https://www.notion.so/animalzco/Thesis-How-do-I-write-a-strong-one-and-other-FAQs-2d5df6dc2cc58174b0facf99e7f9fc5c` — In animalzco workspace, not accessible via personal integration. Content found via published blog version instead.
+
+### Technical Notes
+- The `/write` command uses YAML frontmatter in `state.md` for machine-readable state + markdown body for human-readable process log. This enables multi-session writing.
+- Article folder convention: `projects/articles/{slug}/` with standard files (state.md, thesis.md, outline-10.md, outline-30.md, research/, introduction.md, draft.md, review-notes.md)
+- Quality gates are conversational, not programmatic — Claude actively tests them (e.g., tries to object to the thesis, counts outline words)
+- The writing-researcher agent retains the proven 6-objective structure from article-researcher.md but adds web search and outline-section mapping
+- Animalz Notion workspace (`animalzco`) not accessible via personal Notion integration — user wants to add it
+
+### Plan File
+- **Path**: `~/.claude/plans/atomic-gliding-jellyfish.md`
+- **Status**: In Progress (cleanup phase)
+- **Phases Completed**: `/write` process design and implementation (all commands + agents built)
+- **Remaining**: Project cleanup pass (README rewrite, TASKS archive, workflow dedup, stale references)
+
+### Future Plans & Unimplemented Phases
+
+#### Project cleanup pass (approved, not yet executed)
+
+1. **Rewrite `README.md`** — Currently says "Social Post Writer." Full rewrite centered on `/write` as primary workflow, `/draft-linkedin-post` as secondary. Current project structure. Keep lean.
+
+2. **Archive `docs/TASKS.md`** → `docs/archive/TASKS-2025-10.md`. Create fresh `docs/TASKS.md` with current status.
+
+3. **Delete `workflows/post-creation.md`** (top-level, 182 lines) — Redundant duplicate of `workflows/post-creation/draft-linkedin-post-v2.md`. First move Voice Authenticity Checklist (lines 119-141) into the v2 file.
+
+4. **Fix `workflows/voice-refinement.md`** — Update v1→v2 references in Related Files (lines 266-269). Update Step 4D (lines 166-170) from v1→v2 to v2→v3.
+
+5. **Delete `workflows/.claude/settings.local.json`** and `workflows/.claude/` directory — legacy subfolder permissions, root handles this.
+
+6. **Verify** — `grep -r "social-post-writer"` and `grep -r "voice-v1"` should return zero results outside `voice/archive/`.
+
+### Next Actions
+- [ ] Execute cleanup pass (see Future Plans above)
+- [ ] Delete `docs/SESSION_STATE_2026-02-16.md` after cleanup is complete (temporary context file)
+- [ ] Add animalzco Notion workspace to MCP integration
+- [ ] Test `/write` with a real article end-to-end
+- [ ] Consider project rename (deferred — command is `/write`, project stays "writing-assistant" for now)
+
+### Metrics
+- Files created: 6 (3 commands, 2 agents, 1 session state)
+- Files modified: 2 (CLAUDE.md, AGENT_GUIDELINES.md)
+- Research: 13 Animalz articles read, 23+ Logseq searches, full project exploration
+
+### Learnings & Improvement Opportunities
+
+**Workflow improvements:**
+- Notion MCP integration only connects to personal workspace — accessing team workspaces (animalzco) requires separate integration setup. Should document this limitation.
+- The `/brief` command's pattern of "DO NOT use AskUserQuestion — use plain text prompts" was adopted for `/write` — it keeps the conversation natural vs. modal.
+
+**New capabilities needed:**
+- A way to access Animalz internal Notion workspace from Claude Code for richer methodology integration
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-02-16" ([feature] [refactor] entry)
+>
+> Context: Built the `/write` structured writing process (8-phase, with agents). Now need to execute the approved cleanup pass to reorganize the rest of the project.
+>
+> Key points:
+> - All `/write` commands and agents are built and live (write.md, write-rescue.md, write-status.md, writing-researcher.md, writing-editor.md)
+> - Cleanup plan approved but not executed — details in plan file and session log "Future Plans" section
+> - Temporary context file at `docs/SESSION_STATE_2026-02-16.md` has research findings summary — delete after cleanup
+>
+> Referenced paths:
+> - `~/.claude/plans/atomic-gliding-jellyfish.md` — Approved cleanup plan
+> - `docs/SESSION_STATE_2026-02-16.md` — Temporary session state with research findings
+> - `workflows/post-creation.md` — To be deleted (redundant)
+> - `workflows/voice-refinement.md` — To be updated (v1→v2 refs)
+>
+> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
 
 ---

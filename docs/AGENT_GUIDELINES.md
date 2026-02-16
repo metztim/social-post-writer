@@ -1,8 +1,8 @@
 # Agent Usage Guidelines
 
-**Purpose:** Document when and how to use agents in the social-post-writer workflow based on best practices and learnings from practice.
+**Purpose:** Document when and how to use agents in writing workflows based on best practices and learnings from practice.
 
-**Last Updated:** 2025-11-05
+**Last Updated:** 2026-02-16
 
 ---
 
@@ -27,21 +27,40 @@
 **Benefit:** Data-driven voice guide updates
 **See:** `workflows/voice-refinement.md`
 
+### ✅ Article Research (`/write` Phase 4)
+**Type:** Custom Subagent (`writing-researcher`)
+**When:** During research phase of the `/write` process
+**Why:** Deep search across Logseq + web, mapped to outline sections. Parallelizable, reusable.
+**Benefit:** Comprehensive research with structured output organized by outline section
+**See:** `.claude/subagents/writing-researcher.md`
+
+### ✅ Article Editorial Review (`/write` Phase 8)
+**Type:** Custom Subagent (`writing-editor`)
+**When:** After drafting, during review phase of the `/write` process (optional)
+**Why:** Uncorrelated context catches thesis drift, weak arguments, and cutting opportunities the main thread misses
+**Benefit:** Fresh-eyes ABCD review (Awesome/Boring/Confusing/Didn't Believe) + specific cut recommendations
+**See:** `.claude/subagents/writing-editor.md`
+
 ---
 
 ## When NOT to Use Agents
 
-### ❌ Core Drafting (Step 5)
-**Reason:** Context continuity critical (Logseq highlights, voice guides, user selection)
+### ❌ Core Drafting (LinkedIn Step 5 / `/write` Phase 7)
+**Reason:** Context continuity critical; the human writes, Claude supports conversationally
 **Use:** Main thread
 **Principle:** "Use agents for analysis, not final production"
 
-### ❌ Logseq Scanning (Steps 1-3)
+### ❌ Thesis & Outline Development (`/write` Phases 1-3, 5-6)
+**Reason:** Interactive sparring requires conversational flow and context continuity
+**Use:** Main thread
+**Principle:** "Agents can't spar — they analyze and report"
+
+### ❌ Logseq Scanning (LinkedIn Steps 1-3)
 **Reason:** Fast sequential operations, no parallelization benefit
 **Use:** Main thread
 **Principle:** "Don't use agents for trivial tasks"
 
-### ❌ Notion Saving (Step 6)
+### ❌ Notion Saving (LinkedIn Step 6)
 **Reason:** Single API call, requires drafting context
 **Use:** Main thread
 **Principle:** "20k token overhead not justified"
@@ -94,7 +113,11 @@
 
 ```
 Is this analysis/validation? → Consider agent
+  Research across multiple sources? → writing-researcher
+  Editorial review with fresh eyes? → writing-editor
+  Engagement metrics analysis? → engagement-pattern-analyst
 Is this creative production? → Main thread
+Is this interactive/conversational? → Main thread (thesis sparring, outline development)
 Is this trivial operation? → Main thread
 Will this run again? → Custom subagent
 One-time complex work? → Task tool

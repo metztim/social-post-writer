@@ -165,8 +165,8 @@ Add confirmed successful patterns:
 
 ### D. Version Increment
 
-- Save current voice guide to `voice/archive/tim-linkedin-voice-v1.md`
-- Update main guide: `voice/tim-linkedin-voice-v2.md`
+- Save current voice guide to `voice/archive/tim-linkedin-voice-v2.md`
+- Update main guide: `voice/tim-linkedin-voice-v3.md`
 - Document changes in changelog section
 
 ---
@@ -262,7 +262,7 @@ Track improvement over time:
 
 ## Related Files
 
-- Post creation: `workflows/post-creation.md`
-- Voice guide: `voice/tim-linkedin-voice-v1.md`
-- Linguistic fingerprint: `voice/tim-linguistic-fingerprint-v1.md`
+- Post creation: `workflows/post-creation/draft-linkedin-post-v2.md`
+- Voice guide: `voice/tim-linkedin-voice-v2.md`
+- Linguistic fingerprint: `voice/tim-linguistic-fingerprint-v2.md`
 - Main command: `.claude/commands/draft-linkedin-post.md`
