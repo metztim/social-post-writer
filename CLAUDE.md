@@ -1,5 +1,18 @@
 # Writing Assistant Project
 
+> Unified craft workspace for all content writing. Articles, LinkedIn posts, copy projects, and voice system live here. Pipeline tracking lives in Notion (MyContent for personal, Content Calendar for Animalz).
+
+## Content strategy
+
+See `CONTENT_STRATEGY.md` for topic pillars, publication routing rules, quality bar, and exclusions. Referenced by `/write` Phase 1 (Foundation) and the global `/content` command.
+
+### Notion integration
+
+- **MyContent** (`131edc77-7df2-80be-a79e-edc6e0955fc2`, personal) — personal pipeline tracker
+- **Content Calendar** (`249df6dc-2cc5-81bc-8944-f44570c7cdce`, work) — Animalz pipeline tracker
+- When starting a `/write` session, ensure the piece has a corresponding Notion entry
+- Rich context goes in Notion **page body** (`notion append-blocks`), not properties
+
 ## Commands
 
 ### `/write` — Structured writing process

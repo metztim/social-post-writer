@@ -102,9 +102,14 @@ Who is your reader? Not a demographic — a person.
 Push back if the answer is generic. "Marketing professionals" is not a reader. "Sarah, VP Marketing at a Series B SaaS company who just got told to 'use AI more' by her CEO" — that's a reader.
 
 ### 1b. Content strategy check
-Does this piece serve a specific strategy?
-- If writing for Animalz or a client: what strategy does it serve? This is required.
-- If writing for We Eat Robots, personal blog, or standalone: a strategy is optional but worth naming if one exists.
+Read `CONTENT_STRATEGY.md` for reference. Then:
+
+**Target publication:** Where will this be published? Use the routing rules in the strategy doc to decide. Set `target_publication` in state.md now — don't leave it blank.
+
+**Pillar alignment:** Which of the 3 topic pillars does this serve? If it doesn't clearly map to one, challenge whether it should be written at all. Check the "say no to" list.
+
+**For Animalz or client work:** What specific strategy does it serve? This is required.
+**For personal channels:** Does it connect to a larger idea or series? For LinkedIn posts, is this testing a thesis for a longer piece?
 
 ### 1c. Reader action
 What should the reader DO after reading this? A specific action, not "feel informed" or "understand better."
