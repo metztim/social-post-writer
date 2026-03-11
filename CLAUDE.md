@@ -14,6 +14,9 @@ Reports where an article is in the process and what's next.
 ### `/draft-linkedin-post` — LinkedIn post workflow
 Separate workflow for LinkedIn posts. See `workflows/post-creation/`.
 
+### `/copywrite` — Structured copywriting process
+7-phase process for short-form conversion copy (landing pages, ads, emails, taglines): Brief → Strategy → Research → Exploration → Selection → Full Copy → Review. Grounded in Harry Dry's three laws, Sullivan's advertising principles, and Wiebe's Money Words. Claude coaches and tests quality — human generates the ideas and writes the variants. See `.claude/commands/copywrite.md`.
+
 ### `/research-article` — Article research
 Standalone research agent for article drafts. See `.claude/subagents/article-researcher.md`.
 
@@ -32,6 +35,20 @@ projects/articles/{slug}/
   review-notes.md       # Editor review findings
 ```
 
+## Copy project folder convention
+
+Each copy project lives in `projects/copy/{slug}/`:
+```
+projects/copy/{slug}/
+  state.md              # Process state (YAML frontmatter + process log)
+  brief.md              # Deliverable, audience, attitude shift, constraints
+  strategy.md           # Core truth, positioning, SOCO/SOCA
+  research/             # Competitive copy, VOC, references
+  variants.md           # All variants with three-laws scoring
+  copy.md               # Final copy
+  review-notes.md       # Review findings
+```
+
 ## External data sources
 
 ### Logseq Knowledge Base
@@ -42,6 +59,34 @@ projects/articles/{slug}/
 To read Logseq pages, look in:
 - `pages/` — Main pages
 - `journals/` — Daily journal entries (format: `YYYY_MM_DD.md`)
+
+### Animalz Knowledge Base (Notion)
+
+Writing advice, style guides, and content strategy docs from the Animalz team. Query with the Notion CLI:
+
+```bash
+# Browse by category
+notion query "Knowledge Base" --filter '{"property": "Category", "select": {"equals": "CATEGORY"}}' -w work
+
+# Read a specific article
+notion get-blocks <page_id> -w work
+```
+
+| Writing need | Category filter |
+|---|---|
+| Style, voice, craft | Writing Fundamentals |
+| Editing standards, copyediting | Editing & Quality |
+| SEO, optimization, AEO | SEO & Optimization |
+| Topic ideation, research process | Research & Ideation |
+| Long-form article structure | Long-form content |
+| Email and newsletter copy | Email & Newsletters |
+| LinkedIn content | LI Content |
+| AI writing tools and red flags | AI Resources |
+
+Additional useful filters:
+- `Document type`: "Guides & Best-Practices", "How-To", "Policies / Standards"
+- `Audience`: "Staff", "Freelancer"
+- `Status`: "Active" for current docs
 
 ## People
 

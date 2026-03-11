@@ -70,4 +70,4 @@ https://www.linkedin.com/posts/metztim_my-most-successful-linkedin-post-ever-was
 - Director of Marketing & Innovation at Animalz
 - Author of "We Eat Robots" newsletter
 - LinkedIn: https://www.linkedin.com/in/metztim
-- Focus: AI workflows for knowledge work
+- Focus: AI for knowledge work

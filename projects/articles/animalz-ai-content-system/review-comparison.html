@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Draft Review: v2 → v3 Comparison</title>
+<style>
+  :root {
+    --bg: #1a1a2e;
+    --surface: #16213e;
+    --surface2: #0f3460;
+    --text: #e0e0e0;
+    --text-muted: #8a8a9a;
+    --accent: #e94560;
+    --accent-soft: rgba(233, 69, 96, 0.15);
+    --green: #4ecca3;
+    --green-soft: rgba(78, 204, 163, 0.15);
+    --yellow: #f5c542;
+    --yellow-soft: rgba(245, 197, 66, 0.12);
+    --blue: #5b9bd5;
+    --blue-soft: rgba(91, 155, 213, 0.12);
+    --border: #2a2a4a;
+    --radius: 8px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Georgia', serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 0;
+  }
+
+  .header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 24px 40px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .header p {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin-top: 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .legend {
+    display: flex;
+    gap: 20px;
+    margin-top: 12px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .legend-dot.cut { background: var(--accent); }
+  .legend-dot.add { background: var(--green); }
+  .legend-dot.change { background: var(--yellow); }
+  .legend-dot.unchanged { background: var(--text-muted); opacity: 0.4; }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
+  .column {
+    padding: 32px 40px;
+    border-right: 1px solid var(--border);
+  }
+
+  .column:last-child {
+    border-right: none;
+  }
+
+  .column-label {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section-break {
+    border-top: 1px solid var(--border);
+    margin: 32px 0;
+    padding-top: 32px;
+  }
+
+  h1.article-title {
+    font-size: 26px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+
+  h2.section-heading {
+    font-size: 20px;
+    margin: 28px 0 16px 0;
+    color: #fff;
+  }
+
+  p {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+
+  .change-marker {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    display: inline-block;
+    margin-bottom: 6px;
+    cursor: default;
+  }
+
+  .change-marker.cut {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border: 1px solid rgba(233, 69, 96, 0.3);
+  }
+
+  .change-marker.add {
+    background: var(--green-soft);
+    color: var(--green);
+    border: 1px solid rgba(78, 204, 163, 0.3);
+  }
+
+  .change-marker.change {
+    background: var(--yellow-soft);
+    color: var(--yellow);
+    border: 1px solid rgba(245, 197, 66, 0.3);
+  }
+
+  .change-marker.info {
+    background: var(--blue-soft);
+    color: var(--blue);
+    border: 1px solid rgba(91, 155, 213, 0.3);
+  }
+
+  .highlight-cut {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 12px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 16px;
+  }
+
+  .highlight-add {
+    background: var(--green-soft);
+    border-left: 3px solid var(--green);
+    padding: 12px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 16px;
+  }
+
+  .highlight-change {
+    background: var(--yellow-soft);
+    border-left: 3px solid var(--yellow);
+    padding: 12px 16px;
+    border-radius: 0 var(--radius) var(--radius) 0;
+    margin-bottom: 16px;
+  }
+
+  .highlight-cut p, .highlight-add p, .highlight-change p {
+    margin-bottom: 0;
+  }
+
+  .rationale {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid var(--border);
+  }
+
+  del {
+    color: var(--accent);
+    text-decoration: line-through;
+    opacity: 0.7;
+  }
+
+  ins {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  a {
+    color: var(--blue);
+    text-decoration: none;
+  }
+
+  .change-index {
+    position: sticky;
+    top: 90px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  .change-index h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+  }
+
+  .change-index ul {
+    list-style: none;
+    font-size: 13px;
+  }
+
+  .change-index li {
+    padding: 4px 0;
+  }
+
+  .change-index a {
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .change-index a:hover {
+    color: var(--yellow);
+  }
+
+  .stats {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+    display: flex;
+    gap: 24px;
+    margin-top: 8px;
+  }
+
+  .stat-value {
+    color: var(--text);
+    font-weight: 600;
+  }
+
+  @media (max-width: 1000px) {
+    .container {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Draft Review: v2 → v3</h1>
+  <p>Your Content Deserves More Than Wishful Workflow Thinking</p>
+  <div class="stats">
+    <span>v2: <span class="stat-value">1,900 words</span></span>
+    <span>v3: <span class="stat-value">~1,820 words</span></span>
+    <span>Changes: <span class="stat-value">7</span></span>
+  </div>
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot cut"></div> Cut</div>
+    <div class="legend-item"><div class="legend-dot change"></div> Changed</div>
+    <div class="legend-item"><div class="legend-dot add"></div> Added / rewritten</div>
+    <div class="legend-item"><div class="legend-dot unchanged"></div> Unchanged</div>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- LEFT: v2 -->
+<div class="column">
+  <div class="column-label">Draft v2 (before)</div>
+
+  <!-- INTRO -->
+  <h1 class="article-title">Your Content Deserves More Than Wishful Workflow Thinking</h1>
+
+  <p>We thought we knew what "AI for our LinkedIn program" meant. Two AirOps workflows — one to turn raw materials into briefs, another to turn briefs into posts. Our team would shape the drafts: tighten hooks, cut filler, make sure the voice actually sounded like the customer.</p>
+
+  <p>That was the plan.</p>
+
+  <p>Before that plan, we had the same setup as most content teams: different people, different prompts, no shared system. Mostly Claude, some ChatGPT. Everyone had their own versions of everything.</p>
+
+  <p>AirOps workflows felt like the real answer — a step up from prompt chaos into something structured and scalable. And they were. But they were also just the beginning.</p>
+
+  <div id="c1-left">
+    <span class="change-marker change">CHANGE #1</span>
+    <div class="highlight-change">
+      <p>What we discovered wasn't a workflow. It was a system — databases, routers, intake forms, feedback loops, style calibrators, API integrations. The work of building it looked nothing like content work. We'd already named this phenomenon the AI onion: each layer of implementation reveals the next. This is what the onion actually looks like when you peel all the way through it.</p>
+      <div class="rationale">One dense paragraph packing system reveal + earned secret + AI onion reference. Split for breathing room.</div>
+    </div>
+  </div>
+
+  <!-- H2 1 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your workflows need to work</h2>
+
+  <p>Getting the workflow right is genuinely hard. And if you can't get through this layer, you'll never even encounter the challenges ahead.</p>
+
+  <p>Raw materials go in, briefs come out. Briefs go in, posts come out. Sounds simple. It isn't. The first version of any workflow is an impressive-looking way to arrive at output that's generic or garbage. Only by tweaking, testing, failing, cursing at our computers, and doing more tweaking and testing did we eventually get something we were happy with. The real work is product development, not content work.</p>
+
+  <p>[Needs Nathan's permission] We learned this the hard way. We assigned Nathan, one of our best editors, to workflow building...</p>
+
+  <p>Most teams are still stuck in this layer. Some will stay here for months. But even when you nail it — even when the workflows consistently produce good output — you've only built the engine. Not the car.</p>
+
+  <!-- H2 2 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your data needs a smart home</h2>
+
+  <p>Workflows that run autonomously produce overwhelming amounts of data. We didn't see that coming.</p>
+
+  <p>We were drowning in raw materials, output, versions to compare, briefs. The workflow worked. The data management didn't.</p>
+
+  <p>So we built Notion databases — Raw Materials, Briefs, LinkedIn Content — all connected, all triggerable. Something shifted. Notion became more accessible than AirOps for the service team. Not everyone needed to learn the workflow tool. They could work where they were already comfortable, triggering workflows by changing a status on a Notion item.</p>
+
+  <p>But Notion can't talk to AirOps directly — the data formats don't match. So we built a server-side router to sit between them, restructuring data on an Animalz-owned server. Claude Code suggested it. We wouldn't have thought of it on our own. That router then became useful for everything else: form submissions, YouTube transcription, connecting data sources we hadn't imagined yet.</p>
+
+  <div id="c2-left">
+    <span class="change-marker change">CHANGE #2</span>
+    <div class="highlight-change">
+      <p>We also built a review dashboard that flags which drafts need heavy editing versus a light polish, and tracks which angles have already been used for each customer.</p>
+      <div class="rationale">Orphaned paragraph — not set up or paid off. Integrated into the router paragraph instead.</div>
+    </div>
+  </div>
+
+  <div id="c3-left">
+    <span class="change-marker change">CHANGE #3</span>
+    <div class="highlight-change">
+      <p>AirOps was no longer the center of the system. Data was. The workflows were just one component — important, but not central. This is context engineering in practice: <del>the right information, arriving at the right point in the workflow, is what makes the difference between generic output and something that actually sounds like the customer.</del></p>
+      <div class="rationale">The context engineering explanation does double duty (closes data section AND defines context engineering). Trimmed — let the link do the work.</div>
+    </div>
+  </div>
+
+  <!-- H2 3 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your customers get the white-glove treatment</h2>
+
+  <div id="c4-left">
+    <span class="change-marker cut">CUT #4</span>
+    <div class="highlight-cut">
+      <p>As we built the system, it created opportunities we hadn't planned for. <del>Not because we were visionary, but because the infrastructure made them possible.</del></p>
+      <div class="rationale">"Not because we were visionary" defends against a criticism nobody's making. The second clause alone does the work.</div>
+    </div>
+  </div>
+
+  <p>The intake form is my favorite example. We needed to onboard our first customer for the new LinkedIn program, and our traditional intake form didn't capture the right information. The customer needed it the next day. So I vibe coded a new one.</p>
+
+  <p>As I built it, I realized AI could go through all the materials generated during the sales process — call transcripts, proposals, research — and pre-fill as much of the form as possible. Claude Code one-shotted the form and added a UX touch we didn't ask for: it automatically highlighted the pre-filled fields, showing the customer we'd done our homework before they even started.</p>
+
+  <p>Customers loved it. Even though the new form is longer than the original, 80% complete it in less than 24 hours. The old form often got filled in a hurry or not at all.</p>
+
+  <p>That wasn't planned.</p>
+
+  <p>The same pattern repeated. Many founders didn't have a style guide, so we built a style calibrator...</p>
+
+  <div id="c5-left">
+    <span class="change-marker change">CHANGE #5</span>
+    <div class="highlight-change">
+      <p>Each of these tools emerged from a problem the system surfaced. And together, they made the service feel <del>bespoke</del> — not "we run your stuff through a tool" but "we've done the homework before you even arrive."</p>
+      <div class="rationale">"Bespoke" is British/formal — not Tim's register. Voice agent flagged. Swapped to "tailored."</div>
+    </div>
+  </div>
+
+  <!-- H2 4 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your system gets smarter every cycle</h2>
+
+  <p>When you improve a draft by hand, you fix that draft. When you improve the system, every future run gets better.</p>
+
+  <p>Our biggest wish was engagement data feeding back into the system. We were already working with Ordinal (formerly Assembly) for LinkedIn scheduling, and it turned out they have an API. Now, once every 24 hours, our router pulls published posts and their engagement metrics from Ordinal — not just posts we created, but everything our customers publish: text, images, carousels, all the metadata.</p>
+
+  <p>This information feeds back into the system. Brand kits get refined. Prompts get adjusted. Post variety shifts based on what's actually working — not what we guess is working.</p>
+
+  <div id="c6-left">
+    <span class="change-marker cut">CUT #6</span>
+    <div class="highlight-cut">
+      <p>And then there's real-time content. QueryM monitors social media for trending topics within specific parameters. <del>We create a profile for each customer and their industry.</del> When something relevant breaks, QueryM sends a signal to our router...</p>
+      <div class="rationale">Operational setup detail the executive audience doesn't need. They need to know trending signals trigger the system.</div>
+    </div>
+  </div>
+
+  <p>30 to 60 minutes later, several fully drafted posts roll out. Our team gets a notification, picks the strongest angle, edits the draft. Customers get relevant content within hours of something happening in their industry. That capability didn't exist before we built the system.</p>
+
+  <p>Every new data source, every refined brand kit, every feedback cycle compounds. A competitor can switch AI models overnight. They can't replicate the system.</p>
+
+  <!-- CONCLUSION -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your people need to stay sharp</h2>
+
+  <p>Once the system works, the biggest risk is your team trusting it too much.</p>
+
+  <p>I've watched this happen with multiple people, and it's always the same pattern. They start skeptical — "AI can't do this," "I don't trust it," "the output isn't good enough." Then the first version ships, and the posts coming out look... good. Polished. Professional. And instantly — not gradually, instantly — they flip. First drafts get treated as finished pieces. V1 output goes directly to customers.</p>
+
+  <div id="c7-left">
+    <span class="change-marker change">CHANGE #7</span>
+    <div class="highlight-change">
+      <p>"Automation tends to turn us from actors into observers," Nicholas Carr wrote in <em>The Glass Cage</em>. That's exactly what happens — except it doesn't creep in over months. It happens the moment the system produces something that looks polished. "Sometimes I wonder if we made an airplane that is too easy to fly," an Airbus engineer once said, "because in a difficult airplane the crews may stay more alert."</p>
+      <div class="rationale">Two stacked quotes make the conclusion feel more researched than experienced. Tim's articles typically use one external quote. Kept Airbus (more vivid, unexpected), cut Carr.</div>
+    </div>
+  </div>
+
+  <p>So we built speed bumps — small friction points that keep people engaged instead of surrendering to the machine. We'd gone to near-full autopilot and had to pull it back.</p>
+
+  <p>The system is powerful. But it needs sharp humans. That's not wishful workflow thinking — that's the part nobody warns you about.</p>
+
+  <p>What are you building speed bumps for?</p>
+
+</div>
+
+<!-- RIGHT: v3 -->
+<div class="column">
+  <div class="column-label">Draft v3 (after)</div>
+
+  <!-- INTRO -->
+  <h1 class="article-title">Your Content Deserves More Than Wishful Workflow Thinking</h1>
+
+  <p>We thought we knew what "AI for our LinkedIn program" meant. Two AirOps workflows — one to turn raw materials into briefs, another to turn briefs into posts. Our team would shape the drafts: tighten hooks, cut filler, make sure the voice actually sounded like the customer.</p>
+
+  <p>That was the plan.</p>
+
+  <p>Before that plan, we had the same setup as most content teams: different people, different prompts, no shared system. Mostly Claude, some ChatGPT. Everyone had their own versions of everything.</p>
+
+  <p>AirOps workflows felt like the real answer — a step up from prompt chaos into something structured and scalable. And they were. But they were also just the beginning.</p>
+
+  <div id="c1-right">
+    <span class="change-marker change">CHANGE #1</span>
+    <div class="highlight-add">
+      <p>What we discovered wasn't a workflow. It was a system — databases, routers, intake forms, feedback loops, style calibrators, API integrations. The work of building it looked nothing like content work.</p>
+      <p>We'd already named this phenomenon the AI onion: each layer of implementation reveals the next. This is what the onion actually looks like when you peel all the way through it.</p>
+      <div class="rationale">Split into two paragraphs. System reveal + earned secret lands on its own. AI onion gets its own paragraph as the framing device.</div>
+    </div>
+  </div>
+
+  <!-- H2 1 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your workflows need to work</h2>
+
+  <p>Getting the workflow right is genuinely hard. And if you can't get through this layer, you'll never even encounter the challenges ahead.</p>
+
+  <p>Raw materials go in, briefs come out. Briefs go in, posts come out. Sounds simple. It isn't. The first version of any workflow is an impressive-looking way to arrive at output that's generic or garbage. Only by tweaking, testing, failing, cursing at our computers, and doing more tweaking and testing did we eventually get something we were happy with. The real work is product development, not content work.</p>
+
+  <p>[Needs Nathan's permission] We learned this the hard way. We assigned Nathan, one of our best editors, to workflow building...</p>
+
+  <p>Most teams are still stuck in this layer. Some will stay here for months. But even when you nail it — even when the workflows consistently produce good output — you've only built the engine. Not the car.</p>
+
+  <!-- H2 2 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your data needs a smart home</h2>
+
+  <p>Workflows that run autonomously produce overwhelming amounts of data. We didn't see that coming.</p>
+
+  <p>We were drowning in raw materials, output, versions to compare, briefs. The workflow worked. The data management didn't.</p>
+
+  <p>So we built Notion databases — Raw Materials, Briefs, LinkedIn Content — all connected, all triggerable. Something shifted. Notion became more accessible than AirOps for the service team. Not everyone needed to learn the workflow tool. They could work where they were already comfortable, triggering workflows by changing a status on a Notion item.</p>
+
+  <div id="c2-right">
+    <span class="change-marker change">CHANGE #2</span>
+    <div class="highlight-add">
+      <p>But Notion can't talk to AirOps directly — the data formats don't match. So we built a server-side router to sit between them, restructuring data on an Animalz-owned server. Claude Code suggested it. We wouldn't have thought of it on our own. That router then became useful for everything else: form submissions, YouTube transcription, connecting data sources we hadn't imagined yet. <ins>On top of it, a review dashboard that flags which drafts need heavy editing versus a light polish, and tracks which angles have already been used.</ins></p>
+      <div class="rationale">Dashboard integrated into router paragraph instead of standing alone. Flows naturally as "another thing built on this infrastructure."</div>
+    </div>
+  </div>
+
+  <div id="c3-right">
+    <span class="change-marker change">CHANGE #3</span>
+    <div class="highlight-add">
+      <p>AirOps was no longer the center of the system. Data was. The workflows were just one component — important, but not central. This is context engineering in practice.</p>
+      <div class="rationale">Trimmed. The link to the context engineering article does the explaining — no need to define it here.</div>
+    </div>
+  </div>
+
+  <!-- H2 3 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your customers get the white-glove treatment</h2>
+
+  <div id="c4-right">
+    <span class="change-marker cut">CUT #4</span>
+    <div class="highlight-add">
+      <p>As we built the system, it created opportunities we hadn't planned for. <ins>The infrastructure made them possible.</ins></p>
+      <div class="rationale">Cut the preemptive defense. Kept the explanation.</div>
+    </div>
+  </div>
+
+  <p>The intake form is my favorite example. We needed to onboard our first customer for the new LinkedIn program, and our traditional intake form didn't capture the right information. The customer needed it the next day. So I vibe coded a new one.</p>
+
+  <p>As I built it, I realized AI could go through all the materials generated during the sales process — call transcripts, proposals, research — and pre-fill as much of the form as possible. Claude Code one-shotted the form and added a UX touch we didn't ask for: it automatically highlighted the pre-filled fields, showing the customer we'd done our homework before they even started.</p>
+
+  <p>Customers loved it. Even though the new form is longer than the original, 80% complete it in less than 24 hours. The old form often got filled in a hurry or not at all.</p>
+
+  <p>That wasn't planned.</p>
+
+  <p>The same pattern repeated. Many founders didn't have a style guide, so we built a style calibrator...</p>
+
+  <div id="c5-right">
+    <span class="change-marker change">CHANGE #5</span>
+    <div class="highlight-add">
+      <p>Each of these tools emerged from a problem the system surfaced. And together, they made the service feel <ins>tailored</ins> — not "we run your stuff through a tool" but "we've done the homework before you even arrive."</p>
+      <div class="rationale">"Tailored" is more conversational and fits Tim's register.</div>
+    </div>
+  </div>
+
+  <!-- H2 4 -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your system gets smarter every cycle</h2>
+
+  <p>When you improve a draft by hand, you fix that draft. When you improve the system, every future run gets better.</p>
+
+  <p>Our biggest wish was engagement data feeding back into the system. We were already working with Ordinal (formerly Assembly) for LinkedIn scheduling, and it turned out they have an API. Now, once every 24 hours, our router pulls published posts and their engagement metrics from Ordinal — not just posts we created, but everything our customers publish: text, images, carousels, all the metadata.</p>
+
+  <p>This information feeds back into the system. Brand kits get refined. Prompts get adjusted. Post variety shifts based on what's actually working — not what we guess is working.</p>
+
+  <div id="c6-right">
+    <span class="change-marker cut">CUT #6</span>
+    <div class="highlight-add">
+      <p>And then there's real-time content. QueryM monitors social media for trending topics within specific parameters. When something relevant breaks, QueryM sends a signal to our router...</p>
+      <div class="rationale">Sentence removed. The flow works without the setup detail.</div>
+    </div>
+  </div>
+
+  <p>30 to 60 minutes later, several fully drafted posts roll out. Our team gets a notification, picks the strongest angle, edits the draft. Customers get relevant content within hours of something happening in their industry. That capability didn't exist before we built the system.</p>
+
+  <p>Every new data source, every refined brand kit, every feedback cycle compounds. A competitor can switch AI models overnight. They can't replicate the system.</p>
+
+  <!-- CONCLUSION -->
+  <div class="section-break"></div>
+  <h2 class="section-heading">Your people need to stay sharp</h2>
+
+  <p>Once the system works, the biggest risk is your team trusting it too much.</p>
+
+  <p>I've watched this happen with multiple people, and it's always the same pattern. They start skeptical — "AI can't do this," "I don't trust it," "the output isn't good enough." Then the first version ships, and the posts coming out look... good. Polished. Professional. And instantly — not gradually, instantly — they flip. First drafts get treated as finished pieces. V1 output goes directly to customers.</p>
+
+  <div id="c7-right">
+    <span class="change-marker change">CHANGE #7</span>
+    <div class="highlight-add">
+      <p>"Sometimes I wonder if we made an airplane that is too easy to fly," an Airbus engineer once said, "because in a difficult airplane the crews may stay more alert."</p>
+      <div class="rationale">Kept Airbus quote only. Carr removed — one quote is more Tim. The Airbus quote is more vivid and unexpected.</div>
+    </div>
+  </div>
+
+  <p>So we built speed bumps — small friction points that keep people engaged instead of surrendering to the machine. We'd gone to near-full autopilot and had to pull it back.</p>
+
+  <p>The system is powerful. But it needs sharp humans. That's not wishful workflow thinking — that's the part nobody warns you about.</p>
+
+  <p>What are you building speed bumps for?</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

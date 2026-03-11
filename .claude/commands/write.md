@@ -340,6 +340,7 @@ Ask the writer how they want to work:
 - **A: Write in the terminal.** Type the draft here. You'll capture and save it.
 - **B: Write elsewhere.** Paper, Notion, Lex, whatever. Bring it back when done — paste or provide the file path.
 - **C: Section by section.** Write one section, discuss, then write the next.
+- **D: Drafting team.** Spawn the drafting team agent to draft collaboratively. Requires well-prepared inputs (thesis, 30% outline, research). See `.claude/subagents/drafting-team.md`.
 
 ### Rules during drafting
 

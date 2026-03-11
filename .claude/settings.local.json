@@ -35,7 +35,17 @@
       "mcp__notion-personal__API-retrieve-a-data-source",
       "mcp__logseq__logseq_search",
       "mcp__logseq__logseq_search_all",
-      "mcp__logseq__logseq_get_page"
+      "mcp__logseq__logseq_get_page",
+      "WebFetch(domain:grain.com)",
+      "WebFetch(domain:docs.grain.inc)",
+      "WebFetch(domain:zapier.com)",
+      "WebFetch(domain:www.airops.com)",
+      "WebFetch(domain:www.adweek.com)",
+      "WebFetch(domain:contentmarketinginstitute.com)",
+      "WebFetch(domain:ahrefs.com)",
+      "Bash(animalz-notion get-comments:*)",
+      "mcp__notion-personal__API-retrieve-a-block",
+      "Skill(flag-content)"
     ],
     "deny": [],
     "ask": []
