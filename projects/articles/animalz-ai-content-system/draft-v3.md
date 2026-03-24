@@ -1,3 +1,9 @@
+---
+superseded_by: draft-v5.md
+source_of_truth: https://www.notion.so/animalzco/Your-Content-Deserves-More-Than-Wishful-Workflow-Thinking-24ddf6dc2cc580ed997ae8d812ef814d
+note: Superseded. See draft-v5.md or the Notion page above for the current version.
+---
+
 # Your Content Deserves More Than Wishful Workflow Thinking
 
 We thought we knew what "AI for our [LinkedIn program](https://www.animalz.co/blog/linkedin-playbook-b2b-startups)" meant. Two AirOps workflows — one to turn raw materials into briefs, another to turn briefs into posts. Our team would shape the drafts: tighten hooks, cut filler, make sure the voice actually sounded like the customer.

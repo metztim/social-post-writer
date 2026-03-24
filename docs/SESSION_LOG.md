@@ -1,1139 +1,3 @@
-- Staccato "The result?" section needed em-dash rhythm
-- Closing question too generic → more provocative version
-- Source link needed specificity ("Full How I Write episode")
-
-**User disagreed with one recommendation:**
-- I suggested cutting "He thinks more writers should follow a slower rhythm" as meta-commentary
-- User correctly noted it provides necessary transition from Dan's personal practice to his advice for others
-- Kept the line
-
-**Notion API notes:**
-- Successfully created database entry using `database_id` in parent (not `page_id`)
-- Properties schema: `{"title": [{"text": {"content": "..."}}]}`
-- Added content via `API-patch-block-children` with paragraph blocks
-- Cannot update Type/Status via API (user set manually)
-
-### Final Post Structure
-1. Personal admission (weekly guilt)
-2. Dan Wang intro with credential ("China analyst")
-3. His approach: one annual letter
-4. Transition: "He thinks more writers should follow a slower rhythm"
-5. Quote from podcast
-6. Platform pressure (Substack, Twitter)
-7. Dan's result: quality over quantity
-8. Tim's aspiration: monthly feels right
-9. Reader perspective: would welcome slower pace from others
-10. Question: "What pace feels right to you, either as a reader or a writer?"
-
-### Key Decisions Made
-
-**Angle selection:**
-- Not about Dan's annual letters (too extreme for most)
-- Focus on monthly/quarterly as achievable alternative to weekly treadmill
-- Add personal struggle for authenticity
-- Include reader perspective to broaden appeal
-
-**Voice authenticity:**
-- Added self-deprecating parenthetical: "(Content marketer who can't keep a content schedule. I know.)" — later removed by user in final edit
-- Short punchy phrases: "One post. One year."
-- Em-dash rhythm throughout
-- Single question ending (no framing like "My question for today:")
-
-**Dan Wang intro:**
-- "China analyst Dan Wang" - clean, provides context for unfamiliar readers
-- Considered other options: credential-based (publications), achievement-based (built reputation with one thing)
-
-### Notion Entry Created
-- **Page ID**: 2c0edc77-7df2-815e-a702-ffb7e5932ea4
-- **Title**: "Dan Wang: Monthly/quarterly writing rhythm"
-- **URL**: https://www.notion.so/Dan-Wang-Monthly-quarterly-writing-rhythm-2c0edc777df2815ea702ffb7e5932ea4
-- **Status**: Ideas (user to update)
-- **Type**: Not set (user to update to "LinkedIn post")
-
-### Next Actions
-- [ ] User to finalize and publish from Notion
-- [ ] Add podcast link to comments when publishing
-- [ ] Track engagement for future voice guide refinement
-
-### Metrics
-- Files created: 0 (source already existed)
-- Notion pages created: 1
-- Agent tasks launched: 2 (voice rewriter, editorial review)
-- Draft iterations: 3 (initial → agent-refined → user-edited)
-- Final word count: ~220 words
-
----
-
-## Session Log: 2025-12-11
-
-**Project**: writing-assistant
-**Type**: [creative]
-
-### Objectives
-- Create visual for LinkedIn post "What Would The Buddha Do?"
-- Find and use Gemini image generation tooling
-
-### Summary
-Explored creating a minimalistic visual for a LinkedIn post about using "What would the Buddha do?" as an AI prompt. Located the Gemini 3 Pro image generation skill in the plugins marketplace. Iteratively refined prompts to achieve a chat interface aesthetic showing the prompt and "Probably nothing." response.
-
-### Files Changed
-- None (creative/visual work session)
-
-### Technical Notes
-- **Gemini imagegen skill location**: `~/.claude/plugins/marketplaces/every-marketplace/plugins/compound-engineering/skills/gemini-imagegen/`
-- **LinkedIn optimal dimensions**: 1200×627 (≈1.91:1), closest Gemini ratio is 16:9
-- **Model used**: `gemini-3-pro-image-preview`
-- **Multi-turn refinement**: Gemini supports iterative feedback to refine generated images
-
-### Image Prompt Evolution
-**Initial concept**: Minimalistic screenshot of prompting window with subtle Buddhist ornaments
-
-**V1 result**: Quote card with mandalas in corners, lotus icon - too decorative, not UI-like
-
-**V1 feedback given**:
-```
-Make this look like an actual screenshot of a chat interface, not a quote card. Add a visible text input field border around "What would the Buddha do?" to show it as a user message. Remove the mandala ornaments from the corners entirely. Replace "Perhaps, he would first..." with just "Probably nothing." and add a blinking text cursor after it to suggest the response is still being typed. Remove the lotus icon. The aesthetic should be clean functional UI like ChatGPT or Claude - realistic spacing, subtle shadows, proper message alignment. Keep the warm neutral background but make it feel like a real app screenshot.
-```
-
-**V2 result**: Chat bubbles with correct alignment, but artifacts (scrollbars, partial buttons, cropped UI chrome)
-
-**V2 feedback prepared**:
-```
-Remove all the UI chrome around the edges - the scrollbars, the partial "Chat" button at top, the vertical elements on the left side. Just show the two chat bubbles cleanly centered on a plain background with nothing else. Keep the chat bubble styling and message alignment. The background should be clean white or very light gray, not tan/beige. Make it look like a polished, intentionally designed crop of a chat interface - just the essential exchange, no window decorations or browser elements.
-```
-
-### Next Actions
-- [ ] Continue Gemini iteration with V2 feedback to clean up artifacts
-- [ ] Finalize visual and attach to LinkedIn post
-- [ ] Post "What Would The Buddha Do?" content
-
-### Metrics
-- Files modified: 0
-- Gemini iterations: 2
-- Prompt refinements: 2
-
----
-
-## Session Log: 2025-12-16
-
-**Project**: writing-assistant
-**Type**: [docs] [review]
-
-### Objectives
-- Fact-check and refine LinkedIn post about "not-do lists" for 2026
-
-### Summary
-Reviewed a draft LinkedIn post about saying no to opportunities in the new year. Verified Warren Buffett's "5/25 Rule" attribution (noted it's third-hand and hedged appropriately with "supposedly"). Researched Lao Tzu quote origin — found it's from Tao Te Ching Chapter 48 but the user's version was a paraphrase, not a verbatim quote. Revised attribution to avoid false precision (removed quotation marks, used paraphrase style). Final polish on grammar and flow.
-
-### Files Changed
-- No files modified (review/consultation session)
-
-### Technical Notes
-- **Buffett 5/25 Rule**: Also called "Buffett's Two Lists" or "25/5 Focus Method". Story is third-hand (pilot → blogger → everyone). Buffett reportedly skeptical of attribution.
-- **Lao Tzu quote**: Original (Ch. 48) contrasts 學 (learning) with 道 (Tao), not knowledge with wisdom. User's "knowledge/wisdom" framing was interpretation, not translation. Solution: paraphrase without quotation marks.
-- **Journalistic standards**: Direct quotes in quotation marks must be actual verbatim quotes or established translations. Paraphrases should not use quotation marks.
-
-### Next Actions
-- [ ] Post finalized draft to LinkedIn
-- [ ] Consider adding source link to Emily Kramer's MKT1 newsletter in post
-
-### Metrics
-- Files modified: 0
-- Research queries: 2 (Buffett method name, Lao Tzu quote origin)
-
----
-
-## Imported from we-eat-robots-writing: 2025-10-06
-
-> *This session was imported when consolidating we-eat-robots-writing into writing-assistant (2025-12-30)*
-
-**Project**: we-eat-robots-writing (now merged into writing-assistant)
-**Duration**: ~2 hours
-**Type**: [feature] [research] [tooling]
-
-### Objectives
-- Research supporting material from Logseq highlights library for "AI's Maddening Multitasking Trap" article draft
-- Create reusable article research system for future articles
-
-### Summary
-Conducted comprehensive research through Logseq highlights library to find supporting data, quotes, and insights for the AI multitasking article. Found extensive material from books like BrainChains, A World Without Email, Four Thousand Weeks, Deep Work, The Distracted Mind, and others. Created a detailed research findings document with recommendations organized by theme. Then designed and implemented a reusable article research system consisting of a specialized agent and slash command for future article research workflows.
-
-### Files Changed
-- `projects/articles/ai-multitasking-trap/research-findings-logseq.md` - Created comprehensive research findings document
-- `.claude/subagents/article-researcher.md` - Created specialized agent for comprehensive article research
-- `.claude/commands/research-article.md` - Created slash command to invoke article-researcher agent
-
-### Technical Notes
-
-**Research Methodology**:
-- Used parallel Grep searches across Logseq library with multiple keyword strategies
-- Read 10+ highlight files including BrainChains, A World Without Email, Four Thousand Weeks, Deep Work
-- Organized findings by type: research data, powerful quotes, supporting concepts, solutions
-
-**Key Discoveries**:
-- Strong research data: 25-100%+ task switching costs, 4x efficiency loss from multitasking
-- Identified powerful concepts: attention residue (Sophie Leroy), overhead tax (Cal Newport)
-
-**Design Decisions**:
-- Chose single agent over multiple agents because research objectives are interconnected
-- Structured agent for 6 research objectives: claims validation, similar arguments, new insights, contrary views, practical examples, supporting data
-
----
-
-## Future Sessions
-
-**Continue here for:**
-- LinkedIn post drafting (test enhanced workflow)
-- Article drafting with /research-article workflow
-- Newsletter writing (we-eat-robots)
-- Voice guide refinement (data-driven v3 update)
-- Engagement analysis (systematic correlation)
-- Workflow improvements (measure agent effectiveness)
-
-**Session logs for this project:** Continue adding above this line
-
----
-
-## Session Log: 2025-12-30
-
-**Project**: writing-assistant
-**Duration**: ~45 minutes
-**Type**: [refactor] [docs] [config]
-
-### Objectives
-- Analyze current state of writing-assistant project after hiatus
-- Check MCP servers and API integrations
-- Compare with we-eat-robots-writing project and decide on merge strategy
-- Consolidate into unified writing repository
-
-### Summary
-Conducted comprehensive analysis of both writing projects using parallel subagents. Discovered writing-assistant is a mature LinkedIn post drafting system with voice capture, while we-eat-robots-writing focuses on article research workflows. Designed and implemented a unified repository structure with `projects/` directory organized by content type (linkedin-posts, articles, we-eat-robots newsletter). Imported all assets from we-eat-robots-writing including the article-researcher agent and /research-article command.
-
-### Files Changed
-- `projects/linkedin-posts/` - Created directory, moved all drafts from `drafts/`
-- `projects/articles/` - Created directory for long-form content
-- `projects/articles/ai-multitasking-trap/` - Imported from we-eat-robots-writing
-- `projects/articles/dan-wang-writing/` - Moved from drafts
-- `projects/we-eat-robots/` - Created empty directory for newsletter editions
-- `.claude/subagents/article-researcher.md` - Imported specialized research agent
-- `.claude/commands/research-article.md` - Imported slash command for article research
-- `docs/SESSION_LOG.md` - Merged we-eat-robots session log entry
-- `drafts/` - Removed (contents moved to projects/)
-
-### Technical Notes
-
-**MCP Server Status**:
-- Notion Personal: Connected and functional
-- Chrome DevTools: Connected and functional
-
-**Key Design Decisions**:
-1. **Projects by type, not status**: `linkedin-posts/`, `articles/`, `we-eat-robots/` allows different workflows per content type
-2. **Research co-location**: Each article keeps its `research-findings-*.md` alongside the draft (no shared research folder)
-3. **Voice guides centralized**: Root-level `voice/` directory serves all project types
-4. **Single .claude/**: All commands and agents in one place at repo root
-5. **Notion for published work**: Local folders for drafts/research; Notion MyContent for tracking engagement
-
-**Project Comparison Summary**:
-| Aspect | writing-assistant | we-eat-robots-writing |
-|--------|------------------|----------------------|
-| Focus | LinkedIn posts, voice authenticity | Articles, research depth |
-| Maturity | Production-ready (v2 voice guide) | Early stage |
-| Main workflow | /draft-linkedin-post | /research-article |
-
-### Future Plans & Unimplemented Phases
-
-#### Phase: Archive/Delete we-eat-robots-writing
-**Status**: Not started
-**Planned Steps**:
-1. Verify all content successfully imported (confirmed in this session)
-2. Archive or delete `/Users/timmetz/Developer/Projects/Personal/we-eat-robots-writing`
-3. Update any cross-references if needed
-
-#### Phase: Test Imported Workflows
-**Status**: Not started
-**Planned Steps**:
-1. Run `/research-article` command on an existing draft to verify it works
-2. Confirm Logseq path permissions are correct in settings.local.json
-3. Test article-researcher agent output format
-
-### Next Actions
-- [ ] Archive or delete we-eat-robots-writing repository (all content imported)
-- [ ] Test `/research-article` command on a draft article
-- [ ] Continue work on ai-multitasking-trap article (research complete, draft integration pending)
-- [ ] Consider creating README in projects/ explaining the structure
-
-### Metrics
-- Files moved: 10
-- Files imported: 4 (article-researcher.md, research-article.md, 2 article files)
-- Directories created: 4 (projects/, linkedin-posts/, articles/, we-eat-robots/)
-- Git commits: 2 (pre-cleanup + restructure)
-
----
-
-## Session Log: 2026-01-13
-
-**Project**: writing-assistant
-**Type**: [docs]
-
-### Objectives
-- Prepare materials for "The Workflow" podcast appearance (Jan 15th)
-- Update Style Guide Creator workflow documentation
-- Review and update Animalz Claude Code article
-
-### Summary
-Pivoted from Social Post Creator to Style Guide Creator workflow for The Workflow podcast—more universally applicable since it doesn't require a Second Brain/Logseq setup. Created comprehensive interview prep materials, prompts document with 8-agent appendix, workflow diagram spec, and screenshot instructions. Also reviewed the Animalz Claude Code article for updates (installation method, slash commands). Final corrections made based on actual plugin review: article count (5+ not 15-20), flexible source inputs, and --dry-run flag.
-
-### Files Changed
-- `projects/we-eat-robots/the-workflow/prompts-for-the-workflow.md` - Complete rewrite with Style Guide prompts + 8 agent appendix
-- `projects/we-eat-robots/the-workflow/interview-prep-answers.md` - Updated for 7-step workflow, corrected article count
-- `projects/we-eat-robots/the-workflow/workflow-diagram-spec.md` - 6-step visual flow, corrected article count, added --dry-run
-- `projects/we-eat-robots/the-workflow/screenshot-instructions.md` - 6 screenshots for Style Guide workflow
-- `projects/we-eat-robots/the-workflow/links-and-resources.md` - Updated bio and links
-
-### Technical Notes
-- **Plugin commands verified**: `/generate-style-guide`, `/style-check`, `/batch-review`, `/update-style-guide`, `/validate-style-guide`
-- **Article minimum**: 5 articles minimum, 10-15 recommended (not 15-20 as originally documented)
-- **Source flexibility**: Local files, URLs, blog URL with guidance, or any combination
-- **Flags**: `--auto-apply` and `--dry-run` (dry-run takes precedence)
-- **Installation simplified**: Native installer now recommended over npm (`curl -fsSL https://claude.ai/install.sh | bash`)
-- **The Workflow format**: Written Substack newsletter, not audio podcast—interview is for research, output is written article
-
-### Future Plans & Unimplemented Phases
-
-#### Phase: Screenshots
-**Status**: Not started
-**Planned Steps**:
-1. Capture source articles (folder or blog view)
-2. Terminal running `/generate-style-guide` command
-3. Generated style guide excerpt showing 8 sections
-4. Terminal running `/style-check` with 8 agents visible
-5. Violations report with line numbers
-6. Before/after article comparison
-
-#### Phase: Final Assembly
-**Status**: Not started
-**Planned Steps**:
-1. Find toddler photo (Tim's task)
-2. Upload all materials to The Workflow's Google Drive
-3. Create workflow diagram in Miro (their preferred tool)
-
-### Animalz Article Updates Discussed
-- Installation: Update to native installer (one command, no Node.js required)
-- Slash commands: Update list (remove /export, add /resume, /cost, /config)
-- First test prompt: "analyze my desktop and downloads folders" works after typing `claude`
-- Plugins section: Verified accurate for animalz/claude-plugins
-
-### Next Actions
-- [ ] Find toddler photo
-- [ ] Capture 6 screenshots per screenshot-instructions.md
-- [ ] Upload materials to Google Drive by Tuesday EOD
-- [ ] Create visual diagram in Miro
-- [ ] Update Animalz article with new installation method
-- [ ] Update Animalz article slash commands section
-
-### Metrics
-- Files modified: 5
-- Git commits: 2 (41555b9, f7518ed)
-- Lines added: ~989
-- Lines removed: ~510
-
----
-
-## Session Log: 2026-01-14
-
-**Project**: writing-assistant/projects/we-eat-robots/the-workflow
-**Type**: [docs]
-
-### Objectives
-- Review and sort 27 screenshots for The Workflow podcast interview prep
-- Select 10 best screenshots covering the full workflow
-- Organize backups and rename files with descriptive names
-
-### Summary
-Reviewed all 27 screenshots captured for The Workflow podcast, categorized them by workflow stage (generate → style check → violations report), selected the 10 best that tell the complete story, moved 17 backup files to a new backup folder, and renamed the primary 10 with numbered descriptive names.
-
-### Files Changed
-- `screenshots/01-command-autocomplete.png` - Renamed from CleanShot 23.52.46
-- `screenshots/02-source-selection-menu.png` - Renamed from CleanShot 23.53.11
-- `screenshots/03-fetching-articles.png` - Renamed from CleanShot 23.55.21
-- `screenshots/04-style-guide-generated.png` - Renamed from CleanShot 00.42.19
-- `screenshots/05-style-guide-preview.png` - Renamed from CleanShot 00.42.39
-- `screenshots/06-eight-agents-launching.png` - Renamed from CleanShot 00.49.37
-- `screenshots/07-agents-completed.png` - Renamed from CleanShot 00.51.33
-- `screenshots/08-violations-summary.png` - Renamed from CleanShot 00.52.47
-- `screenshots/09-report-with-chart.png` - Renamed from CleanShot 00.53.57
-- `screenshots/10-priority-recommendations.png` - Renamed from CleanShot 00.54.47
-- `screenshots/backup/` - Created, contains 17 backup screenshots
-
-### Technical Notes
-- Screenshots cover 4 of 6 workflow stages from screenshot-instructions.md
-- Missing: Source articles folder view, Before/after comparison
-- User opted to proceed without capturing missing types
-- Key visual (06-eight-agents-launching) shows all 8 parallel agents - the "money shot"
-
-### Future Plans & Unimplemented Phases
-None - task completed as requested.
-
-### Next Actions
-- [ ] Upload 10 primary screenshots to The Workflow Google Drive
-- [ ] Consider capturing source articles folder view if needed later
-- [ ] Consider capturing before/after comparison if needed later
-
-### Metrics
-- Files renamed: 10
-- Files moved to backup: 17
-- Directories created: 1 (screenshots/backup/)
-
----
-
-## Session Log: 2026-01-27
-
-**Project**: writing-assistant
-**Type**: [feature]
-
-### Objectives
-- Sync LinkedIn posts to Notion MyContent database
-- Extract engagement metrics (impressions, reactions, comments, reposts)
-- Add full post content to page bodies
-
-### Summary
-Synced 20 LinkedIn posts to Notion: updated 11 existing posts with current engagement metrics and created 9 new posts with all properties. Used Chrome DevTools MCP for browser automation to extract post data from LinkedIn. Discovered and worked around a bug in the MCP post-page tool by using the direct Notion API script at `~/.claude/scripts/notion-api.py`. Session paused before adding body content to the 9 newly created pages.
-
-### Files Changed
-- `~/.claude/plans/shimmering-tinkering-bird.md` - Plan file for LinkedIn-to-Notion sync (updated with remaining task)
-
-### Technical Notes
-- **Chrome DevTools MCP**: Effective for browser automation with logged-in sessions (LinkedIn)
-- **MCP post-page bug**: The parent parameter was being stringified instead of passed as object; workaround is using `~/.claude/scripts/notion-api.py` directly
-- **Database ID confusion**: Notion's MCP returns `data_source_id` (b0bdaa81-c088-4ef7-b92b-75690666958c) but page creation requires actual `database_id` (131edc77-7df2-80be-a79e-edc6e0955fc2) from page parent responses
-- **Notion text limit**: 2000 characters per text block; long posts need to be split into multiple paragraphs
-
-### Plan File
-- **Path**: `~/.claude/plans/shimmering-tinkering-bird.md`
-- **Status**: In Progress
-- **Phases Completed**: Post extraction, metrics update, page creation
-- **Remaining**: Add body content to 9 newly created pages
-
-### Future Plans & Unimplemented Phases
-
-#### Add Post Body Content
-**Status**: Not started
-**Planned Steps**:
-1. Query Notion database for LinkedIn posts: `python3 ~/.claude/scripts/notion-api.py personal query-database 131edc77-7df2-80be-a79e-edc6e0955fc2 '{"property": "Type", "multi_select": {"contains": "LinkedIn post"}}'`
-2. Check which pages have empty bodies using `get-blocks`
-3. Use Chrome DevTools MCP to navigate to LinkedIn and extract full post text via JavaScript evaluation
-4. For each page needing content, use `append-blocks` to add paragraphs (split at 2000 chars)
-5. Verify content added via Notion UI
-
-### Next Actions
-- [ ] Add body content to 9 newly created LinkedIn posts in Notion
-- [ ] Verify all 20 posts have complete data in Notion
-
-### Metrics
-- Notion pages updated: 11
-- Notion pages created: 9
-- Total posts synced: 20
-
----
-
-## Session Log: 2026-01-30
-
-**Project**: writing-assistant
-**Type**: [content] [creative]
-
-### Objectives
-- Decide whether to add an image to LinkedIn post about ActiveCampaign interview
-- Explore creative approaches to the post
-
-### Summary
-Started with a practical question about LinkedIn post images, evolved into creative reimagining of the post "as the Buddha would write it." This produced a standalone koan about AI and clarity that will be published on both LinkedIn and We Eat Robots Substack. Refined the piece through multiple iterations, ultimately choosing radical minimalism: no image, no subtitle, just "A Koan" as the title.
-
-### Files Changed
-- No files modified in repository (content created for external platforms)
-
-### Technical Notes
-- **The koan created**:
-  ```
-  The student asked: "How do I use AI without creating noise?"
-  The teacher said: "First, know what you want to say. The tool cannot find clarity you do not possess."
-  The student asked: "But what if the tool writes faster than I can think?"
-  The teacher said: "Then you have only accelerated your confusion."
-  ```
-- Echoes the classic Buddhist parable about the businessman who doesn't have time to meditate
-- For LinkedIn: Post as "A koan" with no framing, no image
-- For Substack: Title "A Koan", no subtitle, no image, SEO description uses the opening question
-- URL slug changed from `a-koan` to `ai-koan` for discoverability
-
-### Key Decisions
-1. **Image decision**: For LinkedIn, the article header screenshot (active campaign 2.png) would work, but for the koan-only version, no image is better
-2. **No attribution**: Decided against crediting Claude or linking to the original ActiveCampaign article - would undercut the minimalism
-3. **"Content age" vs "AI content age"**: Kept broader framing, then dropped it entirely to just "A koan"
-4. **Substack SEO**: Keep `ai-koan` as slug for discoverability (infrastructure doesn't affect reader experience)
-
-### Next Actions
-- [ ] Publish koan on We Eat Robots Substack
-- [ ] Post koan version on LinkedIn
-- [ ] Consider follow-up post showing before/after unslop comparison (using unslop-sideview.png)
-
-### Metrics
-- Files modified: 0
-- Creative output: 1 koan for dual-platform publishing
-
----
-
-## Session Log: 2026-02-16
-
-**Project**: writing-assistant
-**Type**: [feature] [refactor]
-
-### Objectives
-- Design and build a structured writing process tool (`/write`) for thought leadership articles
-- Research the Animalz writing methodology from published articles, Logseq knowledge base, and internal resources
-- Reorganize the writing-assistant project around this new primary workflow
-
-### Summary
-Built a complete 8-phase structured writing process for Claude Code (`/write` command) based on deep research across 13 Animalz articles and 23+ Logseq search queries. The process enforces disciplined writing by having Claude act as strict editor — pushing back on weak theses, enforcing outline discipline, and preventing AI shortcuts. Also created `/write-rescue` (mid-process entry for broken drafts), `/write-status` (progress check), and two subagents (writing-researcher for Phase 4 research, writing-editor for Phase 8 ABCD review). Project cleanup planned but not yet executed.
-
-### Files Changed
-- `.claude/commands/write.md` - **Created.** Core 8-phase writing process (23KB). Foundation → Thesis → Structure → Research → 30% Outline → Introduction → Drafting → Review. Quality gates at each phase.
-- `.claude/commands/write-rescue.md` - **Created.** Mid-process rescue: diagnoses existing drafts, maps against 8 phases, identifies failure points, sets up state file for `/write`.
-- `.claude/commands/write-status.md` - **Created.** Quick status utility for in-progress articles.
-- `.claude/subagents/writing-researcher.md` - **Created.** Research agent for Phase 4. Adapted from article-researcher.md with added web search and outline-section mapping.
-- `.claude/subagents/writing-editor.md` - **Created.** Editorial review agent for Phase 8. ABCD analysis (Awesome/Boring/Confusing/Didn't Believe), thesis drift check, cut recommendations.
-- `CLAUDE.md` - **Rewritten.** Added commands overview, article folder convention, people section.
-- `docs/AGENT_GUIDELINES.md` - **Updated.** Added writing-researcher and writing-editor agents, updated decision tree.
-- `docs/SESSION_STATE_2026-02-16.md` - **Created.** Temporary context preservation file with full session state and research findings. Can be deleted after cleanup is complete.
-
-### Referenced Materials
-*(Not modified, but important context for this session)*
-
-**Animalz articles read (all in `/Users/timmetz/Library/CloudStorage/Dropbox/1 Animalz/2 Areas/AI Ops Animalz/1 Published articles/`):**
-- `20200321 How to Write a Blog Post Outline - Animalz.md` — 10%/30% outline methodology
-- `20210601 Hook, Line, Sinker How to Write an Introduction - Animalz.md` — Hook/sinker/line framework
-- `20240328 Distribute Ideas Not Content - Mark Rodgers.docx` — Idea-centric content strategy
-- `20240428 Everybody Wants Thought Leadership...docx` — Earned secrets, 5 types of thought leadership
-- `20240725 Stay Strong Never Let AI Fill Your Blank Page - Animalz.md` — Human-first AI philosophy
-- `20241205 Blockbuster Blogs How Breakthrough Ideas Are Born - Animalz.md` — 4 origins of blockbuster ideas
-- `20250522 Confessions of an AI Addict - Animalz.md` — 6 vows for AI discipline
-- `20250612 17 Flagship Frameworks From 10 Years of Animalz Content - Animalz.md` — BLUF, Content Value Curve, High-Concept, Information Gain
-- `20250403 Write Smarter, Not Harder...Animalz.md` — ABCD feedback framework, voice-to-draft pipeline
-- `20201013 The Idea Farm...Ryan Law.md` — Idea readiness assessment (Impact/Originality/Credibility/Timeliness)
-- `20211124 The Problem with "Writing is Thinking" - Animalz.md` — Writer-centric vs reader-centric audit
-- `20250918 The Burden of Quality...Animalz.md` — Purpose + Context quality calibration
-- `20250409 AI Content Works...Animalz.md` — Editorial QA questions
-
-**Logseq pages with key findings:**
-- `On Writing (highlights).md` — Stephen King: 2nd draft = 1st - 10%, write with door closed
-- `On Writing Well (highlights).md` — Zinsser: clear thinking = clear writing, one provocative thought
-- `Several Short Sentences About Writing (highlights).md` — Klinkenborg: every word earns its place
-- `Working (highlights).md` — Caro: see it whole before writing, boil to 3 paragraphs
-- `Hey Whipple, Squeeze This (highlights).md` — Sullivan: don't write, talk; cut by a third
-- `blank page fallacy.md` — Full article draft on AI + writing (three seductions of The Button)
-
-**Existing project files used as patterns:**
-- `~/.claude/commands/brief.md` — Step-display pattern, checkpoint design
-- `.claude/subagents/article-researcher.md` — 6-objective research pattern (basis for writing-researcher)
-
-**Notion page attempted but inaccessible:**
-- `https://www.notion.so/animalzco/Thesis-How-do-I-write-a-strong-one-and-other-FAQs-2d5df6dc2cc58174b0facf99e7f9fc5c` — In animalzco workspace, not accessible via personal integration. Content found via published blog version instead.
-
-### Technical Notes
-- The `/write` command uses YAML frontmatter in `state.md` for machine-readable state + markdown body for human-readable process log. This enables multi-session writing.
-- Article folder convention: `projects/articles/{slug}/` with standard files (state.md, thesis.md, outline-10.md, outline-30.md, research/, introduction.md, draft.md, review-notes.md)
-- Quality gates are conversational, not programmatic — Claude actively tests them (e.g., tries to object to the thesis, counts outline words)
-- The writing-researcher agent retains the proven 6-objective structure from article-researcher.md but adds web search and outline-section mapping
-- Animalz Notion workspace (`animalzco`) not accessible via personal Notion integration — user wants to add it
-
-### Plan File
-- **Path**: `~/.claude/plans/atomic-gliding-jellyfish.md`
-- **Status**: In Progress (cleanup phase)
-- **Phases Completed**: `/write` process design and implementation (all commands + agents built)
-- **Remaining**: Project cleanup pass (README rewrite, TASKS archive, workflow dedup, stale references)
-
-### Future Plans & Unimplemented Phases
-
-#### Project cleanup pass (approved, not yet executed)
-
-1. **Rewrite `README.md`** — Currently says "Social Post Writer." Full rewrite centered on `/write` as primary workflow, `/draft-linkedin-post` as secondary. Current project structure. Keep lean.
-
-2. **Archive `docs/TASKS.md`** → `docs/archive/TASKS-2025-10.md`. Create fresh `docs/TASKS.md` with current status.
-
-3. **Delete `workflows/post-creation.md`** (top-level, 182 lines) — Redundant duplicate of `workflows/post-creation/draft-linkedin-post-v2.md`. First move Voice Authenticity Checklist (lines 119-141) into the v2 file.
-
-4. **Fix `workflows/voice-refinement.md`** — Update v1→v2 references in Related Files (lines 266-269). Update Step 4D (lines 166-170) from v1→v2 to v2→v3.
-
-5. **Delete `workflows/.claude/settings.local.json`** and `workflows/.claude/` directory — legacy subfolder permissions, root handles this.
-
-6. **Verify** — `grep -r "social-post-writer"` and `grep -r "voice-v1"` should return zero results outside `voice/archive/`.
-
-### Next Actions
-- [ ] Execute cleanup pass (see Future Plans above)
-- [ ] Delete `docs/SESSION_STATE_2026-02-16.md` after cleanup is complete (temporary context file)
-- [ ] Add animalzco Notion workspace to MCP integration
-- [ ] Test `/write` with a real article end-to-end
-- [ ] Consider project rename (deferred — command is `/write`, project stays "writing-assistant" for now)
-
-### Metrics
-- Files created: 6 (3 commands, 2 agents, 1 session state)
-- Files modified: 2 (CLAUDE.md, AGENT_GUIDELINES.md)
-- Research: 13 Animalz articles read, 23+ Logseq searches, full project exploration
-
-### Learnings & Improvement Opportunities
-
-**Workflow improvements:**
-- Notion MCP integration only connects to personal workspace — accessing team workspaces (animalzco) requires separate integration setup. Should document this limitation.
-- The `/brief` command's pattern of "DO NOT use AskUserQuestion — use plain text prompts" was adopted for `/write` — it keeps the conversation natural vs. modal.
-
-**New capabilities needed:**
-- A way to access Animalz internal Notion workspace from Claude Code for richer methodology integration
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-16" ([feature] [refactor] entry)
->
-> Context: Built the `/write` structured writing process (8-phase, with agents). Now need to execute the approved cleanup pass to reorganize the rest of the project.
->
-> Key points:
-> - All `/write` commands and agents are built and live (write.md, write-rescue.md, write-status.md, writing-researcher.md, writing-editor.md)
-> - Cleanup plan approved but not executed — details in plan file and session log "Future Plans" section
-> - Temporary context file at `docs/SESSION_STATE_2026-02-16.md` has research findings summary — delete after cleanup
->
-> Referenced paths:
-> - `~/.claude/plans/atomic-gliding-jellyfish.md` — Approved cleanup plan
-> - `docs/SESSION_STATE_2026-02-16.md` — Temporary session state with research findings
-> - `workflows/post-creation.md` — To be deleted (redundant)
-> - `workflows/voice-refinement.md` — To be updated (v1→v2 refs)
->
-> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
-
----
-
-## Session Log: 2026-02-16 (continued)
-
-**Project**: writing-assistant
-**Type**: [refactor] [docs]
-
-### Objectives
-- Execute the approved cleanup pass from the previous session (plan file: `atomic-gliding-jellyfish.md`)
-- Commit all work from the `/write` build session + cleanup
-- Rename GitHub repo from `social-post-writer` to `writing-assistant`
-
-### Summary
-Executed all 7 tasks from the approved cleanup plan: rewrote README.md (now "Writing Assistant" with `/write` as primary workflow), archived stale TASKS.md, deleted redundant `workflows/post-creation.md` (after moving Voice Authenticity Checklist into v2 file), fixed v1 references in `workflows/voice-refinement.md`, deleted legacy `workflows/.claude/` directory, updated SESSION_LOG.md title, and deleted the temporary session state file. Committed everything (both the `/write` build from the prior session and this cleanup) as a single commit. Renamed the GitHub repo from `social-post-writer` to `writing-assistant` and updated the local remote URL.
-
-### Files Changed
-- `README.md` - Full rewrite: "Writing Assistant" title, two workflows, current project structure
-- `docs/TASKS.md` - Fresh replacement with current active tasks and completed history
-- `docs/archive/TASKS-2025-10.md` - Created: archived original TASKS.md
-- `docs/SESSION_LOG.md` - Title updated from "Social Post Writer" to "Writing Assistant"
-- `docs/SESSION_STATE_2026-02-16.md` - Deleted (temporary context file, no longer needed)
-- `workflows/post-creation.md` - Deleted (redundant duplicate of v2 in subdirectory)
-- `workflows/post-creation/draft-linkedin-post-v2.md` - Added Voice Authenticity Checklist (moved from deleted file)
-- `workflows/voice-refinement.md` - Updated Related Files to v2 paths, Step 4D to v2→v3
-- `workflows/.claude/settings.local.json` - Deleted (legacy subfolder permissions)
-
-### Referenced Materials
-- `~/.claude/plans/atomic-gliding-jellyfish.md` - Cleanup plan (approved previous session, executed this session)
-- Previous session log entry "## Session Log: 2026-02-16" - Full context for what was built
-
-### Technical Notes
-- GitHub repo renamed via `gh repo rename`. GitHub auto-redirects old URL (`social-post-writer` → `writing-assistant`).
-- Remaining `social-post-writer` references in session log history and archive files are intentionally left as-is — they're accurate historical records.
-- Untracked files from other sessions (interviews, screenshots, linkedin-post drafts) were deliberately left out of the commit.
-
-### Plan File
-- **Path**: `~/.claude/plans/atomic-gliding-jellyfish.md`
-- **Status**: Completed
-- **Phases Completed**: All — `/write` build (previous session) + cleanup pass (this session)
-
-### Next Actions
-- [ ] Test `/write` with a real article end-to-end
-- [ ] Add animalzco Notion workspace to MCP integration
-- [ ] Commit remaining untracked files from other sessions if desired (interviews, screenshots, linkedin-post drafts)
-
-### Metrics
-- Files modified: 4
-- Files created: 1 (archive)
-- Files deleted: 3
-- Commit: `d4ddc2f` (16 files, +1800/-499 lines — includes both build + cleanup)
-
-### Learnings & Improvement Opportunities
-
-**Workflow improvements:**
-- The `/save-session` skill should probably prompt to commit if there are uncommitted changes — easy to forget between cleanup and save
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-16 (continued)" ([refactor] [docs] entry)
->
-> Context: Cleanup pass complete. `/write` process built and committed. Repo renamed to writing-assistant. Ready to test `/write` with a real article.
->
-> Key points:
-> - All `/write` commands and agents live and committed
-> - Project fully reorganized — README, TASKS, workflows all current
-> - GitHub repo renamed: `metztim/writing-assistant`
-> - Next step: test `/write` end-to-end with a real article
->
-> Referenced paths:
-> - `.claude/commands/write.md` — Primary workflow command
-> - `projects/articles/` — Where articles will live
->
-> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
-
----
-
-## Session Log: 2026-02-19
-
-**Project**: writing-assistant (animalz-ai-content-system article)
-**Type**: [docs]
-
-### Objectives
-- Rescue the Animalz Intelligence LinkedIn article from the Animalz/content repo into the writing-assistant project
-- Diagnose the draft using /write-rescue and set up for /write
-- Begin Phase 2 (Thesis) work
-
-### Summary
-Imported the Animalz Intelligence article (about building an AI content system) from the Animalz/content repo. Ran /write-rescue: diagnosed three competing theses, mapped all 8 phases, identified thesis drift + multi-purpose conflict as the primary failure. Set up the article folder with state.md, draft.md, and revision brief. Started Phase 2 (Thesis) — worked through earned secret and two thesis attempts. Stopped mid-phase with a clear next step: sharpen the thesis so "not content work" survives the content-expertise objection.
-
-### Files Changed
-- `projects/articles/animalz-ai-content-system/state.md` — Created with Phase 1 complete, detailed process log from rescue + thesis session
-- `projects/articles/animalz-ai-content-system/draft.md` — Current draft copied from latest version (Downloads)
-- `projects/articles/animalz-ai-content-system/research/revision-brief.md` — Full revision brief + all reviewer feedback + Nathan's follow-up
-- `projects/articles/animalz-ai-content-system/research/working-notes.md` — Raw thinking from thesis session: five things people underestimate, Nathan anecdote, thesis iterations, objection exchange
-
-### Referenced Materials
-- `/Users/timmetz/Developer/Projects/Animalz/content/animalz-intelligence-linkedin/` — Original article folder in Animalz/content repo
-- `/Users/timmetz/Developer/Projects/Animalz/content/docs/SESSION_LOG.md` (Session Log: 2026-02-02) — Previous session where revision brief was created
-- `/Users/timmetz/Developer/Projects/Animalz/content/animalz-intelligence-linkedin/feedback/20260107 article feedback Nathan.md` — Nathan's feedback
-- `/Users/timmetz/Downloads/ai-made-building-our-content-system-feel-like-writing.md` — Latest draft version (source for import)
-- Tim's Slack message with his own analysis + Ronnie's full feedback (captured in revision brief)
-- Nathan's follow-up: "the main premise is still vague: you need to build a whole system (of what? or that does what?)"
-
-### Technical Notes
-- **Write-rescue diagnosis:** Three competing theses (feels like writing / three principles / hire us). "Feels like writing" angle scores 25% — the title's promise is what the draft delivers least. Confirmed direction: narrative case study with principles for content/marketing leaders.
-- **Earned secret evolution:** Started vague ("opportunities emerge when you treat AI as a system"), refined through discussion to: "Building AI content at scale is product engineering minus the coding, not content work."
-- **The Nathan anecdote** is the sharpest proof of the earned secret — needs Nathan's permission to use. Great editor assigned to workflow building, hated it because the work is testing/debugging/iterating.
-- **Five things people underestimate** documented in working-notes.md: (1) tool isn't enough out of box, (2) work is product dev not content, (3) system pushes itself onto you, (4) differentiation lives outside tool, (5) tool selection judgment.
-- **Thesis attempt 1:** "Building AI content systems at scale is product engineering work minus the code, not content work." Sharp, arguable. Survived initial objection about content expertise by scoping: content expertise is table stakes, engineering mindset is the missing piece.
-
-### Future Plans & Unimplemented Phases
-
-#### Phase 2: Thesis (in progress)
-**Status**: Partially complete — earned secret solid, thesis needs one more iteration
-**Next step**: Rewrite thesis keeping the sharp "not content work" claim. The content-expertise objection scopes the thesis (content knowledge is table stakes for the reader — it's not what's missing), it doesn't kill it. Nathan had content expertise; that wasn't the gap.
-
-After thesis: 2c (thesis-antithesis-synthesis), then quality gates.
-
-#### Phases 3-8: Not started
-See `.claude/commands/write.md` for full process. Key decisions already made:
-- Structure should follow narrative arc (before → catalyst → three discoveries → results → close)
-- Three principles reframed as discoveries, not prescriptions
-- Bonus principles woven in, not named sections
-- "Feels like writing" angle removed entirely
-- Revision brief checklist in research/revision-brief.md
-
-### Next Actions
-- [ ] Resume Phase 2: write sharpened thesis that survives content-expertise objection
-- [ ] Complete 2c: thesis-antithesis-synthesis
-- [ ] Pass quality gates (thesis validity + thesis-antithesis)
-- [ ] Check with Nathan re: permission to use his story in the article
-- [ ] Move to Phase 3 (Structure) after thesis is locked
-
-### Metrics
-- Files created: 4 (state.md, draft.md, revision-brief.md, working-notes.md)
-- Files modified: 1 (docs/SESSION_LOG.md)
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-19" (animalz-ai-content-system article)
->
-> Context: Working on the Animalz Intelligence article about building our AI content system. Rescued draft into /write process, currently mid-Phase 2 (Thesis).
->
-> Key points:
-> - Earned secret is solid: "building AI content at scale is product engineering minus the coding, not content work"
-> - Thesis attempt 1 was sharp but needs refinement to survive the content-expertise objection (content knowledge is table stakes; engineering mindset is the missing piece)
-> - Five things people underestimate + Nathan anecdote documented in working-notes.md
->
-> Referenced paths:
-> - `projects/articles/animalz-ai-content-system/state.md` — Process state
-> - `projects/articles/animalz-ai-content-system/research/working-notes.md` — Raw thinking from thesis session
-> - `projects/articles/animalz-ai-content-system/research/revision-brief.md` — Full revision brief + feedback
->
-> Read the session log section above and the working-notes.md, then run `/write animalz-ai-content-system` to continue from Phase 2.
-
----
-
-## Session Log: 2026-02-23
-
-**Project**: writing-assistant
-**Type**: [feature] [bugfix]
-
-### Objectives
-- Evaluate whether a Claude deep research report (programmer-monks analogy) could work as a We Eat Robots article
-- Save the article idea to Notion MyContent database
-- Fix a bug in the Notion CLI formatting code
-
-### Summary
-Reviewed a Claude deep research report comparing programmers to medieval monks/scribes and assessed its fit for We Eat Robots. Gave honest feedback: the report itself isn't a good WER fit (wrong genre, no personal voice), but the **meta-story** — that deep research output quality has crossed a publishable threshold — is a strong WER article. Saved the idea to MyContent in personal Notion. Then discovered and fixed a bug in the Notion CLI where `multi_select` property formatting crashed on database objects (schema shape differs from page property values).
-
-### Files Changed
-- `~/.claude/tools/notion-cli/notion_cli/formatting.py` - Fixed `_format_page_list` to skip property extraction for database objects (which have schema-shaped properties, not value-shaped)
-
-### Referenced Materials
-- `projects/articles/programmer-monks/compass_artifact_wf-facb8f3a-5db5-4b28-ad10-2038feddde4c_text_markdown.md` - The deep research report evaluating the monks-to-programmers analogy
-- `projects/we-eat-robots/` - WER publication context (tone, audience, article types)
-
-### Technical Notes
-- **Notion CLI bug**: `_format_page_list` assumed all search results were pages. Notion's search API also returns database objects, where `multi_select` is `{"options": [...]}` (schema) not `[{"name": "..."}]` (values). Iterating the dict yielded string keys → `AttributeError`.
-- **Fix**: Added `object` type check; skip `_extract_properties()` for non-page objects.
-- **uv tool install gotcha**: `--force` alone doesn't rebuild from source. Need `--force --reinstall` to bust the build cache.
-- **MyContent page created**: `310edc77-7df2-81a4-8147-fe3d060ec137` — "Deep research reports have crossed a quality threshold" as WER article idea.
-
-### Next Actions
-- [ ] Decide whether to develop the WER meta-article about deep research quality thresholds
-- [ ] Consider syncing the Notion CLI fix to the team CLI (`modules/tools/notion-cli/`)
-
-### Metrics
-- Files modified: 1
-- Notion pages created: 1
-
-### Learnings & Improvement Opportunities
-
-**Workflow improvements:**
-- `uv tool install . --force` doesn't rebuild from source if the version number hasn't changed. The CLI install/update workflow should use `--force --reinstall` to ensure source changes are picked up.
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-23" (feature/bugfix entry)
->
-> Context: Evaluated a deep research report for WER publication, saved the meta-angle idea to Notion MyContent, and fixed a multi_select formatting bug in the Notion CLI.
->
-> Key points:
-> - WER article idea saved to MyContent: "Deep research reports have crossed a quality threshold"
-> - Notion CLI bug fixed in `~/.claude/tools/notion-cli/notion_cli/formatting.py` — needs sync to team CLI
->
-> Referenced paths:
-> - `projects/articles/programmer-monks/` — Deep research report and source material
-> - `~/.claude/tools/notion-cli/notion_cli/formatting.py` — Fixed formatting file
->
-> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
-
----
-
-## Session Log: 2026-02-26
-
-**Project**: writing-assistant (`/Users/timmetz/Developer/Projects/Personal/writing-assistant/`)
-**Type**: [feature] [docs]
-
-### Objectives
-- Evaluate whether to build a custom CLI/MCP for Animalz KB writing advice or use existing Notion CLI
-- Add KB reference section to writing-assistant CLAUDE.md
-- Design a new `/copywrite` command for copywriting (landing pages, ads) based on Logseq notes and copywriting books
-
-### Summary
-Decided against building a custom CLI for the Animalz Knowledge Base — the existing Notion CLI with category filters covers the use case. Added a KB reference section to the project CLAUDE.md mapping writing needs to database query patterns. Then began planning a `/copywrite` command: researched the existing `/write` command structure in depth, gathered copywriting principles from research files (Harry Dry, Hey Whipple), reflection quotes index, and Notion Library. Logseq searches failed due to macOS Full Disk Access permissions blocking Dropbox access — need to fix before continuing.
-
-### Files Changed
-- `CLAUDE.md` (writing-assistant project) — Added "Animalz Knowledge Base (Notion)" section with query patterns and category-to-writing-need lookup table
-
-### Referenced Materials
-- `~/.claude/research/copywriting-harry-dry-principles.md` — Approved research: Harry Dry's three laws of copywriting, zoom-in technique, craft rules
-- `~/.claude/research/_inbox/copywriting-advertising-principles.md` — Inbox research: Hey Whipple principles, Sullivan's concepting lenses, central human truth
-- `data/indexes/reflection-quotes.json` (my-os project) — Hey Whipple quotes indexed with priorities
-- `.claude/commands/write.md` — Existing 8-phase write command (model for new copywrite command)
-- `.claude/subagents/article-researcher.md` — Writing researcher subagent
-- `voice/` — Tim's voice/linguistic fingerprint files
-- Animalz Knowledge Base (Notion wiki DB): `2c3df6dc-2cc5-803d-aed8-d8ac4d1dc3f7`
-
-### Technical Notes
-- Animalz KB has useful filterable categories: Writing Fundamentals, Editing & Quality, SEO & Optimization, Research & Ideation, Long-form content, Email & Newsletters, LI Content, AI Resources
-- `notion search` is not scoped to a single database — returns tasks mixed with KB articles. Use `notion query "Knowledge Base" --filter` instead.
-- Logseq CLI broken: `~/Library/CloudStorage/Dropbox/Logseq/` returns "Operation not permitted". Cache rebuilt empty. Fix: grant Full Disk Access to terminal app, restart terminal, then `rm ~/.cache/logseq-cli/index.pickle ~/.cache/logseq-cli/mtimes.json`
-
-### Plan File
-- **Path**: `~/.claude/plans/replicated-plotting-engelbart.md`
-- **Status**: Paused (Phase 1 research incomplete — blocked on Logseq access)
-- **Phases Completed**: Existing `/write` command analysis, copywriting sources from research files + Notion Library
-- **Remaining**: Logseq searches, Phase 2 (design), Phase 3 (review), Phase 4 (final plan)
-
-### Future Plans & Unimplemented Phases
-
-#### Logseq research (resume Phase 1)
-**Status**: Blocked on permissions fix
-**Planned Steps**:
-1. Fix Full Disk Access: System Settings → Privacy & Security → Full Disk Access → enable terminal app → restart
-2. Clear stale cache: `rm ~/.cache/logseq-cli/index.pickle ~/.cache/logseq-cli/mtimes.json`
-3. Run comprehensive searches (full list in plan file): copywriting, copy, headline, tagline, Hey Whipple, Harry Dry, Ogilvy, Caples, Hopkins, Copyhackers, brevity, value proposition, positioning, brand voice, CTA, conversion, messaging, hooks, storytelling, ref/copy, ref/writing
-4. Read full pages for all substantive results
-
-#### Phase 2: Design the `/copywrite` command
-**Status**: Not started
-**Key design decisions to make**:
-- Phase structure (copywriting is not articles — not thesis→outline→draft but more like: audience → core truth → messaging angles → write many options → test/refine)
-- What artifacts to produce (state file, brief, headline options, body copy variants, etc.)
-- Folder convention (parallel to `projects/articles/{slug}/`?)
-- Which copywriting principles to embed as quality gates
-- Whether to support different copy types (landing page, ad, email, social) with shared or separate flows
-- Subagent design (copy reviewer?)
-
-### Next Actions
-- [ ] Fix Logseq Full Disk Access permissions (System Settings → Privacy & Security)
-- [ ] Restart terminal
-- [ ] Clear Logseq cache and verify searches work
-- [ ] Complete Logseq copywriting research
-- [ ] Promote `~/.claude/research/_inbox/copywriting-advertising-principles.md` to approved research (user decision)
-- [ ] Design and implement `/copywrite` command
-
-### Metrics
-- Files modified: 1 (CLAUDE.md)
-
-### Learnings & Improvement Opportunities
-
-**Workflow improvements:**
-- Logseq CLI should handle Dropbox permission errors more gracefully — currently silently rebuilds an empty cache, making it look like there are simply no results. Could warn: "0 files found in graph directory — check permissions."
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-26" ([feature] entry)
->
-> Context: Designing a `/copywrite` command for copywriting (landing pages, ads). Research phase paused because Logseq CLI can't access Dropbox (macOS permissions). Comprehensive plan file exists with all research gathered so far.
->
-> Key points:
-> - Fix Logseq access first: grant Full Disk Access to terminal, restart, clear cache (`rm ~/.cache/logseq-cli/index.pickle ~/.cache/logseq-cli/mtimes.json`)
-> - Plan file with full research context: `~/.claude/plans/replicated-plotting-engelbart.md`
-> - After Logseq searches complete, proceed to Phase 2 (design) of the copywrite command
->
-> Referenced paths:
-> - `~/.claude/plans/replicated-plotting-engelbart.md` — Plan file with all research and resume instructions
-> - `~/.claude/research/copywriting-harry-dry-principles.md` — Harry Dry principles
-> - `~/.claude/research/_inbox/copywriting-advertising-principles.md` — Hey Whipple principles
-> - `.claude/commands/write.md` — Existing write command (structural model)
->
-> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
-
----
-
-## Session Log: 2026-02-26 (continued)
-
-**Project**: writing-assistant (`/Users/timmetz/Developer/Projects/Personal/writing-assistant/`)
-**Type**: [feature]
-
-### Objectives
-- Fix Logseq CLI access (blocked by macOS Full Disk Access permissions on Dropbox)
-- Complete comprehensive Logseq copywriting research (Phase 1 of plan)
-- Design and implement the `/copywrite` command (Phase 2 of plan)
-- Promote Hey Whipple research file from inbox to approved
-- Create Money Words research file for Joanna Wiebe/Copyhackers principles
-
-### Summary
-Resumed from earlier session where Logseq access was blocked. After user granted Full Disk Access, cleared cache and confirmed Logseq CLI works. Ran comprehensive searches across 30+ terms (copywriting, headline, advertising, Harry Dry, Ogilvy, Caples, positioning, brand voice, ref/copy, etc.) and read full pages for all substantive results. Key new sources found: Joanna Wiebe's Money Words (The You Rule, interference principle), Arielle Jackson's Positioning framework (SOCO/SOCA, creative brief template, Moore template), and the "How to Make AI Write Less Like AI" three-phase workflow. Extracted specific procedural tools from all sources — Harry Dry's step-by-step process, Sullivan's starting questions, Wiebe's word-level rules, Jackson's positioning questions. Designed and implemented a 7-phase `/copywrite` command grounded in these frameworks. Key design discussion: user pushed back on AI generating variants too early — the human should exhaust themselves first (15+ variants) before Claude helps extend. Promoted Hey Whipple research file and created new Money Words research file.
-
-### Files Changed
-- `.claude/commands/copywrite.md` - Created: Full 7-phase copywriting command (Brief → Strategy → Research → Exploration → Selection → Full Copy → Review)
-- `CLAUDE.md` - Updated: Added `/copywrite` command description and `projects/copy/` folder convention
-- `~/.claude/research/copywriting-advertising-principles.md` - Promoted from `_inbox/` to approved research
-- `~/.claude/research/copywriting-money-words-wiebe.md` - Created: The You Rule, money/lose-money words, interference principle, copy vs. content distinction
-
-**Animalz Intelligence knowledge base** (`/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/knowledge-base/src/content/`):
-- `changelog/2026-02-16-write-command.md` - Created: Retroactive changelog entry for `/write` command
-- `changelog/2026-02-26-copywrite-command.md` - Created: Changelog entry for `/copywrite` command
-- `commands/write.md` - Created: Command reference for `/write` (8-phase article process)
-- `commands/copywrite.md` - Created: Command reference for `/copywrite` (7-phase copy process)
-- `playbook/build-commands-from-knowledge.md` - Created: "Building AI Commands from Personal Knowledge" — how-to on turning book highlights and research notes into structured AI commands, using `/copywrite` as the running example
-
-### Referenced Materials
-- `~/.claude/plans/replicated-plotting-engelbart.md` — Plan file from previous session with all research context and resume instructions
-- `~/.claude/research/copywriting-harry-dry-principles.md` — Approved research: three laws, Zoom In technique, craft rules
-- `.claude/commands/write.md` — Existing 8-phase write command (structural model for /copywrite)
-- Logseq pages read in full:
-  - "Learn Great Copywriting in 76 Minutes | Harry Dry (highlights)" [.3, ref/copy] — 80KB of podcast highlights, primary source for process steps
-  - "Unlock the Power of Money Words" (highlights) [.3] — Joanna Wiebe's word-level conversion rules
-  - "Positioning Your Startup Is Vital" (highlights) [.4] — SOCO/SOCA, Moore template, creative brief template, naming techniques
-  - "How to Make AI Write Less Like AI" (highlights) [.3] — Observe → Distill → Write workflow
-- Logseq pages found but not read in full: The 35 Headline Formulas of John Caples [.4], Headlines (Columbia Journalism) [.3], Selling the Invisible [.4], On Writing Well [.3, ref/copy], The Best PR Advice (Facebook) [.3], We Don't Sell Saddles Here [.4], Product Content Strategy [.4]
-
-### Technical Notes
-- Logseq CLI fix: granting Full Disk Access to terminal app + clearing cache (`rm ~/.cache/logseq-cli/index.pickle ~/.cache/logseq-cli/mtimes.json`) resolved the Dropbox access issue
-- Logseq `get-page` is sensitive to exact title — em dashes (—) vs en dashes (–) vs double hyphens (--) can cause "page not found." Workaround: `ls ~/Library/CloudStorage/Dropbox/Logseq/pages/ | grep -i "keyword"` to find exact filename, then read directly
-- The Harry Dry podcast highlights page is ~80KB — too large to read in one shot. Use grep patterns to extract specific procedural content
-
-### Plan File
-- **Path**: `~/.claude/plans/replicated-plotting-engelbart.md`
-- **Status**: Completed
-- **Phases Completed**: Phase 1 (research — Logseq searches + source analysis), Phase 2 (design), Phase 3 (implementation)
-- **Remaining**: None — command is built and ready to use
-
-### Next Actions
-- [ ] Test `/copywrite` with a real project to validate the flow
-- [ ] Consider building a `/copywrite-status` command (parallel to `/write-status`)
-- [ ] Consider building a copy reviewer subagent (referenced in Phase 7 of the command)
-
-### Metrics
-- Files created: 7
-  - `.claude/commands/copywrite.md`
-  - `~/.claude/research/copywriting-money-words-wiebe.md`
-  - Animalz Intelligence KB: `changelog/2026-02-16-write-command.md`, `changelog/2026-02-26-copywrite-command.md`, `commands/write.md`, `commands/copywrite.md`, `playbook/build-commands-from-knowledge.md`
-- Files modified: 1 (CLAUDE.md)
-- Files moved: 1 (Hey Whipple research promoted from _inbox/)
-
-### Learnings & Improvement Opportunities
-
-**Workflow improvements:**
-- Logseq CLI `get-page` should handle common character variants (em dash / en dash / double hyphen) more gracefully — currently requires exact match
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-26 (continued)" ([feature] entry)
->
-> Context: Built and shipped the `/copywrite` command — a 7-phase structured copywriting process for landing pages, ads, emails, and taglines. Grounded in Harry Dry's three laws, Sullivan's advertising principles, and Wiebe's Money Words.
->
-> Key points:
-> - `/copywrite` command is implemented and ready to use at `.claude/commands/copywrite.md`
-> - Three approved research files back it: Harry Dry principles, Hey Whipple/Sullivan principles, Money Words/Wiebe principles
-> - Not yet tested with a real project
-> - Both commands documented in Animalz Intelligence KB (changelog, commands, playbook article)
->
-> Referenced paths:
-> - `.claude/commands/copywrite.md` — The new command
-> - `~/.claude/research/copywriting-harry-dry-principles.md` — Harry Dry research
-> - `~/.claude/research/copywriting-advertising-principles.md` — Sullivan/Hey Whipple research
-> - `~/.claude/research/copywriting-money-words-wiebe.md` — Wiebe/Money Words research
-> - `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/knowledge-base/src/content/` — Animalz Intelligence KB entries
->
-> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
-
----
-
-## Session Log: 2026-02-26b
-
-**Project**: writing-assistant (context-engineering article)
-**Type**: [docs]
-
-### Objectives
-- Address Tim's 15-item editorial task list and detailed section-by-section feedback on the context engineering article
-- Research missing information (Karpathy bio, LangChain descriptor, context graph terminology, AI Onion, Lenny's podcast, Animalz Intelligence OS examples)
-- Produce revised draft with structural changes, filled placeholders, and new voice (written as Tim)
-- Push formatted draft to Notion for Tim's review
-
-### Summary
-Completed a major editorial revision of the context engineering article. Explored the Animalz Intelligence OS codebase and Notion/Logseq for concrete examples. Researched web sources for placeholders. Rewrote all H2 headers, restructured sections per Tim's feedback, filled all placeholders with real Animalz system examples, completely rewrote the "what to do" section with Tim's 6 specific alternatives, reframed "skill gap" as "team discipline," and tightened the conclusion. Draft delivered locally and to Notion with revision summaries and decision callouts. Word count reduced from ~2,500 to ~2,150 while adding substantially more specific content.
-
-### Files Changed
-- `projects/articles/context-engineering/draft.md` — Complete editorial revision: new headers, restructured sections, all placeholders filled, new voice (Tim first person), rewritten tips section, tightened conclusion
-- `projects/articles/context-engineering/state.md` — Updated title, word count target (VPW-optimized), added detailed revision log with all research findings and structural changes
-
-### Referenced Materials
-- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/` — Full project explored for concrete examples (brand kits, modules, workflows, APIs)
-- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/CLAUDE.md` — Project structure, integrations, Notion database IDs
-- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/README.md` — Architecture, data flow, module descriptions
-- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/` — Brand kit creator (8 components), style calibrator, md-clip Chrome extension, AEO audits, raw materials, output comparison
-- `projects/articles/context-engineering/review-notes.md` — Tim's section-by-section editorial feedback (driving all revision decisions)
-- `projects/articles/context-engineering/research/sources.md` — External references and internal Animalz context
-- `projects/articles/context-engineering/research/original-draft.md` — Agent-generated first draft for comparison
-- `projects/articles/animalz-ai-content-system/draft.md` — Companion article checked for overlap (Phase 2, "Context over Prompts" principle)
-- https://www.animalz.co/blog/ai-onion — AI Onion framework (three-layer model, "team not solo" connection)
-- https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents — Anthropic CE guide
-- https://www.lennysnewsletter.com/p/why-ai-evals-are-the-hottest-new-skill — Lenny's podcast on AI evals (Husain & Shankar)
-- Notion AI Services positioning doc (312df6dc) — Alignment check for article framing
-- Notion Intelligence OS project (26fdf6dc) — Context library structure
-
-### Technical Notes
-- **"Context graph" too niche:** Research showed TrustGraph/Neo4j promote the term but it's not mainstream CE discourse. Used "context library" instead.
-- **Karpathy descriptor:** "OpenAI co-founder and founder of Eureka Labs" — OpenAI co-founder carries more recognition for this audience.
-- **LangChain descriptor:** "AI agent framework" — matches their current positioning.
-- **Companion article overlap managed:** `animalz-ai-content-system` tells the build story; this article cites the system as proof of principle without retelling the narrative.
-- **Voice:** First person singular for Tim's perspective, first person plural for team work, second person for reader-facing advice.
-- **AI Services positioning alignment:** CE not yet in positioning materials — this article introduces the term into Animalz's lexicon.
-
-### Plan File
-- **Path**: `~/.claude/plans/fuzzy-napping-sparkle.md`
-- **Status**: Completed (research, structural revisions, line edits, Notion delivery done)
-- **Remaining**: Tim's review of draft, then `/content-review` stress test
-
-### Next Actions
-- [ ] Tim to review draft in Notion: H1 title (5 alternatives), "slop" alliteration ("substance" recommended), voice authenticity
-- [ ] Run `/content-review` after Tim's feedback is incorporated
-- [ ] Update research/sources.md with new findings (Lenny's podcast, context graph research)
-- [ ] Consider AEO/SEO positioning for target keywords
-
-### Metrics
-- Files modified: 2
-- Notion page populated: 1 (313df6dc — 4 API batches, ~60 blocks)
-- Research agents: 3 (web, codebase, Notion/Logseq)
-- Word count: ~2,500 → ~2,150 (14% reduction, higher density)
-
-### Learnings & Improvement Opportunities
-
-**Workflow improvements:**
-- Intelligence OS codebase exploration agent hit permission issues — needed to explore directly from main session. Consider pre-authorizing read access for subagents on known project directories.
-- Markdown-to-Notion conversion for long articles is labor-intensive. A reusable skill for "push markdown article to Notion page with formatting" would save significant time.
-
-### Continuation Prompt
-> Project: writing-assistant
-> Session log: docs/SESSION_LOG.md
-> Section: "## Session Log: 2026-02-26b" (context-engineering article revision)
->
-> Context: Major editorial revision of the context engineering article for Animalz blog. Draft revised per Tim's 15-item task list, pushed to Notion. Awaiting Tim's review on H1 title, "slop" alliteration, and voice authenticity.
->
-> Key points:
-> - Revised draft at `projects/articles/context-engineering/draft.md` — all placeholders filled, headers rewritten, tips rewritten, team discipline thread woven throughout
-> - Notion draft at page `313df6dc2cc580729827f64b653b6a75` with revision summary and decision callouts
-> - Tim's review notes: `projects/articles/context-engineering/review-notes.md`
-> - Plan file: `~/.claude/plans/fuzzy-napping-sparkle.md`
->
-> Referenced paths:
-> - `projects/articles/context-engineering/` — Article project directory
-> - `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/` — Source for examples
-> - `projects/articles/animalz-ai-content-system/` — Companion article (overlap management)
->
-> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
-
----
-
-## Session Log: 2026-02-27
-
-**Project**: writing-assistant
-**Type**: [feature] [docs]
-
-### Objectives
-- Review and respond to Tim's inline comments on the Context Engineering article in Notion
-- Riff on H1 and H2 title alternatives based on Tim's feedback
-- Fix Notion CLI so `get-comments` finds inline block comments by default
-
-### Summary
-Read Tim's 6 inline comments on the Context Engineering article (sections before "Five problems") and posted editorial replies to each Notion discussion thread. Then iterated on H1 and H2 title candidates through multiple rounds of feedback — landed on "Your Prompts Are Fine: Context Engineering Is Your Next AI Problem" (H1) and "Prompts got you here, context gets you there" (H2, Goldsmith echo). Discovered and fixed a Notion CLI issue where `get-comments` only returned page-level comments by default, missing inline block comments entirely. Updated both personal and team CLIs.
-
-### Files Changed
-- `~/.claude/tools/notion-cli/notion_cli/cli.py` — Replaced `--all-blocks` (opt-in) with `--page-only` (opt-out); `get-comments` now scans all blocks by default
-- `~/.claude/tools/notion-cli/notion_cli/api.py` — Made `get_all_comments()` recursive to find comments inside nested blocks (callouts, toggles, etc.)
-- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/tools/notion-cli/notion_cli/cli.py` — Same `--page-only` flag change synced to team CLI
-- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/tools/notion-cli/notion_cli/api.py` — Added `get_all_comments()` with recursive traversal (was missing entirely from team CLI)
-
-### Referenced Materials
-- `projects/articles/context-engineering/draft.md` — Current article draft, read for full text context
-- Notion page `313df6dc-2cc5-8072-9827-f64b653b6a75` — The Context Engineering article with inline comments
-- https://ahrefs.com/blog/gonzo-content/ — Ryan Law's gonzo content article (referenced in Tim's comment, not found in Logseq)
-- `~/.claude/plans/calm-cooking-whistle.md` — Plan file for the comment reply approach
-
-### Technical Notes
-- **Notion API comment model**: `get-comments` with a page ID returns only page-level comments. Inline discussion comments (from highlighting text) are attached to individual block IDs. Must iterate blocks and query each one.
-- **Resolved comments are hidden**: The Notion API does not return resolved/closed comment threads. If comments disappear, check if they were resolved in the UI.
-- **Block IDs can change**: When Tim edited article text, some block IDs changed, causing 404s on previously-valid IDs.
-- **Callout children**: Comments on content inside callout blocks may be on the callout itself (if no child blocks) or on child blocks within. The recursive `get_all_comments` now handles both.
-- **Ryan Law gonzo content**: Not in Logseq despite Tim's expectation. Article is at ahrefs.com/blog/gonzo-content/. Tim may want to add it.
-
-### Plan File
-- **Path**: `~/.claude/plans/calm-cooking-whistle.md`
-- **Status**: Completed
-- **Phases Completed**: All — comment replies posted to all 6 discussion threads
-
-### Next Actions
 - [ ] Tim to decide on final H1 title (leading candidate: "Your Prompts Are Fine: Context Engineering Is Your Next AI Problem")
 - [ ] Tim to decide on H2 for first section (leading candidate: "Prompts got you here, context gets you there")
 - [ ] Tim to review remaining article sections (from "Five problems" onward)
@@ -1922,3 +786,1102 @@ Created a reusable drafting team subagent definition (`.claude/subagents/draftin
 > - `projects/articles/animalz-ai-content-system/state.md` — Process state
 >
 > Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
+
+---
+
+## Session Log: 2026-03-12
+
+**Project**: writing-assistant
+**Type**: [docs] [config]
+
+### Objectives
+- Review positioning article draft for Animalz blog readiness
+- Develop series concept from feedback on the article
+- Fix Notion CLI access to Content Calendar database
+- Create Notion entries for series brief and positioning piece
+
+### Summary
+Reviewed a Google Doc draft ("If You Can't Explain What You Do in One Sentence, Content Won't Help") and through iterative feedback, identified that the piece's problems were deeper than structural — the advice was generic and the positioning topic was underexplored. This led to developing a series concept ("Borrowed Lenses") about adjacent disciplines content teams should learn from, with the core thesis that AI gives every marketer/founder the opportunity to become a generalist manager of specialist capabilities. Created Notion entries for both the series brief and the positioning piece, fixed the Notion CLI to support the Content Calendar database, and documented work user IDs for future use.
+
+### Files Changed
+- `~/.claude/tools/notion-cli/notion_cli/aliases.py` — Added "Content Calendar" alias to work workspace
+- `~/Developer/Projects/Animalz/animalz-intelligence-os/modules/tools/notion-cli/notion_cli/aliases.py` — Added "Content Calendar" alias to team CLI (kept in sync)
+- `/Users/timmetz/.local/share/uv/tools/notion-cli/lib/python3.13/site-packages/notion_cli/aliases.py` — Copied updated aliases to installed location (uv cache issue)
+- `~/.claude/CLAUDE.md` — Added Content Calendar to database aliases list; added work workspace user IDs (Tim, Nathan)
+- `~/.claude/projects/-Users-timmetz-Developer-Projects-Personal-writing-assistant/memory/MEMORY.md` — Created memory index
+- `~/.claude/projects/-Users-timmetz-Developer-Projects-Personal-writing-assistant/memory/notion_marketing_tasks_statuses.md` — Marketing Tasks status options reference
+
+### Referenced Materials
+- Google Doc: `https://docs.google.com/document/d/1EFkW7DYFHoz74r9eJJcGYpa4S33P7K-yJHyWNjQCl9w/edit` — Original positioning article draft
+- `https://weeatrobots.substack.com/p/what-only-you-can-tell-ai` — Article about AI amplifying expertise; supports the "informed generalist" thesis
+- Animalz Knowledge Base (Notion, work workspace) — Queried Writing Fundamentals and Long-form content categories
+
+### Notion Pages Created/Updated
+- **Content Calendar: "Positioning 101 for Content Teams"** (`321df6dc-2cc5-813e-ba13-dcb278a6a7fb`) — Status: On hold. Detailed feedback on current draft, direction for rework, research note about Tim's Logseq positioning notes.
+- **Marketing Projects: "Borrowed Lenses — Content Series Concept"** (`321df6dc-2cc5-81c6-8a2b-ec18adbaf493`) — Full series brief with concept, phased approach, topics, structure, differentiation, open questions.
+- **Marketing Tasks: "[Nathan] Confirm next steps on generalist series and positioning article"** (`321df6dc-2cc5-81e9-804f-d33fb39ff53c`) — Status: Blocked / Waiting, reminder: 2026-03-17.
+
+### Technical Notes
+- **Notion CLI alias caching issue**: `uv tool install --force` doesn't always pick up source changes. Workaround: manually copy the updated `.py` file to the installed location at `~/.local/share/uv/tools/notion-cli/lib/python3.13/site-packages/`. This may recur.
+- **Work workspace user IDs**: MCP `get-users` only returns personal workspace users. To get work workspace IDs, extract them from existing database entries with people-type properties. Documented Tim (`b969d818-c450-41a9-a3c5-0c4f76a02efe`) and Nathan (`8a8780d4-9260-4381-9456-d8a1c4007b75`) in global CLAUDE.md.
+- **Marketing Tasks statuses**: Not started, In progress, Blocked / Waiting, Done, Paused, Dropped. Saved to project memory.
+
+### Key Decisions
+- **Series thesis**: AI/agents give every founder and marketer the opportunity to become a generalist manager of specialist capabilities. The manager analogy is the core frame — you need 101/201 understanding to direct specialists (or AI) well.
+- **Phased approach**: Phase 1 validates with 2-3 internally-written pieces (Tim on positioning, Ty on brand strategy, Nathan on copywriting). Phase 2 adds outside experts, podcast, 201s only if Phase 1 resonates.
+- **Positioning piece**: Needs fresh start, not a revision. Current draft has reusable elements but the thesis and series strategy should shape the new version.
+- **False familiarity angle**: Most people have heard of these disciplines, might think they understand them, but 4 out of 5 can't articulate or apply them when pressed. Secondary hook, not the lead.
+
+### Next Actions
+- [ ] Tim to discuss series brief with Nathan (reminder: 2026-03-17)
+- [ ] Team input on series title ("Borrowed Lenses" vs alternatives)
+- [ ] Decide starting topic (positioning natural but maybe not strongest lead)
+- [ ] Decide cadence (monthly? bi-monthly?)
+- [ ] When positioning piece moves forward, search Tim's Logseq for positioning research
+- [ ] Consider weaving in "AI mirrors the quality of its input" angle from weeatrobots article
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- Added Content Calendar alias and work user IDs (done this session)
+- Consider adding all Marketing Tasks status options to global CLAUDE.md (currently only in project memory)
+
+**Workflow improvements:**
+- The `uv tool install` caching behavior should be investigated — may need a build version bump or cache-busting strategy to avoid the manual copy workaround
+- When querying Notion status options, should query the database schema directly rather than inferring from existing entries (misses unused statuses like "Blocked / Waiting")
+
+**Feedback:**
+- Tim prefers Notion for briefs and collaborative docs, not Google Docs. Default to Notion for anything team-facing in the work workspace.
+
+### Metrics
+- Files modified: 3 (aliases.py x2, global CLAUDE.md)
+- Files created: 2 (memory index, memory file)
+- Notion pages created: 3 (Content Calendar entry, Marketing Projects entry, Marketing Tasks entry)
+- Notion pages updated: 1 (series brief page body rewritten)
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-12" ([docs/config] entry)
+>
+> Context: Developed "Borrowed Lenses" content series concept for Animalz blog — 101-level explainers on adjacent disciplines (positioning, brand strategy, copywriting, etc.) through the lens of content marketing. Core thesis: AI gives marketers the opportunity to become generalist managers of specialist capabilities.
+>
+> Key points:
+> - Series brief lives in Marketing Projects: `321df6dc-2cc5-81c6-8a2b-ec18adbaf493`
+> - Positioning piece on hold in Content Calendar: `321df6dc-2cc5-813e-ba13-dcb278a6a7fb`
+> - Follow-up task for Nathan discussion: `321df6dc-2cc5-81e9-804f-d33fb39ff53c` (reminder 2026-03-17)
+> - Content Calendar alias added to Notion CLI (both personal and team)
+> - Phased approach: Phase 1 = internal team writes 2-3 pieces, Phase 2 = outside experts/podcast if it works
+>
+> Referenced paths:
+> - Google Doc draft: https://docs.google.com/document/d/1EFkW7DYFHoz74r9eJJcGYpa4S33P7K-yJHyWNjQCl9w/edit
+> - weeatrobots article (supports thesis): https://weeatrobots.substack.com/p/what-only-you-can-tell-ai
+>
+> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
+
+---
+
+## Session Log: 2026-03-12 (2)
+
+**Project**: writing-assistant / animalz-ai-content-system
+**Type**: [docs]
+
+### Objectives
+- Incorporate all Nathan feedback into "Your Content Deserves More Than Wishful Workflow Thinking" article
+- Integrate article properly into the writing-assistant system
+- Establish source-of-truth tracking convention
+
+### Summary
+Consolidated Nathan's feedback from three sources (Notion comments, Claude editorial analysis, Claude V4 revision) plus Tim's own suggested edits into a Phase 8 review round. Created draft-v5 incorporating all feedback: rewritten intro, massaged Nathan section, restructured conclusion with CTA, fixed rhythm throughout. Then pivoted to live editing session where Tim rewrote sections 1-4 directly in Notion while Claude reviewed each section in real-time. Added global source-of-truth tracking rule to CLAUDE.md.
+
+### Files Changed
+- `projects/articles/animalz-ai-content-system/draft-v5.md` — New draft incorporating all feedback, with source-of-truth frontmatter pointing to Notion
+- `projects/articles/animalz-ai-content-system/draft-v3.md` — Added superseded_by frontmatter
+- `projects/articles/animalz-ai-content-system/draft-v2.md` — Added superseded_by frontmatter
+- `projects/articles/animalz-ai-content-system/review-notes.md` — Consolidated feedback from all 3 Nathan sources
+- `projects/articles/animalz-ai-content-system/research/nathan-v4-reference.md` — V4 revision filed as reference (converted from docx)
+- `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md` — Live editorial feedback on Tim's rewrites of sections 1-4, plus final pass checklist
+- `projects/articles/animalz-ai-content-system/state.md` — Phase 8 marked complete, detailed log added
+- `~/.claude/CLAUDE.md` — Added "Source of truth tracking" section
+- `~/.claude/plans/keen-napping-snowglobe.md` — Plan file for Phase 8 review round
+
+### Referenced Materials
+- Notion article page (source of truth): `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` (work workspace)
+- Nathan feedback task: `2e0df6dc-2cc5-80a6-b81f-d901786c7785` (marked Done)
+- V4 docx source: `/Users/timmetz/Downloads/Your_Content_Deserves_More_V4_Revised.docx`
+- Voice guides: `voice/tim-linguistic-fingerprint-v2.md`, `voice/tim-linkedin-voice-v2.md`
+- Nathan's Claude analysis: https://claude.ai/share/12800ff3-f488-4513-bc15-da9b8e71eae8
+
+### Plan File
+- **Path**: `~/.claude/plans/keen-napping-snowglobe.md`
+- **Status**: Completed
+
+### Future Plans & Unimplemented Phases
+
+#### Live editing continuation
+**Status**: In progress — Tim editing in Notion, sections 5-7 need review
+**Final pass checklist** (in `research/editing-session-2026-03-12.md`):
+1. Person/voice consistency (I/we/you/they)
+2. Tense/voice check (prefer present + active; flag opportunities and overcorrections)
+3. Airbus quote attribution
+4. Image placeholders
+5. Internal links
+6. Word count (~2,000)
+7. Copy edit pass
+
+### Next Actions
+- [ ] Review sections 5-7 as Tim finishes them
+- [ ] Run final pass checklist
+- [ ] Verify Airbus quote attribution
+- [ ] Sync final version back to local draft file
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- Added "Source of truth tracking" — versioned files must declare source_of_truth in YAML frontmatter
+
+### Continuation Prompt
+> Project: writing-assistant / animalz-ai-content-system
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-12 (2)"
+>
+> Context: Live editing session on "Your Content Deserves More Than Wishful Workflow Thinking." Tim rewriting in Notion, Claude reviewing. Sections 1-4 reviewed, 5-7 remaining.
+>
+> Key points:
+> - Notion page (source of truth): `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` (work workspace)
+> - Editorial feedback: `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md`
+> - Sections 1-4 rewritten in Notion (local draft-v5.md outdated)
+> - Final pass checklist defined but not yet run
+> - Comments via: `notion get-comments <page_id> -w work --raw`
+>
+> Referenced paths:
+> - `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md`
+> - `projects/articles/animalz-ai-content-system/thesis.md`
+> - `voice/tim-linguistic-fingerprint-v2.md`
+>
+> Read the session log and editing-session file, then check Notion for latest content.
+
+---
+
+## Session Log: 2026-03-12 (3)
+
+**Project**: writing-assistant
+**Type**: [docs] [feature]
+
+### Objectives
+- Continue live editing session on Animalz AI content system article
+- Review remaining sections (5, 6, 7) after Tim's Notion rewrites
+- Plan and create image prompts for article illustrations
+- Prepare editing notes for handoff to Nathan (publishing today)
+- Verify Airbus quote attribution
+
+### Summary
+Completed editorial reviews of all 7 sections. Created comprehensive image plan with 3 Gemini prompts (featured image, publish button, Nathan dragon slayer). Tim generated featured image through two rounds of iteration. Updated editing session doc for Nathan handoff — marking addressed items, adding new typos found, verifying CTA link and Airbus quote attribution. Article is being handed to Nathan for final editing pass.
+
+### Files Changed
+- `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md` - Added S5, S6, S7 reviews; updated all sections with addressed/open status; added handoff header; verified CTA link and Airbus quote; added 2 new typos found in S4
+- `projects/articles/animalz-ai-content-system/images/image-plan.md` - Created: full image plan with 3 Gemini prompts, style direction, brand color references, generation order
+
+### Referenced Materials
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/docs/animalz-brand/` - Brand guidelines (colors, fonts, critters, logo)
+- `~/.claude/research/nano-banana-pro.md` - Nano Banana Pro prompting guide
+- `/Users/timmetz/Downloads/nathan.jpeg` - Nathan photo for cartoonized illustration
+- `https://www.animalz.co/blog/context-engineering` - Style reference for illustrations
+- `projects/articles/animalz-ai-content-system/images/export/featured-v2-Gemini_Generated_Image_x94mv1x94mv1x94m.png` - Featured image v2 (final)
+- `projects/copy/animalz-ai-services/images/pitch-doc/round 3/` - Publish button campaign image (concept reference)
+
+### Technical Notes
+- **Airbus quote verified:** Bernard Ziegler, Airbus's chief engineer (retired 1997), told journalist William Langewiesche. Cited in Nicholas Carr's *The Glass Cage*. "An Airbus engineer" attribution is accurate. Still needs inline link/citation in article.
+- **CTA link confirmed:** "we'd love to talk" links to animalz.co/ai-services (verified via raw Notion blocks)
+- **Nano Banana Pro iteration:** Round 2 feedback in same conversation works well. Label reference image roles explicitly to avoid style contamination (e.g., critters as reference without proper labeling would flatten the illustration style)
+- **Notion callout at top of page** still says draft-v5 is source of truth — should be deleted or updated to say Notion is canonical
+- **"our Animalz"** appears in 3 sections (intro, S3, S5) — recurring insider language issue flagged for Nathan
+
+### Plan File
+- **Path**: `~/.claude/plans/keen-napping-snowglobe.md`
+- **Status**: Completed (Phase 8 review round)
+
+### Future Plans & Unimplemented Phases
+
+#### Image generation (remaining)
+**Status**: Partially complete (featured image done)
+**Planned Steps**:
+1. Generate publish button illustration — use featured image v2 as style reference, attach color palette, paste prompt from `images/image-plan.md`
+2. Generate Nathan dragon slayer — use featured image v2 as style reference, attach Nathan photo + color palette, paste prompt from `images/image-plan.md`. Expect 2-3 rounds for likeness.
+3. All prompts ready in `images/image-plan.md`
+
+#### Final editing pass (Nathan)
+**Status**: Handed off
+- Editing session doc shared with Nathan: `research/editing-session-2026-03-12.md`
+- ~30 open items across all sections (biggest clusters: S3 8 items, S5 11 items, S6 14 items)
+- Final pass checklist at bottom of editing session doc (person/voice check, tense/voice check, copy edit, word count, links)
+
+#### Post-editing tasks
+**Status**: Not started
+1. Add Airbus quote attribution link in article (link to *The Glass Cage* or cite Bernard Ziegler)
+2. Delete or update Notion page callout (currently says draft-v5.md is source of truth)
+3. Verify all internal links survived Notion rewrite (AI onion, context engineering, Claude Code, LinkedIn playbook)
+4. Sync final Notion version back to local draft file when editing complete
+5. Update state.md when article publishes
+
+### Next Actions
+- [ ] Nathan: work through editing session doc items
+- [ ] Tim: add Airbus quote attribution link in Notion
+- [ ] Tim: delete/update outdated callout at top of Notion page
+- [ ] Tim/Nathan: generate remaining images (publish button, Nathan dragon slayer)
+- [ ] Tim: decide on conclusion closing (CTA tone — options in S7 review notes)
+- [ ] Run final pass checklist after Nathan's edits
+
+### Metrics
+- Files modified: 1
+- Files created: 1
+
+### Learnings & Improvement Opportunities
+
+**Feedback memory:**
+- Tim strongly dislikes "The moat isn't the model. It's the system..." construction — considers it AI-generated pattern ("The X isn't Y. It's Z.") and redundant when the same point is made elsewhere. Don't suggest formulaic antithetical constructions.
+- Tim prefers "abandoned workflows" (concrete, specific) over "workflow quality" (vague, hand-wavy). Always favor concrete nouns over abstract quality descriptors.
+- Animalz critters are decorative brand elements only — don't base full illustration style on them. They're too minimal for editorial images.
+
+**Workflow improvements:**
+- `notion get-blocks --raw` with `--limit` sometimes runs as background command with empty output. Using `TaskOutput` tool to retrieve results works more reliably than reading the output file directly.
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-12 (3)" ([docs] [feature] entry)
+>
+> Context: Editing the Animalz AI content system article. All 7 sections reviewed, editing notes handed off to Nathan for final pass. Featured image generated. Two more images to generate.
+>
+> Key points:
+> - Notion page (source of truth): `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` (work workspace)
+> - Editorial feedback: `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md`
+> - Image plan + prompts: `projects/articles/animalz-ai-content-system/images/image-plan.md`
+> - ~30 open editorial items handed to Nathan
+> - Featured image done, publish button + Nathan dragon slayer still need generating
+> - Airbus quote verified (Bernard Ziegler), needs inline attribution link added
+> - Notion page callout still says draft-v5 is source of truth — needs updating
+>
+> Referenced paths:
+> - `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md`
+> - `projects/articles/animalz-ai-content-system/images/image-plan.md`
+>
+> Read the session log and editing-session file, then check Notion for latest content.
+
+---
+
+## Session Log: 2026-03-13
+
+**Project**: writing-assistant
+**Type**: [content]
+
+### Objectives
+- Draft LinkedIn post to promote the context engineering article
+
+### Summary
+Helped Tim draft a LinkedIn post for his context engineering article (https://www.animalz.co/blog/context-engineering). Started by reviewing his existing draft in Notion and the published article. Researched the origin story of the article — discovered via the my-os project that a background task agent picked up a 3.5-month-old task and produced a 2,500-word draft. Used these details to write a tightened version. Tim iterated on it himself, arriving at a final version that leads with "I don't remember writing most of it" and ends with Nathan's "gas station sushi" quote.
+
+### Files Changed
+- `docs/SESSION_LOG.md` — Appended this session log
+
+### Referenced Materials
+- Notion page `31bedc77-7df2-8067-b202-d24f9d948038` (personal) — LinkedIn post draft with multiple versions
+- `/Users/timmetz/Developer/Projects/system/my-os/workflows/daily-review/steps/task-agent.md` — Task agent definition that originally created the article draft
+- `/Users/timmetz/Developer/Projects/system/my-os/data/task-agent/2026-02-23/context-engineering-article.md` — Original agent-generated draft (16KB)
+- https://www.animalz.co/blog/context-engineering — Published article
+- `/Users/timmetz/Downloads/context-engineering-discipline.jpg` — Rabbit-from-hat illustration for the post
+
+### Technical Notes
+- The context engineering article originated from a Notion task created Nov 6, 2025 (from Tim & Ty sync). The my-os task agent executed it on Feb 23, 2026, producing ~65% of the final article.
+- Tim's revised version of the agent draft exists at `data/task-agent/2026-02-23/context-engineering-article-tim-revised.md` (Feb 26)
+- The article project lives at `projects/articles/context-engineering/` in this repo
+
+### Next Actions
+- [ ] Publish the LinkedIn post (Tim — ready to ship)
+- [ ] Add link to article in first comment after posting
+
+### Metrics
+- Files modified: 1 (session log)
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-13" ([content] entry)
+>
+> Context: Drafted LinkedIn post for context engineering article. Post is finalized in Notion (page 31bedc77-7df2-8067-b202-d24f9d948038, personal workspace). Ready to publish.
+>
+> Referenced paths:
+> - Notion page `31bedc77-7df2-8067-b202-d24f9d948038` (personal) — LI post drafts
+>
+> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
+
+---
+
+## Session Log: 2026-03-13 (2)
+
+**Project**: writing-assistant (cross-project: ~/.claude, my-os memory)
+**Type**: [feature] content system consolidation — Steps 7-8
+
+### Objectives
+- Complete Step 7: Clean up Notion Content Calendar
+- Begin Step 8: Audit Notion MyContent
+- Continue content system consolidation (plan: `wobbly-tickling-fern.md`)
+
+### Summary
+Completed Content Calendar cleanup (Step 7): marked 2 stale newsletters as Published, deleted 7 empty pages (5 empty newsletter templates + 2 untitled Ideas). Tim manually handled 3 "In discussion" items and the Clarify case study. Then began MyContent audit (Step 8) — discovered the database is much larger than expected (226+ items vs. earlier estimate of 100). Generated a grouped triage list of all 100 Ideas across 9 thematic groups for Tim to batch-decide. Session paused for Tim to review the triage list offline.
+
+### Files Changed
+- `data/content-system/mycontent-ideas-triage-2026-03-13.md` - **Created**: Full triage list of 100 MyContent Ideas grouped into 9 categories with Notion IDs, plus current Backlog/In progress items
+- `~/.claude/projects/-Users-timmetz-Developer-Projects-Personal-writing-assistant/memory/feedback_notion_cleanup_rules.md` - **Created**: Feedback memory — only delete truly empty Notion pages, everything with content keeps a status
+- `~/.claude/projects/-Users-timmetz-Developer-Projects-Personal-writing-assistant/memory/MEMORY.md` - Added pointer to new feedback memory
+- `~/.claude/projects/-Users-timmetz-Developer-Projects-system-my-os/memory/content-system.md` - Marked Step 7 complete, updated Content Calendar count
+
+### Referenced Materials
+- `~/.claude/plans/wobbly-tickling-fern.md` - Master content system consolidation plan (Steps 0-11)
+- `~/.claude/plans/iterative-sleeping-boole.md` - Step 7 execution plan (Content Calendar cleanup)
+- `~/.claude/projects/-Users-timmetz-Developer-Projects-system-my-os/memory/content-system.md` - Progress tracker for consolidation
+
+### Technical Notes
+- **MyContent is 226+ items**, not ~100 as previously estimated: 100 Ideas, 100+ Done, 13 Discarded, 9 Backlog, 4 In progress. Notion API pagination caps at 100 per query.
+- **Notion cleanup rule (new feedback memory):** Only delete truly empty pages. Everything with any content must keep a status (Published, On hold, or Dropped). Never trash pages with content.
+- **Content Calendar post-cleanup:** ~82 active entries. Status distribution: Drafting 12, Dropped 8, Editing 2, Idea 28, On hold 7, Published 33, Ready for review 1.
+- **"Why am I writing this?" field:** Only 10/226+ MyContent entries populated — significant gap for agent-assisted prep workflow.
+
+### Plan File
+- **Path**: `~/.claude/plans/wobbly-tickling-fern.md`
+- **Status**: In Progress
+- **Phases Completed**: Steps 0a, 0b, 1, 2, 3, 4, 5, 6, 7, 10
+- **Remaining**: Step 8 (MyContent audit — triage in progress), Step 9 (Animalz/content migration), Step 11 (future nice-to-dos)
+
+### Future Plans & Unimplemented Phases
+
+#### Step 8: MyContent Audit (partially complete)
+**Status**: Triage list generated, awaiting Tim's batch decisions
+**Planned Steps**:
+1. Tim reviews `data/content-system/mycontent-ideas-triage-2026-03-13.md` and fills in group decisions (keep/discard/review individually)
+2. Execute Tim's decisions: update statuses in Notion (Discard → "Discarded", keep → stays as "Ideas")
+3. Delete the one empty/no-title Idea
+4. Fix the no-status item (Tool comparison guide)
+5. Flag items missing "Why am I writing this?" for population
+6. Check published items have engagement data
+7. Consolidate identified clusters (Claude Code ~15 items, AI+thinking ~8+ items)
+
+#### Step 9: Migrate Animalz/content/ Active Files
+**Status**: Not started
+**Planned Steps**:
+1. Check which of ~85 files in Animalz/content/ are actively being worked on
+2. Active articles → create writing-assistant `projects/articles/{slug}/` with state files
+3. Create corresponding Content Calendar entries with key points in page body
+4. Mark `Animalz/content/` as read-only archive
+
+#### Remaining follow-ups from previous session
+- Logseq deeper scan: 22 items imported but likely more exist. Re-run with higher limits.
+- Mark imported items as `[[used]]` in Logseq: Prevent re-import of 22 already-imported items.
+- Dedup medium priority: Claude Code cluster (~15 items), vibe coding cluster (4 items), AI+thinking cluster (8+ items) still need consolidation decisions.
+
+### Next Actions
+- [ ] Tim reviews MyContent triage list: `data/content-system/mycontent-ideas-triage-2026-03-13.md`
+- [ ] Execute triage decisions in Notion
+- [ ] Delete empty/no-title Idea, fix no-status item
+- [ ] Begin Step 9: Animalz/content migration
+- [ ] Logseq deeper scan + mark imported items as [[used]]
+
+### Metrics
+- Notion pages updated: 2 (newsletters → Published)
+- Notion pages deleted: 7 (empty templates + empty Ideas)
+- Files created: 2 (triage list, feedback memory)
+- Files modified: 2 (MEMORY.md index, content-system.md progress tracker)
+
+### Learnings & Improvement Opportunities
+
+**Feedback memory saved:**
+- Notion cleanup rule: only delete truly empty pages, everything with content keeps a status
+
+**Workflow improvements:**
+- MyContent query pagination: first query returned 100 items which appeared to be the total but was actually just the API page limit. Should always check for pagination when counting Notion DB entries.
+
+### Continuation Prompt
+> Project: writing-assistant (cross-project: ~/.claude, my-os)
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-13 (2)" ([feature] content system consolidation)
+>
+> Context: Content system consolidation Steps 7 done, Step 8 (MyContent audit) in progress. Tim needs to review the Ideas triage list before we can execute changes.
+>
+> Key points:
+> - Triage list: `data/content-system/mycontent-ideas-triage-2026-03-13.md` — 100 Ideas in 9 groups, Tim fills in decisions
+> - After triage: execute Notion status changes, then Step 9 (Animalz/content migration)
+> - Master plan: `~/.claude/plans/wobbly-tickling-fern.md`
+> - Progress tracker: `~/.claude/projects/-Users-timmetz-Developer-Projects-system-my-os/memory/content-system.md`
+>
+> Referenced paths:
+> - `data/content-system/mycontent-ideas-triage-2026-03-13.md` — triage list to review with Tim
+> - `~/.claude/plans/wobbly-tickling-fern.md` — master consolidation plan
+> - `~/.claude/projects/-Users-timmetz-Developer-Projects-system-my-os/memory/content-system.md` — progress tracker
+>
+
+---
+
+## Session Log: 2026-03-17
+
+**Project**: writing-assistant
+**Type**: [docs] [feature]
+
+### Objectives
+- Complete and publish the Animalz AEO/AI search glossary article from Google Doc draft to Notion
+- Research missing terms, add further reading links, and improve definitions
+
+### Summary
+Took a bare-bones 28-term AEO glossary draft (Google Doc) and turned it into a comprehensive 40-term published Notion article. Added 12 new terms, 21 further reading links (Animalz + selective external), expanded weak definitions (BLUF, Semantic search, Token limit), added concrete examples to 21 terms, and linked the GEO entry to its original academic paper. Final version published directly to the Notion Content Calendar page.
+
+### Files Changed
+- `projects/articles/aeo-glossary/draft.md` — Created: local snapshot of the complete glossary (40 terms, intro, outro, further reading links, examples)
+- `~/.claude/content-inbox/pending/2026-03-17-seo-aeo-translation-guide.md` — Created: content idea flagged during session
+- `~/.claude/plans/snug-wandering-trinket.md` — Created: plan file for glossary completion
+
+### Referenced Materials
+- Notion page `261df6dc-2cc5-80ae-9ad4-dc95c96a8322` (work) — Target publication page, now contains the published glossary
+- Notion page `271df6dc-2cc5-8003-88ee-ea6dd5666473` (work) — Nathan's AEO glossary draft (had Atomic answer definition)
+- Notion page `25edf6dc-2cc5-807c-8dd1-e67f920e4b0b` (work) — Internal AI Glossary (broader scope, informed scope decision)
+- Google Doc: `https://docs.google.com/document/d/1QfWfLjaROSL4D0dSsT826tNFiwEBm5BWPKQo6brXSLE/` — Original draft source
+- GEO paper: `https://arxiv.org/abs/2311.09735` — Aggarwal et al., linked in GEO definition
+- Animalz blog articles used for further reading links:
+  - `animalz.co/blog/seo-vs-aeo` — SEO vs. AEO field guide
+  - `animalz.co/blog/ai-aeo-answer-engine-citation` — 17 Techniques for citation
+  - `animalz.co/blog/ai-overviews-search-traffic` — AI Overviews traffic impact
+  - `animalz.co/blog/ai-visibility-pyramid` — AI Visibility Pyramid framework
+  - `animalz.co/blog/hubs-vs-pillars` — Hub and spoke vs pillar pages
+  - `animalz.co/blog/information-gain` — Information gain theory
+  - `animalz.co/blog/ai-content-research-tools-chatgpt-perplexity` — AI research tools
+  - `animalz.co/blog/content-refresh` — Content refreshing guide
+  - `animalz.co/blog/bottom-line-up-front` — BLUF writing pattern
+
+### Technical Notes
+- **Scope decision**: Kept glossary focused on AEO/AI search terms (not broader "AI content terms") because the internal AI Glossary already covers the broader scope
+- **Notion publishing approach**: Built a Python script to convert markdown to Notion block JSON and publish in batches of 100 (107 blocks total, 2 batches)
+- **Notion append-blocks ordering**: Confirmed the `--after` flag inserts blocks in correct order when done in a single call; multiple calls to same `--after` target insert in reverse order
+- **Example format**: Used `*Example:* [text]` as italic+bold for "Example:" label — renders well in Notion
+- **Terms added**: Agentic search, AI crawlers, AI visibility pyramid, Atomic answer, Chunking, Citation rate, Conversational search, E-E-A-T, GEO, Grounding, Information gain, Query fan-out
+- **Logseq research**: Found relevant notes on AEO from Kevin Indig, iPullRank, Louise Linehan, Kevin Kelly, Natasha Sommerfeld
+
+### Plan File
+- **Path**: `~/.claude/plans/snug-wandering-trinket.md`
+- **Status**: Completed
+- **Phases Completed**: All (scope decision, term selection, research, writing, Notion publishing, revisions)
+
+### Next Actions
+- [ ] Review published glossary in Notion for final editorial pass
+- [ ] Consider updating Notion page status from "Editing" to next stage
+- [ ] Review flagged content idea: SEO → AEO translation guide (visual/infographic)
+- [ ] Google Doc is now superseded — consider adding a note there pointing to Notion
+
+### Metrics
+- Files created: 3 (draft, content inbox item, plan)
+- Notion blocks published: 107 initial + ~25 update blocks (examples, links)
+- Terms: 28 existing → 40 final (+12 new)
+- Further reading links: 21 total (14 Animalz, 7 external)
+- Examples added: 21 terms
+
+### Learnings & Improvement Opportunities
+
+**Workflow improvements:**
+- The Notion batch publishing pattern (markdown → Python → JSON blocks → `notion append-blocks`) worked well for large articles. Could be extracted into a reusable tool.
+- When updating many individual blocks, a script approach is much more efficient than manual CLI calls.
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-17" ([docs] [feature] entry)
+>
+> Context: Completed and published the AEO/AI search glossary to Notion (40 terms, examples, further reading links). May need editorial review or status update.
+>
+> Key points:
+> - Glossary published to Notion page 261df6dc-2cc5-80ae-9ad4-dc95c96a8322 (work workspace)
+> - Local snapshot at projects/articles/aeo-glossary/draft.md
+> - Content idea flagged: SEO → AEO translation guide
+>
+> Referenced paths:
+> - `projects/articles/aeo-glossary/draft.md` — local glossary snapshot
+> - Notion page `261df6dc-2cc5-80ae-9ad4-dc95c96a8322` — published glossary
+>
+> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
+
+---
+
+## Session Log: 2026-03-17
+
+**Project**: writing-assistant
+**Type**: [docs] [feature]
+
+### Objectives
+- Continue section-by-section rewrite of the Animalz AI content system article, addressing Nathan's feedback
+- Pick up from where last session left off (S3 draft awaiting Tim's polish) and complete remaining sections (S4–S6 + conclusion)
+
+### Summary
+Completed drafts for all remaining sections of the article rewrite. Tim provided polished S3, then we collaboratively developed S4 through an extended discussion about the core insight (efficiency-first = narrow lens vs. value-first = discover new things to build), landing on H2 "Screw efficiency, build your dream solutions." S5 was reframed around feedback loops as a reward for system-building ("Now tap into the feedback loops"). S6 focused on the trust-flip pattern ("Add speed bumps or your team falls asleep at the wheel"). Conclusion was completely reworked from a recap to a moat argument ("Your compounding system is an unbeatable moat"). All drafts inserted into Notion with callout markers for Tim to polish.
+
+### Files Changed
+- `~/.claude/plans/flickering-swinging-bear.md` - Updated progress: all sections now drafted, remaining items listed
+- `~/.claude/content-inbox/pending/2026-03-17-old-vs-dream-solution-carousel.md` - Content inbox: LinkedIn carousel idea from S4's old/dream solution pattern
+
+### Referenced Materials
+- Notion article page (work): `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` — source of truth for article content
+- Notion task page (work): `322df6dc-2cc5-81ae-8a5c-c01ee937a1d6` — "Address Nathan's feedback" task
+- `projects/articles/animalz-ai-content-system/state.md` — thesis, earned secret, full process log
+- `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md` — editing session notes (~30 open items, used for S5/S6 input)
+- `~/.claude/plans/flickering-swinging-bear.md` — full revision strategy + progress tracker
+
+### Technical Notes
+- Notion API `append-blocks` with `--after` works reliably for inserting new drafts above old sections with callout markers
+- Notion API doesn't support `annotations` on `paragraph` block `rich_text` items during creation — use `heading_3` for bold labels instead
+- Ordinal vendor name anonymized to "our LinkedIn scheduling tool" in S5 — Tim considering switching vendors
+- The "replacement parts" workflow (appending labeled text blocks at bottom of page for Tim to manually move) works better than trying to do precise in-place edits via API
+
+### Plan File
+- **Path**: `~/.claude/plans/flickering-swinging-bear.md`
+- **Status**: In Progress (all drafts complete, polish phase remaining)
+- **Phases Completed**: All section drafts (Intro, S2, S3, S4, S5, S6, Conclusion)
+- **Remaining**: Tim's polish pass, cleanup of old sections/callout markers, final copy edit
+
+### Future Plans & Unimplemented Phases
+
+#### Polish pass (Tim in Notion)
+**Status**: In progress — Tim polishing sections in Notion
+- S3: Tim provided polished version this session
+- S4: Draft + replacement parts applied, Tim polishing
+- S5, S6, Conclusion: Drafts inserted, awaiting Tim's polish
+
+#### Post-polish cleanup
+**Status**: Not started
+1. Remove old section content below each yellow "ORIGINAL" callout marker
+2. Remove all blue/yellow callout markers
+3. Update H2s in Notion to match locked versions (some old H2s may still show)
+
+#### Final editorial pass
+**Status**: Not started
+1. Copy edit pass (typos, grammar, consistency)
+2. Person/voice consistency check (no more "our Animalz" → should be "our team")
+3. Internal links verification (AI onion, context engineering articles)
+4. Word count check against ~2,000 target
+5. System diagram placement decision (currently in old conclusion — keep or cut?)
+6. Airbus quote attribution: verify Bernard Ziegler as source, engineer vs. executive
+7. CTA tone — Tim previously flagged as "a bit on the nose," new version is softer but may still need adjustment
+8. Remaining items from editing-session-2026-03-12.md that weren't addressed by rewrites
+
+### Next Actions
+- [ ] Tim: Polish S4, S5, S6, Conclusion in Notion
+- [ ] Remove old sections + callout markers after polish
+- [ ] Decide on system diagram placement (conclusion or cut)
+- [ ] Verify Airbus quote attribution
+- [ ] Final copy edit pass
+- [ ] Decide on Ordinal naming (keep anonymized or restore name)
+- [ ] Generate remaining images (publish button, Nathan dragon slayer — prompts in images/image-plan.md)
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- None needed
+
+**Workflow improvements:**
+- The "replacement parts at bottom of page" pattern is effective for Notion collaboration — Tim can copy-paste blocks into position without terminal formatting issues. Consider making this the default for small edits.
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-17" ([docs] [feature] entry)
+> Context: Section-by-section rewrite of the Animalz AI content system article complete — all drafts (S3–S6 + conclusion) inserted into Notion. Tim is polishing in Notion.
+>
+> Key points:
+> - Plan file: `~/.claude/plans/flickering-swinging-bear.md` (has full revision strategy + progress)
+> - Notion article page (source of truth): 24ddf6dc-2cc5-80ed-997a-e8d812ef814d (work workspace)
+> - All section drafts complete. New H2s: "Make data the beating heart" / "Screw efficiency, build your dream solutions" / "Now tap into the feedback loops" / "Add speed bumps or your team falls asleep at the wheel" / "Your compounding system is an unbeatable moat"
+> - Ordinal anonymized in S5 (vendor switch under consideration)
+> - Still needed: Tim's polish, old section cleanup, system diagram decision, Airbus attribution, final copy edit
+>
+> Referenced paths:
+> - `~/.claude/plans/flickering-swinging-bear.md`
+> - `projects/articles/animalz-ai-content-system/state.md`
+> - `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md`
+>
+> Read the session log and plan file, check the article in Notion to see Tim's polish progress, then continue with whatever's next.
+
+---
+
+## Session Log: 2026-03-19
+
+**Project**: writing-assistant
+**Type**: [docs] [feature]
+
+### Objectives
+- Continue polish pass on Animalz AI content system article with Tim
+- Address structural and line-level issues across S5, S6, and Conclusion
+- Create compounding curve chart for conclusion
+- Review article for AirOps partnership sensitivity
+
+### Summary
+Extended interactive polish session covering all remaining sections of the article. Rewrote S5 (feedback loops) to fix the "wire up new data sources" transition — reframed QueryM as part of the same feedback loop, not a separate story. Rewrote S6 (speed bumps) around an autopilot-then-reversal arc, dropping the "two suspects" framing. Rewrote conclusion with compounding curve insight (system starts at ~70% of human, crosses, keeps climbing). Created SVG chart for the conclusion. Verified Airbus quote verbatim from The Glass Cage p.169. Ran AirOps sensitivity review via background agent and saved concerns as Notion task for Ty discussion. Polished dozens of individual sentences and word choices throughout all sections.
+
+### Files Changed
+- `~/.claude/plans/flickering-swinging-bear.md` - Updated progress to reflect near-final state, all sections polished, remaining items listed
+- `/Users/timmetz/Downloads/content_system_compounding_quality_v2.html` - SVG chart: content system vs skilled marketer compounding curves
+
+### Referenced Materials
+- Notion article page (work): `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` — source of truth for article content
+- Notion AI Services Positioning doc: `312df6dc2cc58154acf7f2b91d74c1fd` — reviewed for AirOps sensitivity
+- Notion task for AirOps review: `328df6dc-2cc5-81e8-8c20-d5b7fbc885f8` — created this session
+- `projects/articles/animalz-ai-content-system/research/research-findings.md` — Airbus quote source chain
+- `projects/articles/animalz-ai-content-system/research/editing-session-2026-03-12.md` — editorial feedback reference
+- `projects/articles/animalz-ai-content-system/images/image-plan.md` — image generation prompts and style direction
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/docs/animalz-brand/` — brand guidelines for image prompts
+- `~/.claude/research/nano-banana-pro.md` — Nano Banana Pro prompting guide
+- Nicholas Carr, *The Glass Cage*, p.169 — verbatim Airbus quote verified from Tim's Kindle
+
+### Technical Notes
+- Airbus quote verified verbatim: "Sometimes I wonder if we made an airplane that is too easy to fly. Because in a difficult airplane the crews may stay more alert." — Bernard Ziegler to William Langewiesche, cited in Carr's *The Glass Cage* p.169, footnote 33
+- Notion `append-blocks --after` used successfully to insert new section drafts above old ones
+- Notion `update-block` used for targeted tense fixes and quote updates in S6
+- Notion `delete-block` used to remove old Airbus quote paragraph after inserting pull quote block
+- SVG chart created as standalone HTML — pure SVG, no Chart.js dependency, 820x520 viewBox
+- AirOps sensitivity review: background agent read full article + positioning doc, flagged 3 high, 2 medium, 1 low concern. Results saved to Notion task.
+
+### Plan File
+- **Path**: `~/.claude/plans/flickering-swinging-bear.md`
+- **Status**: In Progress (near-final)
+- **Phases Completed**: All section drafts and Tim's polish pass complete
+- **Remaining**: 2 Whimsical diagrams, AirOps sensitivity discussion with Ty, final copy edit
+
+### Future Plans & Unimplemented Phases
+
+#### Whimsical diagrams (needs MCP installation)
+**Status**: Not started — Whimsical MCP not installed in this project
+**Planned Steps**:
+1. Install Whimsical MCP server for this project
+2. Create diagram 1: System overview showing databases (Raw Materials, Briefs, LinkedIn Content) → router → AirOps workflows → back to Notion. Place in S3 where `[diagram of the router's role in the system]` placeholder is. Caption: "That router would become useful far beyond its original job: status triggers, Slack notifications, and automatic transcription of submitted YouTube links."
+3. Create diagram 2: LinkedIn engagement feedback loop for S5. Shows: published posts → engagement data (24h cycle) → brand kit refinement → improved outputs → published posts. QueryM branch: trending topics → router → raw material → brief workflow → team review → content. Place after "AI and our team use this data to refine brand kits, adjust strategy, and tweak workflows."
+
+#### AirOps sensitivity review
+**Status**: Analysis complete, awaiting Ty discussion
+- Notion task: 328df6dc-2cc5-81e8-8c20-d5b7fbc885f8
+- Tim discussing with Ty (CEO) whether to soften language or keep as-is (it's what differentiates them)
+- Key concerns: thesis = "workflows aren't enough" (= AirOps alone isn't enough), Notion positioned as center, "garbage" associated with AirOps by proximity
+
+#### Final copy edit
+**Status**: Not started
+1. Typo fixes: "GoogleDocs" → "Google Docs" in S3
+2. Person/voice consistency check
+3. Internal links verification (AI onion, context engineering)
+4. Word count check
+5. CTA link — currently points to /contact, update to AI services page when live
+
+### Next Actions
+- [ ] Install Whimsical MCP and create 2 diagrams (S3 system overview, S5 feedback loop)
+- [ ] Tim: Discuss AirOps sensitivity with Ty
+- [ ] Final copy edit pass
+- [ ] Generate zoom-out illustration for S6 via Nano Banana (prompt written, not yet executed)
+- [ ] Update CTA link when AI services page goes live
+- [ ] Decide on Publish button caption (Tim still using longer version)
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- None needed
+
+**Workflow improvements:**
+- Interactive sentence-by-sentence polish works best when Tim shares text in chat and Claude gives targeted options (not full rewrites). This is the most productive mode for late-stage editing.
+- The "replacement parts at bottom of page" Notion pattern from last session is now superseded by Tim editing directly in Notion while discussing changes in chat. More natural workflow.
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-19" ([docs] [feature] entry)
+> Context: Article is near-final. All sections polished by Tim. Need Whimsical diagrams (requires MCP install), AirOps sensitivity decision pending Ty discussion, and final copy edit.
+>
+> Key points:
+> - Plan file: `~/.claude/plans/flickering-swinging-bear.md` (fully updated with current progress + remaining items)
+> - Notion article page (source of truth): 24ddf6dc-2cc5-80ed-997a-e8d812ef814d (work workspace)
+> - AirOps sensitivity task: 328df6dc-2cc5-81e8-8c20-d5b7fbc885f8 (awaiting Ty discussion)
+> - 2 Whimsical diagrams needed: (1) system overview for S3, (2) feedback loop for S5 — Whimsical MCP needs installing first
+> - Final copy edit still needed (typos, links, consistency)
+> - Nano Banana prompt ready for S6 zoom-out illustration (in conversation history, also summarized in image-plan.md style)
+>
+> Referenced paths:
+> - `~/.claude/plans/flickering-swinging-bear.md`
+> - `projects/articles/animalz-ai-content-system/images/image-plan.md`
+>
+> Read the session log and plan file, check the article in Notion, then continue with whatever's next.
+
+---
+
+## Session Log: 2026-03-19 (continued)
+
+**Project**: writing-assistant
+**Type**: [feature] [docs]
+
+### Objectives
+- Create 2 Whimsical diagrams for the article (S3 system overview, S5 feedback loop)
+- Research internal linking opportunities across the Animalz blog
+- Scope AEO optimization process for thought leadership articles
+
+### Summary
+Created two Whimsical diagrams through iterative design with Tim. The S3 system overview became a hub-and-spoke showing the Router at the center connecting Notion, AirOps, Customer Portal, Slack, and LinkedIn. The S5 feedback loop became a flat left-to-right pipeline: Brand Kits & Strategy → Brief Workflow → Team Review → Content Workflow → Team Review → Published Posts → Engagement Data, with three "refines" feedback arrows. Established and codified Whimsical shape conventions in global CLAUDE.md. Researched internal linking opportunities by reading all 314 blog posts and 14 pages from the website-statamic codebase, verified top candidates by reading actual content, and delivered 8 specific link recommendations with anchor text. Created a briefing file for a separate AEO optimization session.
+
+### Files Changed
+- `~/.claude/CLAUDE.md` — Added Whimsical flowchart shape and color conventions under Platform formatting
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/aeo/docs/thought-leadership-aeo-brief.md` — Created: full brief for thought leadership AEO audit process (test case: this article)
+
+### Referenced Materials
+- `~/.claude/plans/flickering-swinging-bear.md` — Plan file for article (updated previous session, still current)
+- Notion article page (work): `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` — Source of truth for article content
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/` — Intelligence OS repo, explored for system architecture (router, databases, workflows)
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/aeo/` — AEO module, explored for existing methodology and Animalz prompt data
+- `/Users/timmetz/Developer/Projects/Animalz/websites/website-statamic/content/collections/blog/` — All 314 blog posts read for internal linking research
+- `/Users/timmetz/Developer/Projects/Animalz/websites/website-statamic/content/collections/pages/` — Service/product pages for linking
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/docs/animalz-brand/animalz-colors.png` — Brand color palette reference
+- `projects/articles/animalz-ai-content-system/images/image-plan.md` — Image generation plan
+
+### Technical Notes
+- Whimsical MCP was already available — no installation needed (contrary to previous session's assumption)
+- Whimsical `flowchart_create` supports mermaid syntax but cycles in mermaid can produce messy layouts. For hub-and-spoke diagrams, `board_edit` with absolute positioning and bidirectional connectors (`:from-endpoint :arrow :to-endpoint :arrow`) works much better.
+- Whimsical `board_edit` doesn't support `:pill` shape — only available via mermaid `([text])` syntax in `flowchart_create`
+- Whimsical `board_clear` requires user confirmation in the app UI — if user doesn't click confirm within 20s, it times out. Workaround: create a new board.
+- Subagents can't access files outside the current project directory (permission sandboxing). For cross-project research, do it in the main conversation.
+- `ai-services` page has `noindex`/`nofollow` — not publicly accessible. CTA currently links to `/contact`.
+
+### Whimsical Diagrams Created
+
+**S3 System Overview (hub-and-spoke):**
+- Board: "Article Diagram — System Overview v3 (S3)" (`KFdHTf`)
+- Router (hexagon) at center, 5 spokes: Notion (cylinder), AirOps (rect), Customer Portal (rect), Slack (rect), LinkedIn (ellipse)
+- Single bidirectional arrows, all purple (Purple-700 for Router, Purple-500 for spokes)
+- QueryM intentionally excluded (not introduced until S5)
+
+**S5 Feedback Loop (flat pipeline):**
+- Board: "Article Diagram — Feedback Loop v2 (S5)" (`CmsFqA`)
+- Linear L→R: Brand Kits & Strategy → Brief Workflow → Team Review → Content Workflow → Team Review → Published Posts → Engagement Data
+- Three "refines" feedback arrows from Engagement Data back to Brand Kits, Brief Workflow, and Content Workflow
+- Caption: "(Diagram made with Claude Code and the Whimsical MCP.)" — already added by Tim
+- No additional caption needed — surrounding text explains it
+
+### Shape & Color Conventions (codified in global CLAUDE.md)
+- Cylinder = data stores, Rectangle = automated processes, Pill = human actions, Ellipse = outputs/artifacts, Hexagon = infrastructure, Diamond = decisions
+- Single color for all nodes (default: Purple-500 #9463EE) — shapes carry semantics, color is aesthetic
+- Exception: hub-and-spoke diagrams may use darker center (Purple-700) + lighter spokes (Purple-500) for visual hierarchy
+
+### Internal Linking Recommendations (8 links)
+
+| # | Anchor text | Links to | Section |
+|---|---|---|---|
+| 1 | "AI-powered LinkedIn service" | `/linkedin-content` | Intro |
+| 2 | "engineering" | `/blog/ai-content-workflows` | S2 |
+| 3 | "vibe coding" | `/blog/code-is-content-build-tools-with-ai` | S4 |
+| 4 | "Tuesday afternoon projects" | `/blog/claude-code` | S4 |
+| 5 | "don't produce slop" | `/blog/risks-of-ai-content` | S2 |
+| 6 | "watched this happen" or "disappears" | `/blog/ai-addiction` | S6 |
+| 7 | "months of trial, error" | `/blog/animalz-ai-journey-lessons-learned` | Conclusion |
+| 8 | "can't be copied" | `/blog/information-gain` | Conclusion |
+
+### Plan File
+- **Path**: `~/.claude/plans/flickering-swinging-bear.md`
+- **Status**: In Progress (near-final)
+- **Remaining**: AirOps sensitivity discussion with Ty, final copy edit, Nano Banana illustrations, CTA link update
+
+### Future Plans & Unimplemented Phases
+
+#### AEO Optimization for Thought Leadership
+**Status**: Briefing complete, not started
+**Next session**: Launch from `animalz-intelligence-os` project
+**Brief file**: `modules/aeo/docs/thought-leadership-aeo-brief.md`
+**Planned steps**:
+1. Read existing AEO methodology and prompt management guides
+2. Read Animalz prompt data in `clients/animalz/prompts/`
+3. Read article from Notion
+4. Design "thought leadership AEO audit" process (reverse of existing: article-first, not prompt-first)
+5. Run on test case article, produce specific recommendations
+6. If successful, codify as command/skill in AEO module
+
+#### Remaining Article Tasks
+1. Tim working in internal links (8 recommendations provided)
+2. AirOps sensitivity — awaiting Ty discussion (Notion task: `328df6dc-2cc5-81e8-8c20-d5b7fbc885f8`)
+3. Final copy edit pass (typos, "GoogleDocs" → "Google Docs", link verification)
+4. Nano Banana illustrations (featured image, Nathan, publish button — prompts in `images/image-plan.md`)
+5. CTA link — update to AI services page when live (currently `/contact`)
+6. Tim adjusting Whimsical diagram colors (Purple-700 Router, Purple-500 spokes)
+
+### Next Actions
+- [ ] Tim: Work in the 8 internal links
+- [ ] Tim: Adjust Whimsical diagram colors (Purple-700/500 split)
+- [ ] Launch AEO session from animalz-intelligence-os (continuation prompt below)
+- [ ] Tim: Discuss AirOps sensitivity with Ty
+- [ ] Final copy edit pass
+- [ ] Generate Nano Banana illustrations
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- Added Whimsical shape/color conventions to global CLAUDE.md (done this session)
+
+**Workflow improvements:**
+- For cross-project research (e.g., searching website codebase from writing-assistant), do it in the main conversation — subagents are sandboxed to the current project directory
+- Whimsical hub-and-spoke diagrams: skip `flowchart_create` mermaid, go straight to `board_edit` with absolute positioning
+- Internal linking research works best when you verify content, not just titles — many titles are misleading (e.g., "data-driven content" was about survey articles, not data infrastructure)
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-19 (continued)" ([feature] [docs] entry)
+> Context: Article is near-final. Whimsical diagrams created (S3 hub-and-spoke, S5 feedback loop). Internal links recommended. AEO optimization scoped for separate session.
+>
+> Key points:
+> - Plan file: `~/.claude/plans/flickering-swinging-bear.md`
+> - Notion article page (source of truth): 24ddf6dc-2cc5-80ed-997a-e8d812ef814d (work workspace)
+> - Whimsical boards: S3 system overview (`KFdHTf`), S5 feedback loop (`CmsFqA`)
+> - 8 internal links recommended (see session log table)
+> - AEO optimization brief created at `animalz-intelligence-os/modules/aeo/docs/thought-leadership-aeo-brief.md`
+> - Remaining: AirOps sensitivity (Ty), final copy edit, Nano Banana illustrations, CTA link
+>
+> Referenced paths:
+> - `~/.claude/plans/flickering-swinging-bear.md`
+> - `projects/articles/animalz-ai-content-system/images/image-plan.md`
+>
+> Read the session log and plan file, then continue with whatever's next.
+
+---
+
+## Session Log: 2026-03-19 (part 3)
+
+**Project**: writing-assistant + animalz-intelligence-os (cross-project)
+**Type**: [feature] [docs]
+
+### Objectives
+- Finalize internal linking recommendations for the content system article
+- Compare "AI Content Works" article with the systems article for overlap/contradictions
+- Create a reusable `/aeo-internal-links` command (forward + backward linking)
+- Make the command client-agnostic and move it to the modules toolkit
+- Update Notion Knowledge Base with the new command documentation
+- Create AEO optimization brief for a separate session
+- Scope external linking as a future addition
+
+### Summary
+Extended the session to finalize internal links (8 recommendations verified by reading actual article content, not just titles), then compared the "AI Content Works" article with the systems article (no contradictions, significant overlap in S2 workflows section). Built a reusable `/aeo-internal-links` command with forward and backward linking modes, made it client-agnostic with three content access strategies (local repo, sitemap crawl, manual), moved it to the modules toolkit at `modules/.claude/commands/aeo-internal-links.md`, and documented it in the Notion Knowledge Base AEO System Guide. Created a Notion task for the future external linking addition. Created an AEO optimization brief for a separate session.
+
+### Files Changed
+- `~/.claude/CLAUDE.md` — Added Whimsical flowchart shape/color conventions under Platform formatting
+- `~/.claude/plans/prancy-growing-turtle.md` — Plan file for moving internal-links command to modules
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/.claude/commands/aeo-internal-links.md` — Created: client-agnostic internal linking command (forward + backward modes)
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/aeo/clients/animalz/config/brand_info.json` — Added `blog_content` config for Animalz website
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/aeo/docs/thought-leadership-aeo-brief.md` — Created: brief for thought leadership AEO audit process
+- `writing-assistant/.claude/commands/internal-links.md` — Deleted (moved to modules toolkit)
+
+### Referenced Materials
+- Notion AEO System Guide: `314df6dc-2cc5-8165-a6fb-f5dac9fb4f65` (work) — Updated with /aeo-internal-links documentation
+- Notion article page: `24ddf6dc-2cc5-80ed-997a-e8d812ef814d` (work) — Source of truth for article
+- Notion external links task: `328df6dc-2cc5-8193-858f-daeb1f5ce7ad` (work) — Task for building external linking skill
+- `/Users/timmetz/Developer/Projects/Animalz/websites/website-statamic/content/collections/blog/` — All 314 blog posts scanned for linking
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/modules/aeo/` — AEO module structure and existing commands
+- `https://www.animalz.co/blog/ai-content-workflows` — Compared with systems article for overlap
+- `https://www.animalz.co/blog/context-engineering` — Recommended as link target for S2
+
+### Technical Notes
+- "AI Content Works" article overlaps significantly with the systems article in S2 (workflows are hard, engineering not content work). No contradictions, but the systems article supersedes the framing. Better to link context-engineering on "engineering" than ai-content-workflows.
+- Internal linking based on titles alone is unreliable — 6 of 15 initial candidates were dropped after reading actual content (e.g., "data-driven content" was about survey articles, "healthy feedback culture" was about interpersonal feedback)
+- Module commands live at `modules/.claude/commands/` with module-specific prefixes (aeo-, bk-, etc.)
+- Client-specific config in `brand_info.json` already had `quick_fix_method` pattern — extended with `blog_content` for the same pattern
+- The `ai-services` page has `noindex`/`nofollow` — not publicly accessible
+
+### Plan File
+- **Path**: `~/.claude/plans/prancy-growing-turtle.md`
+- **Status**: Completed
+- **Phases Completed**: Move /internal-links to modules as client-agnostic /aeo-internal-links
+
+### Final Internal Link Recommendations (8 links)
+
+| # | Anchor text | Links to | Section |
+|---|---|---|---|
+| 1 | "AI-powered LinkedIn service" | `/linkedin-content` | Intro |
+| 2 | "most teams that try never get past this step" | `/blog/ai-content-workflows` | S2 |
+| 3 | "engineering" | `/blog/context-engineering` | S2 |
+| 4 | "vibe coding" | `/blog/code-is-content-build-tools-with-ai` | S4 |
+| 5 | "Tuesday afternoon projects" | `/blog/claude-code` | S4 |
+| 6 | "don't produce slop" | `/blog/risks-of-ai-content` | S2 |
+| 7 | "watched this happen" or "disappears" | `/blog/ai-addiction` | S6 |
+| 8 | "months of trial, error" | `/blog/animalz-ai-journey-lessons-learned` | Conclusion |
+| 9 | "can't be copied" | `/blog/information-gain` | Conclusion |
+
+### Future Plans & Unimplemented Phases
+
+#### Backward internal linking test
+**Status**: Not started — do in fresh session from modules project
+**Command**: `/aeo-internal-links animalz backward 24ddf6dc-2cc5-80ed-997a-e8d812ef814d`
+**What it does**: Searches 300+ existing Animalz blog posts for passages that should link TO the new systems article
+
+#### External linking skill
+**Status**: Notion task created (`328df6dc-2cc5-8193-858f-daeb1f5ce7ad`), not started
+**Open questions**: Should we link to competitors? What types of external links add value? How does external linking interact with AEO? Talk to Nathan/Peter about editorial stance.
+**Implementation**: Add "external" mode to `/aeo-internal-links` once questions are resolved
+
+#### AEO optimization for thought leadership
+**Status**: Brief complete, not started
+**Next session**: Launch from animalz-intelligence-os project
+**Brief**: `modules/aeo/docs/thought-leadership-aeo-brief.md`
+
+### Next Actions
+- [ ] Tim: Work in the 9 internal links
+- [ ] Run backward linking test: `/aeo-internal-links animalz backward 24ddf6dc-...` from modules project
+- [ ] Launch AEO optimization session from animalz-intelligence-os
+- [ ] Tim: Discuss AirOps sensitivity with Ty
+- [ ] Final copy edit pass on article
+- [ ] Tim: Adjust Whimsical diagram colors (Purple-700/500 split)
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- Whimsical conventions added to global CLAUDE.md (done this session)
+
+**Workflow improvements:**
+- When creating commands that will be used by the team, always put them in the modules toolkit (not personal writing-assistant project). Commands should be client-agnostic by default.
+- Internal linking verification (reading content, not just titles) is essential — should be a core principle in any content recommendation workflow
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-19 (part 3)" ([feature] [docs] entry)
+> Context: Article near-final. Diagrams done. Internal links recommended (9 total). /aeo-internal-links command created in modules toolkit. AEO optimization and backward linking scoped for separate sessions.
+>
+> Key points:
+> - Plan file: `~/.claude/plans/flickering-swinging-bear.md`
+> - Notion article page: 24ddf6dc-2cc5-80ed-997a-e8d812ef814d (work workspace)
+> - /aeo-internal-links command: `animalz-intelligence-os/modules/.claude/commands/aeo-internal-links.md`
+> - AEO brief: `animalz-intelligence-os/modules/aeo/docs/thought-leadership-aeo-brief.md`
+> - Remaining: AirOps sensitivity (Ty), final copy edit, backward linking test, AEO optimization session
+>
+> Referenced paths:
+> - `~/.claude/plans/flickering-swinging-bear.md`
+> - `projects/articles/animalz-ai-content-system/images/image-plan.md`
+>
+
+---
+
+## Session Log: 2026-03-23
+
+**Project**: writing-assistant
+**Duration**: ~6 hours (extended Monday session)
+**Type**: [feature] [docs] [bugfix]
+
+### Objectives
+- Prepare and draft WER newsletter #2 (2026-03-23)
+- Launch background research for Claude Code guide campaign
+- Publish AEO glossary to Animalz blog as draft
+- Draft KB system / daily review article for WER
+
+### Summary
+Major Monday planning and execution session. Drafted and iterated WER newsletter #2 through multiple rounds with Tim — featured article about content system piece, bubble narrative timeline visualization, AI writing detection item, and Claude Code guide callout. Created an HTML bubble timeline visualization with per-entry sentiment coloring. Three background agents completed research for Claude Code guide, KB daily review article, and attempted AEO glossary publication (timed out twice). Fixed a Unicode normalization bug in the Logseq CLI. Discovered and documented that Readwise sync dates ≠ publication dates. Dropped Iran/AI reporting piece due to sensitivity concerns, saved draft to Logseq for future use.
+
+### Files Changed
+- `projects/newsletters/2026-03-23/draft.md` — Initial newsletter draft (v1)
+- `projects/newsletters/2026-03-23/draft-v2.md` — Iterated newsletter draft with Tim's rewrites
+- `projects/newsletters/2026-03-23/bubble-timeline.html` — HTML timeline visualization (per-entry sentiment coloring)
+- `projects/newsletters/2026-03-23/bubble-timeline.png` — Screenshot of timeline for Substack
+- `projects/newsletters/2026-03-23/bubble-item-draft.md` — Standalone bubble section draft (from agent)
+- `projects/articles/claude-code-hub/research/campaign-research-report.md` — Full research report for CC content campaign
+- `projects/articles/knowledge-base-daily-review/draft.md` — First draft of KB/daily review article
+- `projects/articles/knowledge-base-daily-review/format-template.md` — Reusable article format template (7 H2 sections)
+- `projects/articles/knowledge-base-daily-review/state.md` — Article state tracking
+- `~/.claude/tools/logseq-cli/logseq_cli/index.py` — Fixed Unicode normalization bug in search
+- `~/.claude/projects/.../memory/feedback_logseq_sync_dates.md` — New memory: sync dates ≠ publication dates
+- `~/.claude/projects/.../memory/MEMORY.md` — Added new memory entry
+
+### Referenced Materials
+- `/Users/timmetz/Developer/Projects/Animalz/animalz-intelligence-os/` — Claude Code content, brand guidelines
+- `/Users/timmetz/Developer/Projects/Animalz/claude-plugins/` — Plugin repo for CC guide
+- `/Users/timmetz/Developer/Projects/Animalz/content/` — Claude Code vs AirOps draft
+- `/Users/timmetz/Developer/Projects/Animalz/websites/website-statamic/.claude/commands/publish-article.md` — Publication workflow
+- `/Users/timmetz/Developer/Projects/system/my-os/workflows/daily-review/` — Daily review workflow
+- `~/.claude/research/nano-banana-pro.md` — Image generation best practices
+- Notion: Content system (`24ddf6dc`), AEO glossary (`261df6dc`), KB article (`2fbedc77`), CC strategy (`321df6dc`), Newsletter (`32cedc77-7df2-8133`)
+- Logseq: Iran photo article (tagged `[[AI model attribution]]` `[[journalism and AI]]`), Sovereign AI (tagged `[[used]]`)
+
+### Technical Notes
+- **Logseq CLI Unicode bug:** Pages with smart quotes (U+2019) invisible to search. Fixed with `_normalize_text()` in `index.py`. Cache must be cleared after fix.
+- **Readwise sync dates ≠ publication dates:** FT article (Dec 2025) synced Mar 20 — always verify via web search.
+- **Notion append-blocks --after:** Unreliable for multi-call ordering. Prefer single large append calls.
+- **AEO glossary publication:** Timed out twice as background agent — needs dedicated foreground session.
+- **Newsletter sensitivity:** Iran/AI reporting piece dropped — saved draft to Logseq for future "AI model attribution in journalism" theme.
+
+### Plan File
+- **Path**: `~/.claude/plans/vivid-petting-sky.md`
+- **Status**: Completed (repurposed for follow-up tasks at end of session)
+
+### Future Plans & Unimplemented Phases
+
+#### Claude Code Guide Campaign
+**Status**: Research complete, awaiting review
+1. Tim reviews `projects/articles/claude-code-hub/research/campaign-research-report.md`
+2. Discuss hub-and-spoke structure with Nathan
+3. Priority: Hub + CLAUDE.md guide → /write showcase + cheat sheet → remaining spokes
+4. Notion task with reminder 2026-03-24
+
+#### AEO Glossary Publication
+**Status**: Not started (two agent timeouts)
+1. Dedicated session with `/publish-article` in website-statamic repo
+2. Notion source: `261df6dc-2cc5-80ae` (work). Need featured image (Nano Banana Pro).
+3. Marketing Tasks item with reminder 2026-03-24
+
+#### KB System / Daily Review Article
+**Status**: First draft complete, awaiting review
+1. Review draft + format template at `projects/articles/knowledge-base-daily-review/`
+2. Open: public repo URL, Whimsical flowchart, evolution dates
+3. Personal Tasks item with reminder 2026-03-24
+
+#### AI Bubble Meta-Analysis (Future)
+**Concept**: 3-4 agents analyzing 10-25 independent voices over 6-12 months. MyContent item "AI Bubble Narrative Tracker" created.
+
+### Next Actions
+- [ ] Tim to publish WER newsletter #2 on Substack
+- [ ] Review Claude Code guide research report
+- [ ] Review KB system article draft + format template
+- [ ] Publish AEO glossary (dedicated session)
+- [ ] Run AI bubble meta-analysis (dedicated session)
+- [ ] Collect more examples of AI model misattribution in journalism
+
+### Metrics
+- Files modified: 5
+- Files created: 8
+- Background agents: 5 launched (3 completed, 2 timed out)
+- Notion items created: 5 (3 tasks, 1 content idea, 1 newsletter page)
+- Bug fixed: 1 (Logseq CLI Unicode)
+
+### Learnings & Improvement Opportunities
+
+**CLAUDE.md updates:**
+- Newsletter process should filter out `[[used]]`/`[[reviewed]]` items when searching for WER candidates
+- Logseq sync dates caveat (saved as memory, consider adding to global CLAUDE.md Logseq section)
+
+**Workflow improvements:**
+- Publish-article workflow needs foreground agent or better timeout handling
+- Chrome DevTools MCP iteration loop (edit → reload → screenshot) is a great pattern for visual content
+- Notion multi-append ordering is unreliable — use single large calls
+
+**New capabilities needed:**
+- Auto-filter `[[used]]`/`[[reviewed]]` in newsletter intake
+- `/publish` command wrapping website-statamic workflow
+
+### Continuation Prompt
+> Project: writing-assistant
+> Session log: docs/SESSION_LOG.md
+> Section: "## Session Log: 2026-03-23" ([feature] [docs] [bugfix] entry)
+>
+> Context: Major Monday session — drafted WER newsletter #2, launched CC guide research, drafted KB article, fixed Logseq CLI bug.
+>
+> Key points:
+> - Newsletter #2 drafted and iterated, Tim finalizing in Substack
+> - Claude Code guide research at `projects/articles/claude-code-hub/research/campaign-research-report.md`
+> - AEO glossary publication still pending (two timeouts) — Marketing Tasks reminder
+> - KB daily review article at `projects/articles/knowledge-base-daily-review/`
+>
+> Referenced paths:
+> - `projects/newsletters/2026-03-23/` (newsletter drafts, bubble timeline)
+> - `projects/articles/claude-code-hub/research/campaign-research-report.md`
+> - `projects/articles/knowledge-base-daily-review/`
+> - `/Users/timmetz/Developer/Projects/Animalz/websites/website-statamic/.claude/commands/publish-article.md`
+>
+> Read the session log section above, familiarize yourself with the context, and let me know when ready to continue.
+> Read the session log and plan file, then continue with whatever's next.

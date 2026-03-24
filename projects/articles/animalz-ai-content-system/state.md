@@ -2,8 +2,8 @@
 title: "Animalz AI Content System"
 slug: animalz-ai-content-system
 created: 2026-01-29
-last_updated: 2026-03-10
-current_phase: 7
+last_updated: 2026-03-12
+current_phase: 8
 target_publication: "Animalz Intelligence"
 word_count_target: 2000
 phases:
@@ -14,7 +14,7 @@ phases:
   5_outline_30: { status: complete, date: 2026-03-10 }
   6_introduction: { status: complete, date: 2026-03-10 }
   7_drafting: { status: complete, date: 2026-03-10 }
-  8_review: { status: pending }
+  8_review: { status: complete, date: 2026-03-12 }
 audience: "Content/marketing leaders or executives who have tried AI (ChatGPT training, shared prompts) and it's not really working. May be considering tools like AirOps. Need to understand the shape of what's possible, not how-to details."
 desired_action: "Recognize the complexity involved in building a real AI content system, and consider hiring Animalz to build it for them."
 desired_takeaway: "Getting real results from AI content at scale requires building a comprehensive system — not just prompts or workflows — and the people who've done it have learned things you can't skip."
@@ -217,3 +217,30 @@ Tim added new material for conclusion: specific examples of adding speed bumps t
 **Output:** draft-v2.md (~1,900 words)
 
 **Team experiment verdict:** Successful. Three parallel reviewers caught distinct issues (structural, voice, research) that a single-pass draft wouldn't have addressed. The consolidated brief prevented conflicting revisions. Fallback not needed.
+
+## 2026-03-12 — Phase 8 (Review) completed — Nathan's feedback round
+
+**Feedback sources:**
+1. Nathan's Notion inline comments (5 comments on draft)
+2. Nathan's Claude editorial analysis (comprehensive structural + line-level feedback)
+3. Nathan's Claude V4 revision (full rewrite attempt)
+4. Tim's suggested edits in Notion (v3.5 baseline)
+
+**Version history:**
+- v3 = agent team output + initial Phase 8 review (draft-v3.md)
+- v3.5 = Tim's suggested edits accepted in Notion
+- v4 = Nathan's Claude revision (research/nathan-v4-reference.md)
+- v5 = Final revision incorporating all feedback (draft-v5.md)
+
+**Key changes in v5:**
+1. **Intro rewritten** — Universal-problem opener (prompt chaos → workflow → false sense of solved) before Animalz story. Addresses Nathan's "confusing start... not sure what I'm about to read as an outsider."
+2. **Nathan section massaged** — Name kept (approved by Nathan). Added complimentary framing, resolution ending ("We sent Nathan back to editorial, where he belongs"). Added concrete engineering questions to show the nature of the work.
+3. **Conclusion restructured** — "Your people need to stay sharp" is now a proper section with specific speed bump examples. New "What you're actually building" conclusion recaps the full system and includes soft CTA linking to AI services page.
+4. **Rhythm fixed throughout** — Combined staccato sentences into longer constructions. Varied sentence length so short punches land by contrast. Addressed Nathan's "too stilted, too many short sentences."
+5. **Minor improvements** — Elevated "surface area of learning" insight in data section. Added QueryM setup line (LinkedIn rewards timeliness). All copy errors fixed.
+
+**Open items:**
+- [ ] Airbus quote attribution: engineer vs. executive (verify source before publishing)
+- [x] Nathan permission: Approved, name kept, section massaged per his feedback
+
+**Review notes saved to:** review-notes.md

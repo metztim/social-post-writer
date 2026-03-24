@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Bubble Narrative Timeline</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #fff;
+    color: #1a1a1a;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    max-width: 600px;
+    width: 100%;
+  }
+  h1 {
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+    color: #111;
+    margin-bottom: 2px;
+    padding: 0 16px;
+  }
+  .subtitle {
+    font-size: 11px;
+    color: #999;
+    margin-bottom: 12px;
+    padding: 0 16px;
+  }
+  .legend {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: #666;
+    padding: 0 16px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .legend-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+  }
+
+  .month-header {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+    padding: 7px 16px 3px 16px;
+  }
+
+  .entry {
+    display: flex;
+    align-items: start;
+    gap: 8px;
+    padding: 5px 16px;
+  }
+  .dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 3px;
+  }
+  .dot.bubble { background: #e05545; }
+  .dot.mixed { background: #d4a03a; }
+  .dot.notbubble { background: #3d944a; }
+
+  .entry-content { min-width: 0; }
+  .entry-top {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+  }
+  .entry-author {
+    font-size: 11.5px;
+    font-weight: 650;
+    color: #222;
+  }
+  .entry-source {
+    font-size: 9.5px;
+    color: #aaa;
+  }
+  .entry-take {
+    font-size: 11px;
+    color: #555;
+    line-height: 1.3;
+    font-style: italic;
+  }
+
+  /* Per-entry background tints matching sentiment */
+  .bg-bubble { background: rgba(224, 85, 69, 0.08); }
+  .bg-mixed { background: rgba(212, 160, 58, 0.08); }
+  .bg-notbubble { background: rgba(61, 148, 74, 0.08); }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>The AI Bubble Narrative: How Expert Opinion Seems to Be Shifting</h1>
+  <p class="subtitle">Based on six months of reading highlights, Oct 2025 – Mar 2026</p>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#e05545"></div> Bubble</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#d4a03a"></div> Mixed</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3d944a"></div> Not a bubble</div>
+  </div>
+
+  <div class="timeline">
+
+    <div class="month-header">Oct 2025</div>
+
+    <div class="entry bg-bubble">
+      <div class="dot bubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">M.G. Siegler</span>
+          <span class="entry-source">Spyglass</span>
+        </div>
+        <div class="entry-take">"Yes, it's a bubble. Yes, that may be a good thing. Yes, it will hurt."</div>
+      </div>
+    </div>
+
+    <div class="entry bg-notbubble">
+      <div class="dot notbubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Derek Thompson</span>
+          <span class="entry-source">Plain English</span>
+        </div>
+        <div class="entry-take">"Everybody thinks AI is a bubble. What if they're wrong?"</div>
+      </div>
+    </div>
+
+    <div class="month-header">Nov 2025</div>
+
+    <div class="entry bg-bubble">
+      <div class="dot bubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Ben Thompson</span>
+          <span class="entry-source">Stratechery</span>
+        </div>
+        <div class="entry-take">"Yes it's a bubble, but bubbles build infrastructure"</div>
+      </div>
+    </div>
+
+    <div class="entry bg-notbubble">
+      <div class="dot notbubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Ethan Mollick</span>
+          <span class="entry-source">One Useful Thing</span>
+        </div>
+        <div class="entry-take">"Era of the chatbot → era of the digital coworker"</div>
+      </div>
+    </div>
+
+    <div class="entry bg-notbubble">
+      <div class="dot notbubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Tim Metz</span>
+          <span class="entry-source">LinkedIn</span>
+        </div>
+        <div class="entry-take">"AI Bubble: What If We're Not?" — the perception gap argument</div>
+      </div>
+    </div>
+
+    <div class="month-header">Dec 2025</div>
+
+    <div class="entry bg-mixed">
+      <div class="dot mixed"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Howard Marks</span>
+          <span class="entry-source">Oaktree Capital memo</span>
+        </div>
+        <div class="entry-take">"An inflection bubble, not a fad — but warning signs are flashing"</div>
+      </div>
+    </div>
+
+    <div class="entry bg-bubble">
+      <div class="dot bubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Cal Newport</span>
+          <span class="entry-source">The New Yorker</span>
+        </div>
+        <div class="entry-take">"AI agents failed to live up to their hype" in 2025</div>
+      </div>
+    </div>
+
+    <div class="month-header">Jan – Feb 2026</div>
+
+    <div class="entry bg-notbubble">
+      <div class="dot notbubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Matt Shumer</span>
+          <span class="entry-source">AI founder</span>
+        </div>
+        <div class="entry-take">"The 'hitting a wall' debate is over. It's done."</div>
+      </div>
+    </div>
+
+    <div class="month-header">Mar 2026</div>
+
+    <div class="entry bg-notbubble">
+      <div class="dot notbubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Ben Thompson</span>
+          <span class="entry-source">Stratechery</span>
+        </div>
+        <div class="entry-take">"I no longer believe we're in a bubble" — flipped from Nov</div>
+      </div>
+    </div>
+
+    <div class="entry bg-bubble">
+      <div class="dot bubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Paul Kedrosky</span>
+          <span class="entry-source">Plain English podcast</span>
+        </div>
+        <div class="entry-take">"Yes, AI is a bubble. There is no question."</div>
+      </div>
+    </div>
+
+    <div class="entry bg-notbubble">
+      <div class="dot notbubble"></div>
+      <div class="entry-content">
+        <div class="entry-top">
+          <span class="entry-author">Jensen Huang</span>
+          <span class="entry-source">Nvidia GTC</span>
+        </div>
+        <div class="entry-take">"Demand up 1,000,000x in two years" — we're underbuilt</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

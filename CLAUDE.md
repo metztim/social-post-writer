@@ -12,6 +12,7 @@ See `CONTENT_STRATEGY.md` for topic pillars, publication routing rules, quality 
 - **Content Calendar** (`249df6dc-2cc5-81bc-8944-f44570c7cdce`, work) — Animalz pipeline tracker
 - When starting a `/write` session, ensure the piece has a corresponding Notion entry
 - Rich context goes in Notion **page body** (`notion append-blocks`), not properties
+- **Append ordering:** When using `notion append-blocks --after <block_id>` multiple times on the same block, subsequent appends insert BEFORE previous ones (newest content goes closest to the anchor block). To maintain correct order, either append all content in a single call or use `--after` on the last block of each previous append.
 
 ## Commands
 
@@ -29,6 +30,9 @@ Separate workflow for LinkedIn posts. See `workflows/post-creation/`.
 
 ### `/copywrite` — Structured copywriting process
 7-phase process for short-form conversion copy (landing pages, ads, emails, taglines): Brief → Strategy → Research → Exploration → Selection → Full Copy → Review. Grounded in Harry Dry's three laws, Sullivan's advertising principles, and Wiebe's Money Words. Claude coaches and tests quality — human generates the ideas and writes the variants. See `.claude/commands/copywrite.md`.
+
+### `/newsletter` — Weekly newsletter workflow
+4-phase process for the We Eat Robots weekly newsletter: Intake → Research → Rewrite & Polish → QA & Publish. Tim provides rough input in Notion (ranging from polished drafts to raw notes to pasted AI output), then runs `/newsletter` to research, rewrite, polish, and write the final version back to Notion. See `.claude/commands/newsletter.md`.
 
 ### `/research-article` — Article research
 Standalone research agent for article drafts. See `.claude/subagents/article-researcher.md`.
@@ -60,6 +64,16 @@ projects/copy/{slug}/
   variants.md           # All variants with three-laws scoring
   copy.md               # Final copy
   review-notes.md       # Review findings
+```
+
+## Newsletter folder convention
+
+Each newsletter issue lives in `projects/newsletters/{YYYY-MM-DD}/`:
+```
+projects/newsletters/{YYYY-MM-DD}/
+  state.md              # Process state (YAML frontmatter + process log)
+  research/             # Enrichment findings
+  final-snapshot.md     # Local copy of final Notion output
 ```
 
 ## External data sources

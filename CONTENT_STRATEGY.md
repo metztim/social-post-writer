@@ -37,6 +37,7 @@ How AI is changing knowledge work, practically — real patterns, real tradeoffs
 | Deep dive, essay, or newsletter-length? | **We Eat Robots** (Substack) |
 | Evergreen, portfolio-worthy, or workflow writeup? | **timmetz.nl** |
 | Grey zone (personal take on Animalz-relevant topic)? | Personal channel first, adapt for Animalz later if it has legs |
+| Weekly curated reading + featured article? | **WER Newsletter** (Substack, separate section from articles) |
 
 ### LinkedIn principle
 
@@ -59,6 +60,7 @@ Avoid frivolous posts with no strategic purpose. When a post performs well, flag
 | **Animalz Blog** | Serves an SEO goal or establishes a thought leadership position |
 | **Animalz KB** | Actionable and reference-worthy — someone can use this to do something |
 | **timmetz.nl** | Portfolio-quality, shows craft and depth |
+| **WER Newsletter** | Personal curation voice, genuine engagement with each item, connects to pillars |
 
 ---
 

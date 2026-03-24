@@ -45,7 +45,21 @@
       "WebFetch(domain:ahrefs.com)",
       "Bash(animalz-notion get-comments:*)",
       "mcp__notion-personal__API-retrieve-a-block",
-      "Skill(flag-content)"
+      "Skill(flag-content)",
+      "mcp__gdrive__gdrive_read",
+      "mcp__notion-personal__API-get-self",
+      "mcp__notion-personal__API-get-users",
+      "mcp__notion-personal__API-retrieve-a-comment",
+      "Bash(notion get-comments:*)",
+      "mcp__whimsical-desktop__board_create",
+      "mcp__whimsical-desktop__flowchart_create",
+      "mcp__whimsical-desktop__board_snapshot",
+      "mcp__whimsical-desktop__navigate",
+      "mcp__whimsical-desktop__board_clear",
+      "mcp__whimsical-desktop__help",
+      "mcp__whimsical-desktop__board_edit",
+      "Bash(notion query:*)",
+      "mcp__chrome-devtools__take_screenshot"
     ],
     "deny": [],
     "ask": []
